@@ -563,13 +563,16 @@ def parse_tournaments_html(html, tier=""):
 # ───────────────────────── турниры (Liquipedia) ─────────────────────────
 
 LP_WIKI = {"dota": "dota2", "cs": "counterstrike", "valorant": "valorant", "pubg": "pubg", "fortnite": "fortnite"}
+# Страницы-кандидаты по порядку. Как только набралось достаточно записей, остальные не запрашиваем.
+# У Dota 2 уровни называются Tier 1/2 (старые S/A-страницы там больше не существуют).
 LP_PAGES = {
-    "dota": [("S-Tier_Tournaments", "S"), ("A-Tier_Tournaments", "A")],
-    "cs": [("S-Tier_Tournaments", "S"), ("A-Tier_Tournaments", "A")],
-    "valorant": [("S-Tier_Tournaments", "S")],
-    "pubg": [("S-Tier_Tournaments", "S")],
-    "fortnite": [("S-Tier_Tournaments", "S")],
+    "dota": [("Tier_1_Tournaments", "1"), ("Portal:Tournaments", ""), ("Tier_2_Tournaments", "2")],
+    "cs": [("S-Tier_Tournaments", "S"), ("A-Tier_Tournaments", "A"), ("Portal:Tournaments", "")],
+    "valorant": [("S-Tier_Tournaments", "S"), ("A-Tier_Tournaments", "A"), ("Portal:Tournaments", "")],
+    "pubg": [("S-Tier_Tournaments", "S"), ("A-Tier_Tournaments", "A"), ("Portal:Tournaments", "")],
+    "fortnite": [("S-Tier_Tournaments", "S"), ("A-Tier_Tournaments", "A"), ("Portal:Tournaments", "")],
 }
+LP_ENOUGH = 8     # столько распознанных турниров достаточно, дальше не идём
 _lp_last = [0.0]
 _lp_blocked = [False]   # после 429 больше не стучимся к Liquipedia в этом запуске
 
@@ -642,6 +645,8 @@ def tournaments(game):
         if len(rows) < 3 or truthy(os.environ.get("DEBUG")):
             save_debug("%s_%s.html" % (game, page.replace(":", "_")), html[:80000])
         items.extend(rows)
+        if len(pick_tournaments([dict(x) for x in items], today)) >= LP_ENOUGH:
+            break
     if not items:
         raise ParseError(("страницы получены, но турниры не распознаны" if got_page else "Liquipedia недоступна")
                          + ("; " + "; ".join(errs) if errs else ""))
