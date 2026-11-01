@@ -1,1 +1,11 @@
-dota.tournaments | ошибка | ParseError: Liquipedia недоступна; S-Tier_Tournaments: Liquipedia: The page you specified doesn't exist.; A-Tier_Tournaments: Liquipedia: The page you specified doesn't exist.
+dota.teams | ок | записей: 15
+dota.meta | ок | записей: 30
+dota.matches | ок | записей: 10
+dota.players | ок | записей: 40
+cs.teams | ок | записей: 16
+pubg.players | пропуск | нет секрета PUBG_API_KEY
+dota.tournaments | ок | записей: 23
+cs.tournaments | ок | записей: 22
+valorant.tournaments | ок | записей: 13
+pubg.tournaments | ок | записей: 14
+fortnite.tournaments | ок | записей: 12

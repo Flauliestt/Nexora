@@ -1,12 +1,17 @@
 {
  "schema": 1,
- "generated": "2026-11-01T13:25:46Z",
+ "generated": "2026-11-01T13:31:07Z",
  "updated": {
-  "dota.teams": "2026-11-01T13:24:49Z",
-  "dota.meta": "2026-11-01T13:24:49Z",
-  "dota.matches": "2026-11-01T13:24:49Z",
-  "dota.players": "2026-11-01T13:24:49Z",
-  "cs.teams": "2026-11-01T13:24:49Z"
+  "dota.teams": "2026-11-01T13:31:07Z",
+  "dota.meta": "2026-11-01T13:31:07Z",
+  "dota.matches": "2026-11-01T13:31:07Z",
+  "dota.players": "2026-11-01T13:31:07Z",
+  "cs.teams": "2026-11-01T13:31:07Z",
+  "dota.tournaments": "2026-11-01T13:31:07Z",
+  "cs.tournaments": "2026-11-01T13:31:07Z",
+  "valorant.tournaments": "2026-11-01T13:31:07Z",
+  "pubg.tournaments": "2026-11-01T13:31:07Z",
+  "fortnite.tournaments": "2026-11-01T13:31:07Z"
  },
  "sources": {
   "dota.teams": {
@@ -35,24 +40,24 @@
    "note": "нет секрета PUBG_API_KEY"
   },
   "dota.tournaments": {
-   "ok": false,
-   "error": "ParseError: Liquipedia недоступна; S-Tier_Tournaments: Liquipedia: The page you specified doesn't exist.; A-Tier_Tournaments: Liquipedia: The page you specified doesn't exist."
+   "ok": true,
+   "n": 23
   },
   "cs.tournaments": {
-   "ok": false,
-   "error": "ParseError: Liquipedia недоступна; S-Tier_Tournaments: Liquipedia ограничила запросы (429) в этом запуске, остальные пропущены; A-Tier_Tournaments: Liquipedia ограничила запросы (429) в этом запуске, остальные пропущены"
+   "ok": true,
+   "n": 22
   },
   "valorant.tournaments": {
-   "ok": false,
-   "error": "ParseError: Liquipedia недоступна; S-Tier_Tournaments: Liquipedia ограничила запросы (429) в этом запуске, остальные пропущены"
+   "ok": true,
+   "n": 13
   },
   "pubg.tournaments": {
-   "ok": false,
-   "error": "ParseError: Liquipedia недоступна; S-Tier_Tournaments: Liquipedia ограничила запросы (429) в этом запуске, остальные пропущены"
+   "ok": true,
+   "n": 14
   },
   "fortnite.tournaments": {
-   "ok": false,
-   "error": "ParseError: Liquipedia недоступна; S-Tier_Tournaments: Liquipedia ограничила запросы (429) в этом запуске, остальные пропущены"
+   "ok": true,
+   "n": 12
   }
  },
  "games": {
@@ -260,104 +265,104 @@
     "high_best": [
      {
       "hero": "Bounty Hunter",
-      "picks": 37112,
+      "picks": 37158,
       "wr": 55.1
      },
      {
       "hero": "Outworld Devourer",
-      "picks": 59560,
+      "picks": 59627,
       "wr": 54.4
      },
      {
       "hero": "Nyx Assassin",
-      "picks": 49944,
+      "picks": 50006,
       "wr": 53.0
      },
      {
       "hero": "Wraith King",
-      "picks": 33554,
+      "picks": 33584,
       "wr": 52.9
      },
      {
       "hero": "Night Stalker",
-      "picks": 37972,
+      "picks": 38015,
       "wr": 52.8
      },
      {
       "hero": "Phantom Lancer",
-      "picks": 42940,
-      "wr": 52.7
+      "picks": 42981,
+      "wr": 52.6
      },
      {
       "hero": "Grimstroke",
-      "picks": 36533,
+      "picks": 36578,
       "wr": 52.6
      },
      {
       "hero": "Spectre",
-      "picks": 27553,
+      "picks": 27587,
       "wr": 52.6
      },
      {
       "hero": "Spirit Breaker",
-      "picks": 66370,
+      "picks": 66445,
       "wr": 52.4
      },
      {
       "hero": "Juggernaut",
-      "picks": 63826,
+      "picks": 63893,
       "wr": 52.4
      }
     ],
     "high_popular": [
      {
       "hero": "Pudge",
-      "picks": 105663,
+      "picks": 105777,
       "wr": 50.0
      },
      {
       "hero": "Rubick",
-      "picks": 101731,
+      "picks": 101836,
       "wr": 49.7
      },
      {
       "hero": "Lion",
-      "picks": 83783,
+      "picks": 83878,
       "wr": 48.3
      },
      {
       "hero": "Invoker",
-      "picks": 81094,
+      "picks": 81170,
       "wr": 51.8
      },
      {
       "hero": "Dragon Knight",
-      "picks": 75690,
+      "picks": 75793,
       "wr": 52.1
      },
      {
       "hero": "Windranger",
-      "picks": 73351,
-      "wr": 49.0
+      "picks": 73422,
+      "wr": 48.9
      },
      {
       "hero": "Slark",
-      "picks": 67840,
+      "picks": 67922,
       "wr": 50.1
      },
      {
       "hero": "Spirit Breaker",
-      "picks": 66370,
+      "picks": 66445,
       "wr": 52.4
      },
      {
       "hero": "Earthshaker",
-      "picks": 64838,
+      "picks": 64906,
       "wr": 51.3
      },
      {
       "hero": "Juggernaut",
-      "picks": 63826,
+      "picks": 63893,
       "wr": 52.4
      }
     ]
@@ -653,7 +658,239 @@
       "team": "IB"
      }
     ]
-   }
+   },
+   "tournaments": [
+    {
+     "name": "1win Essence III",
+     "start": "2026-11-12",
+     "end": "2026-11-18",
+     "prize": "$200,000",
+     "winner": null,
+     "runner_up": null,
+     "tier": "1",
+     "status": "upcoming"
+    },
+    {
+     "name": "BLAST SLAM IX",
+     "start": "2026-11-20",
+     "end": "2026-11-29",
+     "prize": "$750,000",
+     "winner": null,
+     "runner_up": null,
+     "tier": "1",
+     "status": "upcoming"
+    },
+    {
+     "name": "DreamLeague Season 30",
+     "start": "2026-12-02",
+     "end": "2026-12-13",
+     "prize": "$750,000",
+     "winner": null,
+     "runner_up": null,
+     "tier": "1",
+     "status": "upcoming"
+    },
+    {
+     "name": "DreamLeague Season 31",
+     "start": "2027-01-20",
+     "end": "2027-01-31",
+     "prize": "$500,000",
+     "winner": null,
+     "runner_up": null,
+     "tier": "1",
+     "status": "upcoming"
+    },
+    {
+     "name": "PGL Wallachia Season 10",
+     "start": "2027-03-02",
+     "end": "2027-03-14",
+     "prize": "$1,000,000",
+     "winner": null,
+     "runner_up": null,
+     "tier": "1",
+     "status": "upcoming"
+    },
+    {
+     "name": "Clavision x Dota PIT Masters 2027",
+     "start": "2027-03-20",
+     "end": "2027-03-28",
+     "prize": "",
+     "winner": null,
+     "runner_up": null,
+     "tier": "1",
+     "status": "upcoming"
+    },
+    {
+     "name": "ESL One Munich 2027",
+     "start": "2027-04-04",
+     "end": "2027-04-11",
+     "prize": "$1,000,000",
+     "winner": null,
+     "runner_up": null,
+     "tier": "1",
+     "status": "upcoming"
+    },
+    {
+     "name": "DreamLeague Season 32",
+     "start": "2027-04-26",
+     "end": "2027-05-09",
+     "prize": "$750,000",
+     "winner": null,
+     "runner_up": null,
+     "tier": "1",
+     "status": "upcoming"
+    },
+    {
+     "name": "PGL Wallachia Season 11",
+     "start": "2027-05-11",
+     "end": "2027-05-23",
+     "prize": "$1,000,000",
+     "winner": null,
+     "runner_up": null,
+     "tier": "1",
+     "status": "upcoming"
+    },
+    {
+     "name": "PGL Wallachia Season 12",
+     "start": "2027-10-19",
+     "end": "2027-10-31",
+     "prize": "$1,000,000",
+     "winner": null,
+     "runner_up": null,
+     "tier": "1",
+     "status": "upcoming"
+    },
+    {
+     "name": "PARI Universe",
+     "start": "2026-10-22",
+     "end": "2026-11-01",
+     "prize": "$250,000",
+     "winner": null,
+     "runner_up": null,
+     "tier": "1",
+     "status": "ongoing"
+    },
+    {
+     "name": "BLAST SLAM VIII",
+     "start": "2026-09-29",
+     "end": "2026-10-11",
+     "prize": "$750,000",
+     "winner": "Team Yandex",
+     "runner_up": "Team Spirit",
+     "tier": "1",
+     "status": "finished"
+    },
+    {
+     "name": "The International 2026",
+     "start": "2026-08-13",
+     "end": "2026-08-23",
+     "prize": "$3,906,263",
+     "winner": "Team Spirit",
+     "runner_up": "TEAM VISION",
+     "tier": "1",
+     "status": "finished"
+    },
+    {
+     "name": "1win Essence II",
+     "start": "2026-07-30",
+     "end": "2026-08-05",
+     "prize": "$200,000",
+     "winner": "Team Liquid",
+     "runner_up": "Team Falcons",
+     "tier": "1",
+     "status": "finished"
+    },
+    {
+     "name": "Esports World Cup 2026",
+     "start": "2026-07-07",
+     "end": "2026-07-19",
+     "prize": "$2,000,000",
+     "winner": "PVISION",
+     "runner_up": "BB Team",
+     "tier": "1",
+     "status": "finished"
+    },
+    {
+     "name": "BLAST SLAM VII",
+     "start": "2026-05-26",
+     "end": "2026-06-07",
+     "prize": "$1,000,000",
+     "winner": "Team Yandex",
+     "runner_up": "LGD Gaming",
+     "tier": "1",
+     "status": "finished"
+    },
+    {
+     "name": "DreamLeague Season 29",
+     "start": "2026-05-13",
+     "end": "2026-05-24",
+     "prize": "$1,000,000",
+     "winner": "PARIVISION",
+     "runner_up": "Aurora Gaming",
+     "tier": "1",
+     "status": "finished"
+    },
+    {
+     "name": "PGL Wallachia Season 8",
+     "start": "2026-04-18",
+     "end": "2026-04-26",
+     "prize": "$1,000,000",
+     "winner": "BetBoom Team",
+     "runner_up": "Aurora Gaming",
+     "tier": "1",
+     "status": "finished"
+    },
+    {
+     "name": "ESL One Birmingham 2026",
+     "start": "2026-03-22",
+     "end": "2026-03-29",
+     "prize": "$1,000,000",
+     "winner": "Tundra Esports",
+     "runner_up": "Team Yandex",
+     "tier": "1",
+     "status": "finished"
+    },
+    {
+     "name": "PGL Wallachia Season 7",
+     "start": "2026-03-07",
+     "end": "2026-03-15",
+     "prize": "$1,000,000",
+     "winner": "Team Yandex",
+     "runner_up": "Team Liquid",
+     "tier": "1",
+     "status": "finished"
+    },
+    {
+     "name": "DreamLeague Season 28",
+     "start": "2026-02-16",
+     "end": "2026-03-01",
+     "prize": "$1,000,000",
+     "winner": "Tundra Esports",
+     "runner_up": "Aurora Gaming",
+     "tier": "1",
+     "status": "finished"
+    },
+    {
+     "name": "BLAST SLAM VI",
+     "start": "2026-02-03",
+     "end": "2026-02-15",
+     "prize": "$1,000,000",
+     "winner": "Team Liquid",
+     "runner_up": "Natus Vincere",
+     "tier": "1",
+     "status": "finished"
+    },
+    {
+     "name": "DreamLeague Season 27",
+     "start": "2025-12-10",
+     "end": "2025-12-21",
+     "prize": "$1,000,000",
+     "winner": "Team Yandex",
+     "runner_up": "Team Spirit",
+     "tier": "1",
+     "status": "finished"
+    }
+   ]
   },
   "cs": {
    "teams": {
@@ -840,7 +1077,631 @@
       ]
      }
     ]
-   }
+   },
+   "tournaments": [
+    {
+     "name": "Intel Extreme Masters Beijing 2026",
+     "start": "2026-11-02",
+     "end": "2026-11-08",
+     "prize": "$1,250,000",
+     "winner": null,
+     "runner_up": null,
+     "tier": "S",
+     "status": "upcoming"
+    },
+    {
+     "name": "BLAST Rivals Fall 2026",
+     "start": "2026-11-11",
+     "end": "2026-11-15",
+     "prize": "$1,000,000",
+     "winner": null,
+     "runner_up": null,
+     "tier": "S",
+     "status": "upcoming"
+    },
+    {
+     "name": "YaLLa Compass UAE 2026",
+     "start": "2026-11-16",
+     "end": "2026-11-22",
+     "prize": "$600,000",
+     "winner": null,
+     "runner_up": "Cancelled",
+     "tier": "S",
+     "status": "upcoming"
+    },
+    {
+     "name": "PGL Major Singapore 2026",
+     "start": "2026-11-24",
+     "end": "2026-12-13",
+     "prize": "$1,250,000",
+     "winner": null,
+     "runner_up": null,
+     "tier": "S",
+     "status": "upcoming"
+    },
+    {
+     "name": "BLAST Bounty Winter 2027",
+     "start": "2027-01-13",
+     "end": "2027-01-24",
+     "prize": "$500,000",
+     "winner": null,
+     "runner_up": null,
+     "tier": "S",
+     "status": "upcoming"
+    },
+    {
+     "name": "PGL Bucharest 2027",
+     "start": "2027-01-17",
+     "end": "2027-01-24",
+     "prize": "$1,000,000",
+     "winner": null,
+     "runner_up": null,
+     "tier": "S",
+     "status": "upcoming"
+    },
+    {
+     "name": "Intel Extreme Masters Kraków 2027",
+     "start": "2027-01-27",
+     "end": "2027-02-07",
+     "prize": "$1,250,000",
+     "winner": null,
+     "runner_up": null,
+     "tier": "S",
+     "status": "upcoming"
+    },
+    {
+     "name": "PGL Cluj-Napoca 2027",
+     "start": "2027-02-11",
+     "end": "2027-02-21",
+     "prize": "$1,000,000",
+     "winner": null,
+     "runner_up": null,
+     "tier": "S",
+     "status": "upcoming"
+    },
+    {
+     "name": "ESL Pro League Season 25",
+     "start": "2027-03-06",
+     "end": "2027-03-14",
+     "prize": "$1,250,000",
+     "winner": null,
+     "runner_up": null,
+     "tier": "S",
+     "status": "upcoming"
+    },
+    {
+     "name": "PGL Łódź 2027",
+     "start": "2027-03-18",
+     "end": "2027-03-28",
+     "prize": "$1,000,000",
+     "winner": null,
+     "runner_up": null,
+     "tier": "S",
+     "status": "upcoming"
+    },
+    {
+     "name": "PGL Masters Bucharest 2026",
+     "start": "2026-10-24",
+     "end": "2026-10-31",
+     "prize": "$1,250,000",
+     "winner": "FURIA",
+     "runner_up": "Nemiga Gaming",
+     "tier": "S",
+     "status": "finished"
+    },
+    {
+     "name": "Thunderpick World Championship 2026",
+     "start": "2026-10-14",
+     "end": "2026-10-18",
+     "prize": "$1,000,000",
+     "winner": "FURIA",
+     "runner_up": "BetBoom Team",
+     "tier": "S",
+     "status": "finished"
+    },
+    {
+     "name": "Forge of Legends 2026",
+     "start": "2026-10-13",
+     "end": "2026-10-18",
+     "prize": "$500,000",
+     "winner": null,
+     "runner_up": "Cancelled",
+     "tier": "S",
+     "status": "finished"
+    },
+    {
+     "name": "ESL Pro League Season 24",
+     "start": "2026-10-03",
+     "end": "2026-10-11",
+     "prize": "$1,000,000",
+     "winner": "Team Vitality",
+     "runner_up": "MOUZ",
+     "tier": "S",
+     "status": "finished"
+    },
+    {
+     "name": "PGL Fall 2026",
+     "start": "2026-10-01",
+     "end": "2026-10-11",
+     "prize": "$1,250,000",
+     "winner": "16",
+     "runner_up": "Cancelled",
+     "tier": "S",
+     "status": "finished"
+    },
+    {
+     "name": "StarLadder StarSeries Fall 2026",
+     "start": "2026-09-17",
+     "end": "2026-09-20",
+     "prize": "$500,000",
+     "winner": "Team Vitality",
+     "runner_up": "Aurora Gaming",
+     "tier": "S",
+     "status": "finished"
+    },
+    {
+     "name": "FISSURE Playground #3",
+     "start": "2026-09-08",
+     "end": "2026-09-13",
+     "prize": "$1,000,000",
+     "winner": "Legacy",
+     "runner_up": "G2 Esports",
+     "tier": "S",
+     "status": "finished"
+    },
+    {
+     "name": "YaLLa Compass Summer 2026",
+     "start": "2026-09-07",
+     "end": "2026-09-13",
+     "prize": "$600,000",
+     "winner": null,
+     "runner_up": "Cancelled",
+     "tier": "S",
+     "status": "finished"
+    },
+    {
+     "name": "BLAST Open Fall 2026",
+     "start": "2026-08-26",
+     "end": "2026-09-06",
+     "prize": "$1,100,000",
+     "winner": "Team Spirit",
+     "runner_up": "MOUZ",
+     "tier": "S",
+     "status": "finished"
+    },
+    {
+     "name": "Esports World Cup 2026",
+     "start": "2026-08-12",
+     "end": "2026-08-23",
+     "prize": "$2,000,000",
+     "winner": "Team Spirit",
+     "runner_up": "FUT Esports",
+     "tier": "S",
+     "status": "finished"
+    },
+    {
+     "name": "PGL Summer 2026",
+     "start": "2026-08-06",
+     "end": "2026-08-16",
+     "prize": "$1,250,000",
+     "winner": "16",
+     "runner_up": "Cancelled",
+     "tier": "S",
+     "status": "finished"
+    },
+    {
+     "name": "BLAST Bounty Summer 2026",
+     "start": "2026-07-30",
+     "end": "2026-08-02",
+     "prize": "$740,000",
+     "winner": "MOUZ",
+     "runner_up": "Team Spirit",
+     "tier": "S",
+     "status": "finished"
+    }
+   ]
+  },
+  "valorant": {
+   "tournaments": [
+    {
+     "name": "VALORANT Game Changers Championship 2026",
+     "start": "2026-10-22",
+     "end": "2026-11-01",
+     "prize": "$500,000",
+     "winner": null,
+     "runner_up": null,
+     "tier": "S",
+     "status": "ongoing"
+    },
+    {
+     "name": "VALORANT Champions 2026",
+     "start": "2026-09-24",
+     "end": "2026-10-18",
+     "prize": "$2,250,000",
+     "winner": "LOUD",
+     "runner_up": "Team Vitality",
+     "tier": "S",
+     "status": "finished"
+    },
+    {
+     "name": "VCT 2026: Pacific Stage 2",
+     "start": "2026-07-16",
+     "end": "2026-09-06",
+     "prize": "$250,000",
+     "winner": "Global Esports",
+     "runner_up": "Nongshim RedForce",
+     "tier": "S",
+     "status": "finished"
+    },
+    {
+     "name": "VCT 2026: Americas Stage 2",
+     "start": "2026-07-16",
+     "end": "2026-09-06",
+     "prize": "$250,000",
+     "winner": "100 Thieves",
+     "runner_up": "LOUD",
+     "tier": "S",
+     "status": "finished"
+    },
+    {
+     "name": "VCT 2026: EMEA Stage 2",
+     "start": "2026-07-15",
+     "end": "2026-08-30",
+     "prize": "$250,000",
+     "winner": "Karmine Corp",
+     "runner_up": "Team Liquid",
+     "tier": "S",
+     "status": "finished"
+    },
+    {
+     "name": "VCT 2026: China Stage 2",
+     "start": "2026-07-09",
+     "end": "2026-08-23",
+     "prize": "$250,000",
+     "winner": "TYLOO",
+     "runner_up": "JD Gaming",
+     "tier": "S",
+     "status": "finished"
+    },
+    {
+     "name": "Esports World Cup 2026",
+     "start": "2026-07-02",
+     "end": "2026-07-12",
+     "prize": "$2,000,000",
+     "winner": "100 Thieves",
+     "runner_up": "NRG",
+     "tier": "S",
+     "status": "finished"
+    },
+    {
+     "name": "VALORANT Masters London 2026",
+     "start": "2026-06-06",
+     "end": "2026-06-21",
+     "prize": "$1,000,000",
+     "winner": "Leviatán",
+     "runner_up": "Paper Rex",
+     "tier": "S",
+     "status": "finished"
+    },
+    {
+     "name": "VCT 2026: Americas Stage 1",
+     "start": "2026-04-10",
+     "end": "2026-05-24",
+     "prize": "",
+     "winner": "G2 Esports",
+     "runner_up": "Leviatán",
+     "tier": "S",
+     "status": "finished"
+    },
+    {
+     "name": "VCT 2026: Pacific Stage 1",
+     "start": "2026-04-03",
+     "end": "2026-05-17",
+     "prize": "",
+     "winner": "Paper Rex",
+     "runner_up": "FULL SENSE",
+     "tier": "S",
+     "status": "finished"
+    },
+    {
+     "name": "VCT 2026: EMEA Stage 1",
+     "start": "2026-04-01",
+     "end": "2026-05-17",
+     "prize": "",
+     "winner": "Team Heretics",
+     "runner_up": "Team Vitality",
+     "tier": "S",
+     "status": "finished"
+    },
+    {
+     "name": "VCT 2026: China Stage 1",
+     "start": "2026-03-31",
+     "end": "2026-05-10",
+     "prize": "",
+     "winner": "EDward Gaming",
+     "runner_up": "XLG Esports",
+     "tier": "S",
+     "status": "finished"
+    },
+    {
+     "name": "VALORANT Masters Santiago 2026",
+     "start": "2026-02-28",
+     "end": "2026-03-15",
+     "prize": "$1,000,000",
+     "winner": "Nongshim RedForce",
+     "runner_up": "Paper Rex",
+     "tier": "S",
+     "status": "finished"
+    }
+   ]
+  },
+  "pubg": {
+   "tournaments": [
+    {
+     "name": "PUBG Global Championship 2026",
+     "start": "2026-12-01",
+     "end": "2026-12-13",
+     "prize": "$1,500,000",
+     "winner": null,
+     "runner_up": null,
+     "tier": "S",
+     "status": "upcoming"
+    },
+    {
+     "name": "PUBG Global Series 2026 Circuit 4 Series Final",
+     "start": "2026-10-29",
+     "end": "2026-11-01",
+     "prize": "$300,000",
+     "winner": null,
+     "runner_up": null,
+     "tier": "S",
+     "status": "ongoing"
+    },
+    {
+     "name": "PUBG Global Series 2026 Circuit 3 Series Final",
+     "start": "2026-08-20",
+     "end": "2026-08-23",
+     "prize": "$300,000",
+     "winner": "Gen.G Esports",
+     "runner_up": "T1",
+     "tier": "S",
+     "status": "finished"
+    },
+    {
+     "name": "Games of the Future 2026",
+     "start": "2026-07-31",
+     "end": "2026-08-02",
+     "prize": "$1,000,000",
+     "winner": "17 Gaming",
+     "runner_up": "GAM x TE",
+     "tier": "S",
+     "status": "finished"
+    },
+    {
+     "name": "Esports World Cup 2026",
+     "start": "2026-07-21",
+     "end": "2026-07-26",
+     "prize": "$2,025,000",
+     "winner": "Virtus.pro",
+     "runner_up": "The Vicious",
+     "tier": "S",
+     "status": "finished"
+    },
+    {
+     "name": "PUBG Nations Cup 2026",
+     "start": "2026-06-23",
+     "end": "2026-06-28",
+     "prize": "$1,051,550",
+     "winner": "Brazil",
+     "runner_up": "South Korea",
+     "tier": "S",
+     "status": "finished"
+    },
+    {
+     "name": "PUBG Global Series 2026 Circuit 2 Series Final",
+     "start": "2026-06-04",
+     "end": "2026-06-07",
+     "prize": "$300,000",
+     "winner": "Made in Thailand",
+     "runner_up": "SOOPers",
+     "tier": "S",
+     "status": "finished"
+    },
+    {
+     "name": "PUBG Global Series 2026 Circuit 1 Series Final",
+     "start": "2026-04-02",
+     "end": "2026-04-05",
+     "prize": "$300,000",
+     "winner": "Virtus.pro",
+     "runner_up": "eArena",
+     "tier": "S",
+     "status": "finished"
+    },
+    {
+     "name": "PUBG Global Championship 2025",
+     "start": "2025-11-28",
+     "end": "2025-12-14",
+     "prize": "$1,765,800",
+     "winner": "FULL SENSE",
+     "runner_up": "Virtus.pro",
+     "tier": "S",
+     "status": "finished"
+    },
+    {
+     "name": "PUBG Global Series 10 2025",
+     "start": "2025-10-27",
+     "end": "2025-11-02",
+     "prize": "$300,000",
+     "winner": "Virtus.pro",
+     "runner_up": "Twisted Minds",
+     "tier": "S",
+     "status": "finished"
+    },
+    {
+     "name": "PUBG Global Series 9 2025",
+     "start": "2025-10-13",
+     "end": "2025-10-19",
+     "prize": "$300,000",
+     "winner": "Twisted Minds",
+     "runner_up": "Virtus.pro",
+     "tier": "S",
+     "status": "finished"
+    },
+    {
+     "name": "Esports World Cup 2025",
+     "start": "2025-08-12",
+     "end": "2025-08-16",
+     "prize": "$2,010,000",
+     "winner": "Twisted Minds",
+     "runner_up": "Gen.G Esports",
+     "tier": "S",
+     "status": "finished"
+    },
+    {
+     "name": "PUBG Nations Cup 2025",
+     "start": "2025-07-23",
+     "end": "2025-07-27",
+     "prize": "$1,009,518",
+     "winner": "Vietnam",
+     "runner_up": "China",
+     "tier": "S",
+     "status": "finished"
+    },
+    {
+     "name": "PUBG Global Series 8 2025",
+     "start": "2025-05-12",
+     "end": "2025-05-18",
+     "prize": "$300,000",
+     "winner": "BB Team",
+     "runner_up": "Freecs",
+     "tier": "S",
+     "status": "finished"
+    }
+   ]
+  },
+  "fortnite": {
+   "tournaments": [
+    {
+     "name": "FNCS 2026 - Solos BR: Oceania - Grand Finals",
+     "start": "2026-10-26",
+     "end": "2026-10-27",
+     "prize": "$35,400",
+     "winner": "Mase",
+     "runner_up": "ZDog",
+     "tier": "S",
+     "status": "finished"
+    },
+    {
+     "name": "FNCS 2026 - Solos BR: Middle East - Grand Finals",
+     "start": "2026-10-26",
+     "end": "2026-10-27",
+     "prize": "$35,400",
+     "winner": "BARQ",
+     "runner_up": "Matrx",
+     "tier": "S",
+     "status": "finished"
+    },
+    {
+     "name": "FNCS 2026 - Solos BR: Asia - Grand Finals",
+     "start": "2026-10-26",
+     "end": "2026-10-27",
+     "prize": "$35,400",
+     "winner": "Mog",
+     "runner_up": "Stella",
+     "tier": "S",
+     "status": "finished"
+    },
+    {
+     "name": "FNCS 2026 - Solos BR: Brazil - Grand Finals",
+     "start": "2026-10-26",
+     "end": "2026-10-27",
+     "prize": "$72,500",
+     "winner": "Lucx",
+     "runner_up": "Kayky",
+     "tier": "S",
+     "status": "finished"
+    },
+    {
+     "name": "FNCS 2026 - Solos BR: North America West - Grand Finals",
+     "start": "2026-10-26",
+     "end": "2026-10-27",
+     "prize": "$62,750",
+     "winner": "Darky",
+     "runner_up": "Chele",
+     "tier": "S",
+     "status": "finished"
+    },
+    {
+     "name": "FNCS 2026 - Solos BR: North America Central - Grand Finals",
+     "start": "2026-10-26",
+     "end": "2026-10-27",
+     "prize": "$174,750",
+     "winner": "Ajerss",
+     "runner_up": "Ritual",
+     "tier": "S",
+     "status": "finished"
+    },
+    {
+     "name": "FNCS 2026 - Solos BR: Europe - Grand Finals",
+     "start": "2026-10-26",
+     "end": "2026-10-27",
+     "prize": "$253,500",
+     "winner": "Tjino",
+     "runner_up": "shxrk",
+     "tier": "S",
+     "status": "finished"
+    },
+    {
+     "name": "Mobile Series 2026 - Championship",
+     "start": "2026-10-24",
+     "end": "2026-10-25",
+     "prize": "$200,000",
+     "winner": "Amp2Fly",
+     "runner_up": "IAmNoob",
+     "tier": "S",
+     "status": "finished"
+    },
+    {
+     "name": "FNCS 2026 Global Championship",
+     "start": "2026-09-26",
+     "end": "2026-09-27",
+     "prize": "$2,000,000",
+     "winner": "Pixie",
+     "runner_up": "t3eny",
+     "tier": "S",
+     "status": "finished"
+    },
+    {
+     "name": "FNCS 2026 Pro-Am Creator Series: Team Liquid",
+     "start": "2026-09-06",
+     "end": "2026-09-06",
+     "prize": "$50,000",
+     "winner": "zEkO",
+     "runner_up": "Daryki",
+     "tier": "S",
+     "status": "finished"
+    },
+    {
+     "name": "Reload Elite Series 2026 - Championship",
+     "start": "2026-08-19",
+     "end": "2026-08-22",
+     "prize": "$1,025,000",
+     "winner": "Malibuca",
+     "runner_up": "SkyJump",
+     "tier": "S",
+     "status": "finished"
+    },
+    {
+     "name": "FNCS 2026 - Major 2: Oceania - Grand Finals",
+     "start": "2026-08-01",
+     "end": "2026-08-02",
+     "prize": "$75,000",
+     "winner": "Tinka",
+     "runner_up": "Sazers",
+     "tier": "S",
+     "status": "finished"
+    }
+   ]
   }
  }
 }
