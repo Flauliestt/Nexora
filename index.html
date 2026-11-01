@@ -1,0 +1,1743 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Nexora: игры, рейтинги и инструменты</title>
+<meta name="description" content="Nexora: рейтинги команд и игроков, мета, расписание турниров и победители по Dota 2, CS2, Valorant, PUBG и Fortnite. Плюс генераторы ников, промптов и идей. Бесплатно, на русском и английском.">
+<meta name="theme-color" content="#0e0a17">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Nexora: инструменты для геймеров">
+<meta property="og:description" content="Рейтинги, мета и турниры по Dota 2, CS2, Valorant, PUBG и Fortnite. Генераторы ников, промптов и идей.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Onest:wght@400;500;600&family=Unbounded:wght@500;700&display=swap">
+<style>
+/* Layout: sticky bar, hero with a "roll" console, one page where tool tiles open as views via #links. */
+:root {
+  --bg: #0c0913;
+  --bar: #0e0a17;
+  --surface: #151020;
+  --well: #0f0b18;
+  --line: #2b2140;
+  --line-2: #4a3a6b;
+  --hover: #211736;
+  --fg: #efeaf9;
+  --muted: #a99fc2;
+  --accent: #a98bff;
+  --accent-hi: #c0a8ff;
+  --accent-ink: #150c2b;
+  --glow: #2a1650;
+  --signal: #6ee7b7;
+  --loss: #ff9aa8;
+  --warn: #f3c96b;
+  --f-display: 'Unbounded', 'Segoe UI', system-ui, sans-serif;
+  --f-body: 'Onest', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --f-mono: 'JetBrains Mono', ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: radial-gradient(900px 420px at 12% -8%, var(--glow), transparent 62%), var(--bg);
+  background-color: var(--bg);
+  color: var(--fg);
+  font-family: var(--f-body);
+  font-size: 15px;
+  line-height: 1.55;
+}
+body::before {
+  content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px);
+  z-index: 10; background: var(--bar);
+}
+a { color: inherit; }
+button, input, textarea, select { font: inherit; color: inherit; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+[hidden] { display: none !important; }
+.sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+.wrap {
+  width: 100%; max-width: 1140px; margin-inline: auto;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+}
+
+/* header */
+.bar {
+  position: sticky; top: env(safe-area-inset-top, 0px); z-index: 20;
+  background: var(--bar); border-bottom: 1px solid var(--line);
+}
+.bar .wrap { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding-block: 12px; }
+.logo { font-family: var(--f-display); font-weight: 700; font-size: 19px; letter-spacing: .16em; text-decoration: none; }
+.logo span { color: var(--accent); }
+.bar-actions { display: flex; align-items: center; gap: 8px; }
+
+/* buttons */
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 6px;
+  font-size: 14px; font-weight: 500; line-height: 1.2; text-decoration: none;
+  padding: 10px 14px; border-radius: 8px; cursor: pointer;
+  background: transparent; border: 1px solid var(--line-2);
+  transition: border-color .15s, background .15s, transform .1s;
+}
+.btn:hover { border-color: var(--accent); background: var(--hover); }
+.btn:active { transform: translateY(1px); }
+.btn.primary { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); font-weight: 600; }
+.btn.primary:hover { background: var(--accent-hi); border-color: var(--accent-hi); }
+.btn.sm { padding: 8px 12px; font-size: 13px; }
+.btn.armed { border-color: #f08fa0; color: #ffc2cc; }
+.btn:disabled { opacity: .6; cursor: progress; }
+
+/* hero */
+.hero { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr); gap: 40px; align-items: center; padding-block: 52px 40px; }
+.eyebrow {
+  display: inline-block; font-family: var(--f-mono); font-size: 12px; letter-spacing: .12em;
+  text-transform: uppercase; color: var(--accent-hi);
+  border: 1px solid var(--line-2); border-radius: 999px; padding: 6px 12px; margin-bottom: 20px;
+}
+h1 {
+  font-family: var(--f-display); font-weight: 700; margin: 0 0 18px;
+  font-size: clamp(30px, 5.6vw, 54px); line-height: 1.1; text-wrap: balance;
+}
+.accent { color: var(--accent); }
+.lead { color: var(--muted); font-size: 17px; max-width: 52ch; margin: 0 0 26px; }
+.cta { display: flex; flex-wrap: wrap; gap: 10px; }
+
+.console { background: var(--well); border: 1px solid var(--line-2); border-radius: 10px; min-width: 0; }
+.console-head {
+  display: flex; align-items: center; justify-content: space-between; gap: 10px;
+  padding: 10px 14px; border-bottom: 1px solid var(--line);
+  font-family: var(--f-mono); font-size: 12px; color: var(--muted);
+}
+.console-body { display: grid; gap: 14px; padding: 16px 14px 18px; }
+.cline { display: grid; grid-template-columns: 52px minmax(0, 1fr); gap: 10px; align-items: baseline; }
+.ckey { font-family: var(--f-mono); font-size: 12px; color: var(--accent); text-transform: uppercase; letter-spacing: .08em; }
+.cval { overflow-wrap: anywhere; min-width: 0; }
+.cval.nick { font-family: var(--f-mono); font-size: 18px; color: var(--signal); }
+
+/* home tiles */
+.section-title { font-family: var(--f-display); font-weight: 500; font-size: 22px; margin: 0 0 18px; scroll-margin-top: 80px; }
+.tiles { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; padding-bottom: 52px; }
+.tile {
+  display: flex; flex-direction: column; gap: 10px; min-width: 0;
+  background: var(--surface); border: 1px solid var(--line); border-radius: 12px;
+  padding: 20px; text-decoration: none; transition: border-color .15s, background .15s;
+}
+.tile:hover { border-color: var(--accent); background: var(--hover); }
+.tile.wide { grid-column: span 2; }
+.tile.full { grid-column: 1 / -1; }
+.tile h3 { font-family: var(--f-display); font-weight: 500; font-size: 16px; line-height: 1.3; margin: 0; }
+.tile p { margin: 0; color: var(--muted); font-size: 14px; }
+.tile .go { margin-top: auto; padding-top: 6px; font-family: var(--f-mono); font-size: 12px; color: var(--accent-hi); letter-spacing: .06em; }
+.tag { font-family: var(--f-mono); font-size: 11px; letter-spacing: .14em; color: var(--accent); }
+.pills { display: flex; flex-wrap: wrap; gap: 6px; }
+.pill { font-family: var(--f-mono); font-size: 11px; padding: 4px 9px; border-radius: 999px; border: 1px solid var(--line-2); color: var(--muted); }
+.pill.live { border-color: var(--signal); color: var(--signal); }
+
+/* views */
+.view { padding-block: 28px 56px; }
+.back { display: inline-block; font-family: var(--f-mono); font-size: 13px; color: var(--accent-hi); text-decoration: none; margin-bottom: 18px; padding: 6px 0; }
+.back:hover { text-decoration: underline; }
+.view-title { font-family: var(--f-display); font-weight: 500; font-size: clamp(22px, 4vw, 30px); line-height: 1.2; margin: 0 0 8px; text-wrap: balance; }
+.view-desc { color: var(--muted); margin: 0 0 22px; max-width: 62ch; }
+.card {
+  background: var(--surface); border: 1px solid var(--line); border-radius: 12px;
+  padding: 22px; display: flex; flex-direction: column; gap: 12px; min-width: 0; max-width: 760px;
+}
+.card.full { max-width: none; }
+.field { display: grid; gap: 6px; }
+label { font-size: 13px; font-weight: 500; color: var(--muted); }
+input, textarea, select {
+  width: 100%; padding: 11px 12px; border-radius: 8px;
+  border: 1px solid var(--line-2); background: var(--well); outline: none;
+}
+input:focus, textarea:focus, select:focus { border-color: var(--accent); }
+textarea { min-height: 96px; resize: vertical; }
+.result {
+  flex: 1; min-height: 56px; padding: 14px; border-radius: 8px;
+  background: var(--well); border: 1px dashed var(--line-2);
+  white-space: pre-wrap; overflow-wrap: anywhere; line-height: 1.6;
+}
+.result.nick { font-family: var(--f-mono); font-size: 22px; color: var(--signal); display: flex; align-items: center; }
+.result.answer { border-style: solid; border-color: var(--line-2); }
+.answer-box { display: grid; gap: 8px; }
+.actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: auto; }
+.actions .btn { flex: 1 1 auto; }
+.stats { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }
+.stat { padding: 12px 6px; text-align: center; border-radius: 8px; background: var(--well); border: 1px solid var(--line); }
+.stat strong { display: block; font-family: var(--f-mono); font-weight: 500; font-size: 22px; color: var(--accent-hi); font-variant-numeric: tabular-nums; }
+.stat span { font-size: 12px; color: var(--muted); }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.chip {
+  font-size: 13px; padding: 7px 12px; border-radius: 999px; cursor: pointer;
+  background: transparent; border: 1px solid var(--line-2); color: var(--muted);
+  transition: border-color .15s, color .15s;
+}
+.chip:hover { border-color: var(--accent); color: var(--fg); }
+.card p { margin: 0; color: var(--muted); font-size: 14px; }
+
+/* player profile */
+.tabs { display: flex; gap: 6px; overflow-x: auto; padding-bottom: 6px; margin-bottom: 14px; scrollbar-width: thin; }
+.tab {
+  flex: 0 0 auto; text-decoration: none; font-size: 14px; font-weight: 500;
+  padding: 9px 14px; border-radius: 8px; border: 1px solid var(--line-2); color: var(--muted);
+}
+.tab:hover { border-color: var(--accent); color: var(--fg); }
+.tab[aria-current="page"] { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); font-weight: 600; }
+.searchbar { display: flex; flex-wrap: wrap; gap: 8px; }
+.searchbar input { flex: 1 1 220px; width: auto; min-width: 0; }
+.searchbar select { flex: 0 0 auto; width: auto; }
+.hint { color: var(--muted); font-size: 13px; margin: 0; }
+.note { padding: 12px 14px; border-radius: 8px; border: 1px solid var(--line-2); background: var(--well); color: var(--muted); font-size: 14px; }
+.note.err { border-color: #7b3a49; color: #ffc2cc; }
+.note.soft { border-style: dashed; }
+.pc { display: grid; gap: 16px; }
+.pc-head { display: flex; align-items: center; gap: 14px; min-width: 0; }
+.avatar { width: 64px; height: 64px; border-radius: 12px; background: var(--well); border: 1px solid var(--line-2); object-fit: cover; flex: 0 0 auto; }
+.pc-name { min-width: 0; }
+.pc-name strong { display: block; font-family: var(--f-display); font-weight: 500; font-size: 18px; overflow-wrap: anywhere; }
+.pc-name span { font-family: var(--f-mono); font-size: 12px; color: var(--muted); }
+.example-tag { margin-left: auto; align-self: flex-start; font-family: var(--f-mono); font-size: 11px; letter-spacing: .1em; padding: 4px 9px; border-radius: 999px; border: 1px solid var(--warn); color: var(--warn); }
+.medal { display: inline-flex; align-items: center; gap: 8px; font-weight: 600; }
+.medal i { width: 12px; height: 12px; border-radius: 50%; background: var(--mc, var(--accent)); box-shadow: 0 0 0 3px var(--well), 0 0 0 4px var(--mc, var(--accent)); }
+.medal small { font-family: var(--f-mono); font-size: 12px; color: var(--muted); font-weight: 400; }
+.pc h4 { font-family: var(--f-mono); font-size: 12px; letter-spacing: .12em; text-transform: uppercase; color: var(--accent); margin: 4px 0 0; font-weight: 500; }
+.rows { display: grid; }
+.row { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 4px 12px; align-items: center; padding: 10px 0; border-top: 1px solid var(--line); min-width: 0; }
+.row:first-child { border-top: 0; }
+.row b { font-weight: 600; overflow-wrap: anywhere; }
+.row .sub { grid-column: 1 / -1; font-size: 12px; color: var(--muted); }
+.num { font-family: var(--f-mono); font-variant-numeric: tabular-nums; }
+.win { color: var(--signal); }
+.lose { color: var(--loss); }
+.links { display: flex; flex-wrap: wrap; gap: 8px; }
+.pick { display: grid; gap: 8px; }
+.pick button {
+  display: flex; align-items: center; gap: 12px; text-align: left; cursor: pointer; min-width: 0;
+  padding: 10px 12px; border-radius: 8px; background: var(--well); border: 1px solid var(--line-2);
+}
+.pick button:hover { border-color: var(--accent); }
+.pick img { width: 36px; height: 36px; border-radius: 8px; flex: 0 0 auto; background: var(--surface); }
+.pick span { min-width: 0; overflow-wrap: anywhere; }
+.pick small { display: block; color: var(--muted); font-size: 12px; }
+[data-game-panel] { display: grid; gap: 12px; }
+.out { display: grid; gap: 12px; margin-top: 2px; }
+.spin { color: var(--muted); font-family: var(--f-mono); font-size: 13px; }
+
+/* channel */
+.kv { display: grid; gap: 14px; }
+.kv .links .btn { flex: 1 1 220px; }
+
+/* favorites */
+.fav-head { display: flex; align-items: baseline; gap: 10px; }
+.fav-head h2 { margin: 0; font-family: var(--f-display); font-weight: 500; font-size: 17px; }
+.fav-count { font-family: var(--f-mono); font-size: 13px; color: var(--muted); }
+.fav-list { display: grid; }
+.fav-empty { color: var(--muted); font-size: 14px; padding: 6px 0; }
+.fav { display: grid; gap: 8px; padding: 14px 0; border-top: 1px solid var(--line); min-width: 0; }
+.fav-text { white-space: pre-wrap; overflow-wrap: anywhere; }
+.fav-meta { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
+.fav-meta .tag { margin-right: auto; }
+
+footer { border-top: 1px solid var(--line); color: var(--muted); font-size: 13px; }
+footer .wrap { padding-block: 26px 34px; display: grid; gap: 4px; }
+footer strong { color: var(--fg); letter-spacing: .14em; font-family: var(--f-display); font-weight: 500; }
+footer a { color: var(--accent-hi); }
+
+/* toasts */
+.toasts {
+  position: fixed; left: 0; right: 0; bottom: 0; z-index: 40; pointer-events: none;
+  display: flex; flex-direction: column; align-items: center; gap: 8px;
+  padding: 0 max(16px, env(safe-area-inset-left, 0px)) calc(16px + env(safe-area-inset-bottom, 0px));
+}
+.toast {
+  background: #1d1530; border: 1px solid var(--line-2); color: var(--fg);
+  padding: 10px 16px; border-radius: 8px; font-size: 14px; max-width: 100%;
+  box-shadow: 0 8px 28px #00000080; animation: rise .18s ease-out;
+}
+@keyframes rise { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+
+@media (max-width: 900px) {
+  .tiles { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .tile.t2 { grid-column: span 2; }
+}
+@media (max-width: 860px) {
+  .hero { grid-template-columns: minmax(0, 1fr); gap: 28px; padding-block: 36px 30px; }
+}
+@media (max-width: 600px) {
+  .tiles { grid-template-columns: minmax(0, 1fr); }
+  .tile.wide, .tile.t2 { grid-column: auto; }
+}
+@media (max-width: 520px) {
+  .nav-tools { display: none; }
+  .card { padding: 18px; }
+  .lead { font-size: 16px; }
+  .searchbar .btn { flex: 1 1 100%; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .btn, .toast, .tile { transition: none; animation: none; }
+}
+
+/* games: data blocks from data/data.json */
+.muted { color: var(--muted); }
+.chip[aria-pressed="true"] { border-color: var(--accent); color: var(--accent-ink); background: var(--accent); font-weight: 600; }
+.seg { display: flex; flex-wrap: wrap; gap: 6px; }
+#gamesInfo { display: grid; gap: 8px; margin-bottom: 14px; }
+#gamesInfo .hint { margin: 0; }
+.ggrid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+.ggrid .span2 { grid-column: 1 / -1; }
+.gblock {
+  background: var(--surface); border: 1px solid var(--line); border-radius: 12px;
+  padding: 20px; display: flex; flex-direction: column; gap: 12px; min-width: 0;
+}
+.gblock h3 { font-family: var(--f-display); font-weight: 500; font-size: 16px; line-height: 1.3; margin: 0; }
+.gblock .hint { margin: 0; }
+.gblock .stale { color: var(--warn); }
+.sub-h { font-family: var(--f-mono); font-size: 12px; letter-spacing: .12em; text-transform: uppercase; color: var(--accent); margin: 6px 0 -4px; font-weight: 500; }
+.lt { display: grid; }
+.lr {
+  display: grid; grid-template-columns: minmax(30px, auto) minmax(0, 1fr) auto; gap: 2px 10px;
+  align-items: baseline; padding: 9px 0; border-top: 1px solid var(--line); min-width: 0;
+}
+.lr:first-child { border-top: 0; }
+.lr.nr { grid-template-columns: minmax(0, 1fr) auto; }
+.lr .rk { font-family: var(--f-mono); font-size: 13px; color: var(--muted); }
+.lr .nm { font-weight: 600; overflow-wrap: anywhere; min-width: 0; }
+.lr .vl { font-family: var(--f-mono); font-variant-numeric: tabular-nums; color: var(--accent-hi); text-align: right; }
+.lr .sb { grid-column: 2 / -1; font-size: 12px; color: var(--muted); overflow-wrap: anywhere; }
+.lr.nr .sb { grid-column: 1 / -1; }
+.trow { display: grid; gap: 3px; padding: 11px 0; border-top: 1px solid var(--line); min-width: 0; }
+.trow:first-child { border-top: 0; }
+.trow .top { display: flex; align-items: baseline; justify-content: space-between; gap: 10px; }
+.trow .nm { font-weight: 600; overflow-wrap: anywhere; min-width: 0; }
+.trow .meta { font-size: 12px; color: var(--muted); }
+.trow .res { font-size: 13px; color: var(--muted); overflow-wrap: anywhere; }
+.tb { flex: 0 0 auto; font-family: var(--f-mono); font-size: 11px; padding: 3px 9px; border-radius: 999px; border: 1px solid var(--line-2); color: var(--muted); white-space: nowrap; }
+.tb.up { border-color: var(--warn); color: var(--warn); }
+.tb.on { border-color: var(--signal); color: var(--signal); }
+.credit { margin: 0; font-size: 12px; color: var(--muted); }
+.soonlist { display: grid; gap: 10px; padding-bottom: 36px; }
+.srow {
+  display: grid; grid-template-columns: auto minmax(0, 1fr) auto; gap: 12px; align-items: center;
+  background: var(--surface); border: 1px solid var(--line); border-radius: 10px;
+  padding: 12px 14px; text-decoration: none; transition: border-color .15s, background .15s;
+}
+.srow:hover { border-color: var(--accent); background: var(--hover); }
+.srow .sm { min-width: 0; }
+.srow strong { display: block; font-weight: 600; overflow-wrap: anywhere; }
+.srow small { color: var(--muted); font-size: 12px; }
+@media (max-width: 760px) {
+  .ggrid { grid-template-columns: minmax(0, 1fr); }
+  .ggrid .span2 { grid-column: auto; }
+}
+@media (max-width: 520px) {
+  .srow { grid-template-columns: minmax(0, 1fr) auto; }
+  .srow .pill { grid-column: 1 / -1; justify-self: start; }
+  .gblock { padding: 16px; }
+}
+</style>
+
+</head>
+<body>
+<header class="bar">
+  <div class="wrap">
+    <a class="logo" href="#home" aria-label="Nexora">NEX<span>ORA</span></a>
+    <div class="bar-actions">
+      <a class="btn sm nav-tools" href="#games" data-i18n="navGames">Игры</a>
+      <button class="btn sm" id="langBtn" data-act="lang" type="button">EN</button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+
+    <!-- ГЛАВНАЯ -->
+    <div class="view-home" data-view="home">
+      <section class="hero">
+        <div>
+          <span class="eyebrow">AI × Gaming × Technology</span>
+          <h1><span data-i18n="heroA">Играй умнее с</span> <span class="accent">Nexora</span></h1>
+          <p class="lead" data-i18n="heroDesc">Рейтинги команд и игроков, мета, когда турниры и кто победил: Dota 2, CS2, Valorant, PUBG и Fortnite. Плюс генераторы ников, промптов и идей.</p>
+          <div class="cta">
+            <a class="btn primary" href="#games" data-i18n="ctaGames">Смотреть игры</a>
+            <a class="btn" href="#nick" data-i18n="ctaNick">Сгенерировать ник</a>
+          </div>
+        </div>
+        <div class="console" aria-live="polite">
+          <div class="console-head">
+            <span data-i18n="consoleTitle">случайный набор</span>
+            <button class="btn sm" data-act="roll" type="button" data-i18n="consoleRoll">Ещё раз</button>
+          </div>
+          <div class="console-body">
+            <div class="cline"><span class="ckey">nick</span><span class="cval nick" id="cNick"></span></div>
+            <div class="cline"><span class="ckey">idea</span><span class="cval" id="cIdea"></span></div>
+            <div class="cline"><span class="ckey">lab</span><span class="cval" id="cLab"></span></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="soon" hidden>
+        <h2 class="section-title" data-i18n="soonTitle">Ближайшие турниры</h2>
+        <div class="soonlist" id="soonList"></div>
+      </section>
+      <section id="tools">
+        <h2 class="section-title" data-i18n="toolsTitle">Инструменты</h2>
+        <div class="tiles">
+          <a class="tile wide" href="#games">
+            <span class="tag">GAMES</span>
+            <h3 data-i18n="tGames">Игры и рейтинги</h3>
+            <p data-i18n="tGamesD">Рейтинги команд и игроков, мета, когда турниры и кто победил. Dota 2, CS2, Valorant, PUBG, Fortnite.</p>
+            <div class="pills"><span class="pill">Dota 2</span><span class="pill">CS2</span><span class="pill">Valorant</span><span class="pill">PUBG</span><span class="pill">Fortnite</span></div>
+            <span class="go" data-i18n="open">Открыть →</span>
+          </a>
+          <a class="tile" href="#nick">
+            <span class="tag">NICK</span>
+            <h3 data-i18n="nickTitle">Генератор ников</h3>
+            <p data-i18n="tNickD">Придуманные слова вместо шаблонных ников.</p>
+            <span class="go" data-i18n="open">Открыть →</span>
+          </a>
+          <a class="tile" href="#prompt">
+            <span class="tag">PROMPT</span>
+            <h3 data-i18n="promptTitle">Конструктор промптов</h3>
+            <p data-i18n="tPromptD">Готовый запрос для ИИ за пару секунд.</p>
+            <span class="go" data-i18n="open">Открыть →</span>
+          </a>
+          <a class="tile" href="#video">
+            <span class="tag">VIDEO</span>
+            <h3 data-i18n="videoTitle">Идеи для видео</h3>
+            <p data-i18n="tVideoD">Темы и заголовки для роликов, шортсов и стримов.</p>
+            <span class="go" data-i18n="open">Открыть →</span>
+          </a>
+          <a class="tile" href="#idea">
+            <span class="tag">IDEA</span>
+            <h3 data-i18n="ideaTitle">Генератор идей</h3>
+            <p data-i18n="tIdeaD">Идеи для проектов, сайтов и новых навыков.</p>
+            <span class="go" data-i18n="open">Открыть →</span>
+          </a>
+          <a class="tile" href="#lab">
+            <span class="tag">LAB</span>
+            <h3 data-i18n="labTitle">Игровые испытания</h3>
+            <p data-i18n="tLabD">Челленджи для игры в одиночку или с друзьями.</p>
+            <span class="go" data-i18n="open">Открыть →</span>
+          </a>
+          <a class="tile" href="#text">
+            <span class="tag">TEXT</span>
+            <h3 data-i18n="textTitle">Анализ текста</h3>
+            <p data-i18n="tTextD">Слова, символы, строки, чистка пробелов и регистр.</p>
+            <span class="go" data-i18n="open">Открыть →</span>
+          </a>
+          <a class="tile t2" href="#favorites">
+            <span class="tag">SAVED</span>
+            <h3 data-i18n="favTitle">Избранное</h3>
+            <p data-i18n="tFavD">Результаты, которые ты сохранил. Хранятся в этом браузере.</p>
+            <span class="go" id="favTile" data-i18n="open">Открыть →</span>
+          </a>
+          <a class="tile full" href="#helper" data-ai-only hidden>
+            <span class="tag">AI</span>
+            <h3 data-i18n="helpTitle">Помощник Nexora</h3>
+            <p data-i18n="tHelpD">Задай вопрос про игры, контент или сайт. ИИ ответит коротко и по делу.</p>
+            <span class="go" data-i18n="open">Открыть →</span>
+          </a>
+          <a class="tile full" href="#channel">
+            <span class="tag">TELEGRAM</span>
+            <h3 data-i18n="tChannel">Наш канал и бот</h3>
+            <p data-i18n="tChannelD">Новости и идеи для геймеров на русском и английском. Бот помогает с постами и порядком в чате.</p>
+            <span class="go" data-i18n="open">Открыть →</span>
+          </a>
+        </div>
+      </section>
+    </div>
+
+    <!-- ИГРЫ -->
+    <section class="view" data-view="games" hidden>
+      <a class="back" href="#home" data-i18n="back">← Все инструменты</a>
+      <h2 class="view-title" data-i18n="gamesTitle">Игры и рейтинги</h2>
+      <p class="view-desc" data-i18n="gamesDesc">Рейтинги команд и игроков, мета, расписание турниров и победители. Данные обновляются раз в сутки.</p>
+      <nav class="tabs" aria-label="Games">
+        <a class="tab" href="#games-dota" data-game="dota">Dota 2</a>
+        <a class="tab" href="#games-cs" data-game="cs">CS2</a>
+        <a class="tab" href="#games-valorant" data-game="valorant">Valorant</a>
+        <a class="tab" href="#games-pubg" data-game="pubg">PUBG</a>
+        <a class="tab" href="#games-fortnite" data-game="fortnite">Fortnite</a>
+      </nav>
+      <div id="gamesInfo"></div>
+      <div id="gamesOut" aria-live="polite"></div>
+    </section>
+
+    <!-- НИКИ -->
+    <section class="view" data-view="nick" hidden>
+      <a class="back" href="#home" data-i18n="back">← Все инструменты</a>
+      <h2 class="view-title" data-i18n="nickTitle">Генератор ников</h2>
+      <p class="view-desc" data-i18n="nickDesc">Выбери стиль и получи ник в один клик.</p>
+      <div class="card">
+        <div class="field">
+          <label for="nickStyle" data-i18n="nickStyle">Стиль ника</label>
+          <select id="nickStyle">
+            <option value="dark">Dark</option>
+            <option value="cyber">Cyber</option>
+            <option value="funny">Funny</option>
+            <option value="pro">Pro</option>
+          </select>
+        </div>
+        <div class="field" data-ai-only hidden>
+          <label for="nickWord" data-i18n="nickWord">Слово или тема (необязательно)</label>
+          <input id="nickWord" maxlength="20" autocomplete="off" data-i18n-ph="phNickWord">
+        </div>
+        <div class="result nick" id="nickname" aria-live="polite"></div>
+        <div class="actions">
+          <button class="btn primary" data-act="gen-nick" type="button" data-i18n="gen">Сгенерировать</button>
+          <button class="btn" data-act="copy" data-target="nickname" type="button" data-i18n="copy">Копировать</button>
+          <button class="btn" data-act="save" data-target="nickname" data-tool="nick" type="button" data-i18n="fav">В избранное</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ПРОМПТЫ -->
+    <section class="view" data-view="prompt" hidden>
+      <a class="back" href="#home" data-i18n="back">← Все инструменты</a>
+      <h2 class="view-title" data-i18n="promptTitle">Конструктор промптов</h2>
+      <p class="view-desc" id="promptDesc" data-i18n="promptDesc">Собери готовый запрос. Чтобы получить ответ, отправь его в любой ИИ-сервис.</p>
+      <div class="card">
+        <div class="field">
+          <label for="aiTask" data-i18n="promptTask">Что должен сделать ИИ?</label>
+          <select id="aiTask">
+            <option value="ideas" data-i18n="task_ideas">Придумать идеи</option>
+            <option value="explain" data-i18n="task_explain">Объяснить сложную тему</option>
+            <option value="content" data-i18n="task_content">Создать контент</option>
+            <option value="code" data-i18n="task_code">Помочь с программированием</option>
+            <option value="game" data-i18n="task_game">Придумать игровую стратегию</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="aiTopic" data-i18n="promptTopic">Тема или задача</label>
+          <textarea id="aiTopic" maxlength="400" data-i18n-ph="phTopic"></textarea>
+        </div>
+        <div class="actions">
+          <button class="btn primary" data-act="build-prompt" type="button" data-i18n="promptBuild">Создать промпт</button>
+          <button class="btn primary" data-act="send-ai" data-ai-only hidden type="button" data-i18n="sendAI">Отправить в ИИ</button>
+        </div>
+        <div class="result" id="aiResult" aria-live="polite"></div>
+        <div class="actions">
+          <button class="btn" data-act="copy" data-target="aiResult" type="button" data-i18n="copy">Копировать</button>
+          <button class="btn" data-act="save" data-target="aiResult" data-tool="prompt" type="button" data-i18n="fav">В избранное</button>
+        </div>
+        <div class="answer-box" id="aiAnswerBox" hidden>
+          <label data-i18n="aiAnswerLabel">Ответ ИИ</label>
+          <div class="result answer" id="aiAnswer" aria-live="polite"></div>
+          <div class="actions">
+            <button class="btn" data-act="copy" data-target="aiAnswer" type="button" data-i18n="copy">Копировать</button>
+            <button class="btn" data-act="save" data-target="aiAnswer" data-tool="ai" type="button" data-i18n="fav">В избранное</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ВИДЕО -->
+    <section class="view" data-view="video" hidden>
+      <a class="back" href="#home" data-i18n="back">← Все инструменты</a>
+      <h2 class="view-title" data-i18n="videoTitle">Идеи для видео</h2>
+      <p class="view-desc" data-i18n="videoDesc">Темы и заголовки для роликов, шортсов и стримов.</p>
+      <div class="card">
+        <div class="field">
+          <label for="platform" data-i18n="platform">Платформа</label>
+          <select id="platform">
+            <option value="YouTube" data-i18n="plat_YouTube">YouTube</option>
+            <option value="TikTok" data-i18n="plat_TikTok">TikTok</option>
+            <option value="Shorts" data-i18n="plat_Shorts">YouTube Shorts</option>
+            <option value="stream" data-i18n="plat_stream">Стрим</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="videoTopic" data-i18n="topic">Тема канала</label>
+          <input id="videoTopic" value="Minecraft" data-i18n-ph="phVideo" autocomplete="off">
+        </div>
+        <button class="btn primary" data-act="gen-video" type="button" data-i18n="videoBtn">Придумать идею</button>
+        <div class="result" id="videoResult" aria-live="polite"></div>
+        <div class="actions">
+          <button class="btn" data-act="copy" data-target="videoResult" type="button" data-i18n="copy">Копировать</button>
+          <button class="btn" data-act="save" data-target="videoResult" data-tool="video" type="button" data-i18n="fav">В избранное</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ИДЕИ -->
+    <section class="view" data-view="idea" hidden>
+      <a class="back" href="#home" data-i18n="back">← Все инструменты</a>
+      <h2 class="view-title" data-i18n="ideaTitle">Генератор идей</h2>
+      <p class="view-desc" data-i18n="ideaDesc">Вдохновение для проектов, сайтов и новых навыков.</p>
+      <div class="card">
+        <div class="field">
+          <label for="ideaCategory" data-i18n="category">Категория</label>
+          <select id="ideaCategory">
+            <option value="site" data-i18n="cat_site">Сайт или приложение</option>
+            <option value="game" data-i18n="cat_game">Игры</option>
+            <option value="content" data-i18n="cat_content">Контент</option>
+            <option value="learn" data-i18n="cat_learn">Обучение</option>
+          </select>
+        </div>
+        <div class="field" data-ai-only hidden>
+          <label for="ideaTopic" data-i18n="ideaTopic">О чём идея? (необязательно)</label>
+          <input id="ideaTopic" maxlength="80" autocomplete="off" data-i18n-ph="phIdeaTopic">
+        </div>
+        <button class="btn primary" data-act="gen-idea" type="button" data-i18n="ideaBtn">Новая идея</button>
+        <div class="result" id="ideaResult" aria-live="polite"></div>
+        <div class="actions">
+          <button class="btn" data-act="copy" data-target="ideaResult" type="button" data-i18n="copy">Копировать</button>
+          <button class="btn" data-act="save" data-target="ideaResult" data-tool="idea" type="button" data-i18n="fav">В избранное</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ИСПЫТАНИЯ -->
+    <section class="view" data-view="lab" hidden>
+      <a class="back" href="#home" data-i18n="back">← Все инструменты</a>
+      <h2 class="view-title" data-i18n="labTitle">Игровые испытания</h2>
+      <p class="view-desc" data-i18n="labDesc">Случайные челленджи для игры в одиночку или с друзьями.</p>
+      <div class="card">
+        <div class="field">
+          <label for="challengeGame" data-i18n="gameType">Тип игры</label>
+          <select id="challengeGame">
+            <option value="any" data-i18n="game_any">Любая игра</option>
+            <option value="shooter" data-i18n="game_shooter">Шутер</option>
+            <option value="sandbox" data-i18n="game_sandbox">Песочница / выживание</option>
+            <option value="racing" data-i18n="game_racing">Гонки</option>
+          </select>
+        </div>
+        <button class="btn primary" data-act="gen-lab" type="button" data-i18n="labBtn">Новое испытание</button>
+        <div class="result" id="challengeResult" aria-live="polite"></div>
+        <div class="actions">
+          <button class="btn" data-act="copy" data-target="challengeResult" type="button" data-i18n="copy">Копировать</button>
+          <button class="btn" data-act="save" data-target="challengeResult" data-tool="lab" type="button" data-i18n="fav">В избранное</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ТЕКСТ -->
+    <section class="view" data-view="text" hidden>
+      <a class="back" href="#home" data-i18n="back">← Все инструменты</a>
+      <h2 class="view-title" data-i18n="textTitle">Анализ текста</h2>
+      <p class="view-desc" data-i18n="textDesc">Считай слова, символы и строки, чисти лишние пробелы, меняй регистр.</p>
+      <div class="card">
+        <div class="field">
+          <label for="textInput" data-i18n="textLabel">Введи или вставь текст</label>
+          <textarea id="textInput" data-i18n-ph="phText"></textarea>
+        </div>
+        <div class="stats">
+          <div class="stat"><strong id="wordCount">0</strong><span data-i18n="words">Слова</span></div>
+          <div class="stat"><strong id="charCount">0</strong><span data-i18n="chars">Символы</span></div>
+          <div class="stat"><strong id="lineCount">0</strong><span data-i18n="lines">Строки</span></div>
+        </div>
+        <div class="actions">
+          <button class="btn" data-act="t-clean" type="button" data-i18n="clean">Убрать лишние пробелы</button>
+          <button class="btn" data-act="t-upper" type="button" data-i18n="upper">ВЕРХНИЙ РЕГИСТР</button>
+          <button class="btn" data-act="t-lower" type="button" data-i18n="lower">нижний регистр</button>
+        </div>
+        <div class="actions">
+          <button class="btn" data-act="copy" data-target="textInput" type="button" data-i18n="copyText">Копировать текст</button>
+          <button class="btn" data-act="t-clear" type="button" data-i18n="clear">Очистить</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ПОМОЩНИК (только когда подключён ИИ) -->
+    <section class="view" data-view="helper" hidden>
+      <a class="back" href="#home" data-i18n="back">← Все инструменты</a>
+      <h2 class="view-title" data-i18n="helpTitle">Помощник Nexora</h2>
+      <p class="view-desc" data-i18n="helpDesc">Задай вопрос про игры, контент или этот сайт. ИИ ответит коротко и по делу.</p>
+      <div class="card">
+        <div class="chips">
+          <button class="chip" data-act="chip" type="button" data-i18n="chip1">Как придумать название для канала?</button>
+          <button class="chip" data-act="chip" type="button" data-i18n="chip2">Как начать стримить с телефона?</button>
+          <button class="chip" data-act="chip" type="button" data-i18n="chip3">Что делать, если не хватает идей для видео?</button>
+        </div>
+        <div class="field">
+          <label for="helpInput" data-i18n="helpLabel">Твой вопрос</label>
+          <input id="helpInput" maxlength="300" autocomplete="off" data-i18n-ph="phHelp">
+        </div>
+        <div class="actions">
+          <button class="btn primary" id="askBtn" data-act="ask-help" type="button" data-i18n="helpAsk">Спросить</button>
+        </div>
+        <div class="answer-box" id="helpAnswerBox" hidden>
+          <div class="result answer" id="helpAnswer" aria-live="polite"></div>
+          <div class="actions">
+            <button class="btn" data-act="copy" data-target="helpAnswer" type="button" data-i18n="copy">Копировать</button>
+            <button class="btn" data-act="save" data-target="helpAnswer" data-tool="help" type="button" data-i18n="fav">В избранное</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ИЗБРАННОЕ -->
+    <section class="view" data-view="favorites" hidden>
+      <a class="back" href="#home" data-i18n="back">← Все инструменты</a>
+      <div class="card">
+        <div class="fav-head">
+          <h2 data-i18n="favTitle">Избранное</h2>
+          <span class="fav-count" id="favCount"></span>
+        </div>
+        <p data-i18n="favDesc">Сохраняй результаты, которые пригодятся позже. Они хранятся в этом браузере.</p>
+        <div class="fav-list" id="favoriteList"></div>
+        <div class="actions">
+          <button class="btn" id="clearFavs" data-act="clear-favs" type="button" data-i18n="favClear">Очистить избранное</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- КАНАЛ И БОТ -->
+    <section class="view" data-view="channel" hidden>
+      <a class="back" href="#home" data-i18n="back">← Все инструменты</a>
+      <h2 class="view-title" data-i18n="tChannel">Наш канал и бот</h2>
+      <p class="view-desc" data-i18n="chanDesc">Новости и идеи для геймеров выходят на русском и английском. Бот пишет посты для канала и следит за порядком в чате.</p>
+      <div class="card">
+        <div class="kv">
+          <div class="links">
+            <a class="btn primary" id="chanLink" href="#channel" target="_blank" rel="noopener noreferrer" hidden data-i18n="chanOpen">Открыть канал в Telegram</a>
+            <a class="btn" id="botLink" href="#channel" target="_blank" rel="noopener noreferrer" data-i18n="botOpen">Открыть бота @NexoraZoneBot</a>
+          </div>
+          <p data-i18n="chanBot">Бот @NexoraZoneBot готовит новости и идеи для канала, а в чате выдаёт предупреждения за ссылки, спам и флуд.</p>
+        </div>
+      </div>
+    </section>
+
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div><strong>NEXORA</strong> — AI × Gaming × Technology</div>
+    <div>© <span id="year"></span> Nexora. <span data-i18n="footTag">Создано для будущего.</span></div>
+    <div data-i18n="footNote">Данные игр собираются автоматически раз в сутки: OpenDota, Valve, PUBG, Liquipedia.</div>
+  </div>
+</footer>
+
+<div class="toasts" id="toasts" role="status" aria-live="polite"></div>
+
+<script>
+(function () {
+  'use strict';
+
+  /* ===== НАСТРОЙКА =====
+     API_URL: адрес Cloudflare Worker (см. worker.js). Пока строка пустая, ИИ-кнопки скрыты.
+     CHANNEL_URL: ссылка на твой Telegram-канал, например 'https://t.me/yourchannel'. */
+  var CONFIG = {
+    API_URL: '',
+    BOT_URL: 'https://t.me/NexoraZoneBot',
+    CHANNEL_URL: 'https://t.me/RealNexoraHub',
+    DATA_URL: 'data/data.json'
+  };
+  var AI_ON = /^https:\/\//.test(CONFIG.API_URL);
+
+  var $ = function (id) { return document.getElementById(id); };
+  var qsa = function (sel, root) { return Array.prototype.slice.call((root || document).querySelectorAll(sel)); };
+  var FAV_KEY = 'nexoraFavorites', LANG_KEY = 'nexoraLang';
+  var BASE_TITLE = document.title || 'Nexora';
+
+  function sget(k) { try { return localStorage.getItem(k); } catch (e) { return null; } }
+  function sset(k, v) { try { localStorage.setItem(k, v); return true; } catch (e) { return false; } }
+
+  var lang = 'ru';
+  (function () { var s = sget(LANG_KEY); if (s === 'ru' || s === 'en') lang = s; })();
+
+  /* ---------- строки интерфейса ---------- */
+  var I = {
+    ru: {
+      langAria: 'Switch to English', langBtn: 'EN',
+      navGames: 'Игры', open: 'Открыть →', back: '← Все инструменты',
+      heroA: 'Играй умнее с',
+      heroDesc: 'Рейтинги команд и игроков, мета, когда турниры и кто победил: Dota 2, CS2, Valorant, PUBG и Fortnite. Плюс генераторы ников, промптов и идей.',
+      ctaGames: 'Смотреть игры', ctaNick: 'Сгенерировать ник',
+      consoleTitle: 'случайный набор', consoleRoll: 'Ещё раз', toolsTitle: 'Инструменты',
+      /* плитка игр: tGames, tGamesD ниже */
+      tNickD: 'Придуманные слова вместо шаблонных ников.',
+      tPromptD: 'Готовый запрос для ИИ за пару секунд.',
+      tVideoD: 'Темы и заголовки для роликов, шортсов и стримов.',
+      tIdeaD: 'Идеи для проектов, сайтов и новых навыков.',
+      tLabD: 'Челленджи для игры в одиночку или с друзьями.',
+      tTextD: 'Слова, символы, строки, чистка пробелов и регистр.',
+      tFavD: 'Результаты, которые ты сохранил. Хранятся в этом браузере.',
+      tHelpD: 'Задай вопрос про игры, контент или сайт. ИИ ответит коротко и по делу.',
+      tChannel: 'Наш канал и бот',
+      tChannelD: 'Новости и идеи для геймеров на русском и английском. Бот помогает с постами и порядком в чате.',
+      nickTitle: 'Генератор ников', nickDesc: 'Выбери стиль и получи ник в один клик.', nickStyle: 'Стиль ника',
+      nickWord: 'Слово или тема (необязательно)', phNickWord: 'Например: лёд, космос, ворон',
+      gen: 'Сгенерировать', copy: 'Копировать', fav: 'В избранное',
+      promptTitle: 'Конструктор промптов',
+      promptDesc: 'Собери готовый запрос. Чтобы получить ответ, отправь его в любой ИИ-сервис.',
+      promptDescAI: 'Собери запрос и отправь его в ИИ Nexora. Ответ появится ниже.',
+      promptTask: 'Что должен сделать ИИ?', promptTopic: 'Тема или задача', promptBuild: 'Создать промпт',
+      task_ideas: 'Придумать идеи', task_explain: 'Объяснить сложную тему', task_content: 'Создать контент',
+      task_code: 'Помочь с программированием', task_game: 'Придумать игровую стратегию',
+      phTopic: 'Например: идеи для игрового YouTube-канала',
+      promptTail: 'Структурируй ответ, приведи практические примеры и укажи ограничения.', q1: '«', q2: '»',
+      sendAI: 'Отправить в ИИ', aiAnswerLabel: 'Ответ ИИ',
+      videoTitle: 'Идеи для видео', videoDesc: 'Темы и заголовки для роликов, шортсов и стримов.',
+      platform: 'Платформа', topic: 'Тема канала', phVideo: 'Например: Minecraft, игры, технологии', videoBtn: 'Придумать идею',
+      plat_YouTube: 'YouTube', plat_TikTok: 'TikTok', plat_Shorts: 'YouTube Shorts', plat_stream: 'Стрим',
+      platformLabel: 'Платформа', ideaLabel: 'Идея', defTopic: 'игры',
+      ideaTitle: 'Генератор идей', ideaDesc: 'Вдохновение для проектов, сайтов и новых навыков.',
+      category: 'Категория', ideaBtn: 'Новая идея', ideaTopic: 'О чём идея? (необязательно)', phIdeaTopic: 'Например: Roblox, учёба, музыка',
+      cat_site: 'Сайт или приложение', cat_game: 'Игры', cat_content: 'Контент', cat_learn: 'Обучение',
+      labTitle: 'Игровые испытания', labDesc: 'Случайные челленджи для игры в одиночку или с друзьями.',
+      gameType: 'Тип игры', labBtn: 'Новое испытание',
+      game_any: 'Любая игра', game_shooter: 'Шутер', game_sandbox: 'Песочница / выживание', game_racing: 'Гонки',
+      textTitle: 'Анализ текста', textDesc: 'Считай слова, символы и строки, чисти лишние пробелы, меняй регистр.',
+      textLabel: 'Введи или вставь текст', phText: 'Начни печатать…',
+      words: 'Слова', chars: 'Символы', lines: 'Строки',
+      clean: 'Убрать лишние пробелы', upper: 'ВЕРХНИЙ РЕГИСТР', lower: 'нижний регистр',
+      copyText: 'Копировать текст', clear: 'Очистить',
+      helpTitle: 'Помощник Nexora', helpDesc: 'Задай вопрос про игры, контент или этот сайт. ИИ ответит коротко и по делу.',
+      chip1: 'Как придумать название для канала?', chip2: 'Как начать стримить с телефона?',
+      chip3: 'Что делать, если не хватает идей для видео?',
+      helpLabel: 'Твой вопрос', phHelp: 'Например: с чего начать свой канал?', helpAsk: 'Спросить',
+      favTitle: 'Избранное', favDesc: 'Сохраняй результаты, которые пригодятся позже. Они хранятся в этом браузере.',
+      favEmpty: 'Пока пусто. Нажми «В избранное» под любым результатом.',
+      favClear: 'Очистить избранное', favConfirm: 'Нажми ещё раз, чтобы удалить всё', remove: 'Удалить',
+      chanDesc: 'Новости и идеи для геймеров выходят на русском и английском. Бот пишет посты для канала и следит за порядком в чате.',
+      chanOpen: 'Открыть канал в Telegram', botOpen: 'Открыть бота @NexoraZoneBot',
+      chanBot: 'Бот @NexoraZoneBot готовит новости и идеи для канала, а в чате выдаёт предупреждения за ссылки, спам и флуд.',
+      footTag: 'Создано для будущего.',
+      footNote: 'Данные игр собираются автоматически раз в сутки: OpenDota, Valve, PUBG, Liquipedia.',
+      copied: 'Скопировано', selected: 'Текст выделен. Нажми Ctrl+C, чтобы скопировать',
+      nothingCopy: 'Пока нечего копировать', nothingSave: 'Пока нечего сохранять',
+      saved: 'Добавлено в избранное', already: 'Уже есть в избранном', removed: 'Удалено', cleared: 'Избранное очищено',
+      noStorage: 'Браузер не даёт сохранять данные: избранное пропадёт после закрытия страницы',
+      needTopic: 'Сначала введи тему или задачу', needQuestion: 'Сначала напиши вопрос',
+      aiThinking: 'Думаю…',
+      aiFail: 'ИИ сейчас не отвечает. Показан вариант из базы.',
+      aiFailAsk: 'ИИ сейчас не отвечает. Попробуй позже.',
+      aiLimit: 'Слишком много запросов. Подожди минуту.',
+      /* игры */
+      loading: 'Загружаю…',
+      gamesTitle: 'Игры и рейтинги',
+      gamesDesc: 'Рейтинги команд и игроков, мета, расписание турниров и победители. Данные обновляются раз в сутки.',
+      tGames: 'Игры и рейтинги',
+      tGamesD: 'Рейтинги команд и игроков, мета, когда турниры и кто победил. Dota 2, CS2, Valorant, PUBG, Fortnite.',
+      soonTitle: 'Ближайшие турниры', soonNow: 'идёт сейчас', inDays: 'через {n} дн.', today: 'сегодня', tomorrow: 'завтра',
+      dUpdated: 'Обновлено: ', dFrom: 'Данные от ',
+      dStale: 'Данные не обновлялись {n} дн. и могли устареть.',
+      dNone: 'Данные ещё собираются. Загляни завтра.',
+      dFail: 'Не удалось загрузить данные. Попробуй обновить страницу чуть позже.',
+      dExample: 'ПРИМЕР: цифры и названия вымышленные. Настоящие данные появятся после первого обновления.',
+      bTourn: 'Турниры', bTeams: 'Рейтинг команд', bPlayers: 'Рейтинг игроков', bMeta: 'Мета: герои',
+      bMatches: 'Последние матчи про-сцены', bSoon: 'Скоро на Nexora',
+      soonD: 'Над этим мы работаем:', s_teams: 'рейтинг команд', s_players: 'рейтинг игроков', s_meta: 'мета',
+      gOn: 'Идут сейчас', gUp: 'Скоро', gDone: 'Недавно прошли',
+      winnerL: 'Победитель: ', runnerL: 'финалист: ', winnerUnknown: 'Победитель пока не указан', tierL: 'тир ',
+      credit: 'Данные турниров: Liquipedia (CC BY-SA 3.0).',
+      noData: 'Данных пока нет.', soonShort: 'Скоро.', srcDown: 'Источник сейчас не отвечает. Покажем данные, как только он вернётся.',
+      mPro: 'Про-сцена', mBest: 'Лучший винрейт', mPop: 'Популярные',
+      mProD: 'Кого чаще всего берут и банят на профессиональных матчах. В скобках винрейт.',
+      mBestD: 'Лучший винрейт среди популярных героев на высоких рангах (Divine и Immortal).',
+      mPopD: 'Самые популярные герои на высоких рангах (Divine и Immortal).',
+      picksL: 'выборов', bansL: 'банов', gamesL: 'игр',
+      rEurope: 'Европа', rAmericas: 'Америка', rSeAsia: 'Юго-Восточная Азия', rChina: 'Китай',
+      rEU: 'Европа', rAS: 'Азия', rNA: 'Северная Америка',
+      teamsD: 'Активные команды за последние 3 месяца. Число справа это рейтинг.',
+      csD: 'Мировой рейтинг Valve на ',
+      playersDotaD: 'Топ таблицы лидеров Dota 2 по выбранному региону.',
+      pubgD: 'Режим Squad FPP, рейтинговый сезон. ',
+      winsL: 'побед', lossesL: 'поражений', lastL: 'последний матч ', ptsL: 'очков', dmgL: 'урон', vs: 'против'
+    },
+    en: {
+      langAria: 'Переключить на русский', langBtn: 'RU',
+      navGames: 'Games', open: 'Open →', back: '← All tools',
+      heroA: 'Play smarter with',
+      heroDesc: 'Team and player rankings, the meta, when tournaments start and who won: Dota 2, CS2, Valorant, PUBG and Fortnite. Plus nickname, prompt and idea generators.',
+      ctaGames: 'See the games', ctaNick: 'Generate a nickname',
+      consoleTitle: 'random roll', consoleRoll: 'Roll again', toolsTitle: 'Tools',
+      /* плитка игр: tGames, tGamesD ниже */
+      tNickD: 'Invented words instead of template nicknames.',
+      tPromptD: 'A ready prompt for AI in a couple of seconds.',
+      tVideoD: 'Topics and titles for videos, shorts and streams.',
+      tIdeaD: 'Ideas for projects, websites and new skills.',
+      tLabD: 'Challenges to play alone or with friends.',
+      tTextD: 'Words, characters, lines, space cleanup and letter case.',
+      tFavD: 'Results you saved. Stored in this browser.',
+      tHelpD: 'Ask about games, content or this site. The AI answers briefly and to the point.',
+      tChannel: 'Our channel and bot',
+      tChannelD: 'Gaming news and ideas in Russian and English. The bot helps with posts and keeps the chat tidy.',
+      nickTitle: 'Nickname Generator', nickDesc: 'Pick a style and get a nickname in one click.', nickStyle: 'Nickname style',
+      nickWord: 'Word or theme (optional)', phNickWord: 'e.g. ice, space, raven',
+      gen: 'Generate', copy: 'Copy', fav: 'Favorite',
+      promptTitle: 'Prompt Builder',
+      promptDesc: 'Build a ready prompt. Send it to any AI service to get an answer.',
+      promptDescAI: 'Build a prompt and send it to Nexora AI. The answer appears below.',
+      promptTask: 'What should the AI do?', promptTopic: 'Topic or task', promptBuild: 'Build prompt',
+      task_ideas: 'Generate ideas', task_explain: 'Explain a difficult topic', task_content: 'Create content',
+      task_code: 'Help with programming', task_game: 'Suggest a gaming strategy',
+      phTopic: 'e.g. ideas for a gaming YouTube channel',
+      promptTail: 'Structure the answer clearly, give practical examples and mention any limitations.', q1: '“', q2: '”',
+      sendAI: 'Send to AI', aiAnswerLabel: 'AI answer',
+      videoTitle: 'Video Ideas', videoDesc: 'Topics and titles for videos, shorts and streams.',
+      platform: 'Platform', topic: 'Channel topic', phVideo: 'e.g. Minecraft, games, technology', videoBtn: 'Generate idea',
+      plat_YouTube: 'YouTube', plat_TikTok: 'TikTok', plat_Shorts: 'YouTube Shorts', plat_stream: 'Stream',
+      platformLabel: 'Platform', ideaLabel: 'Idea', defTopic: 'gaming',
+      ideaTitle: 'Idea Generator', ideaDesc: 'Inspiration for projects, websites and new skills.',
+      category: 'Category', ideaBtn: 'New idea', ideaTopic: 'What is the idea about? (optional)', phIdeaTopic: 'e.g. Roblox, school, music',
+      cat_site: 'Website or app', cat_game: 'Gaming', cat_content: 'Content', cat_learn: 'Learning',
+      labTitle: 'Gaming Challenges', labDesc: 'Random challenges to try alone or with friends.',
+      gameType: 'Game type', labBtn: 'New challenge',
+      game_any: 'Any game', game_shooter: 'Shooter', game_sandbox: 'Sandbox / survival', game_racing: 'Racing',
+      textTitle: 'Text Analyzer', textDesc: 'Count words, characters and lines, remove extra spaces, change letter case.',
+      textLabel: 'Enter or paste text', phText: 'Start typing…',
+      words: 'Words', chars: 'Characters', lines: 'Lines',
+      clean: 'Clean extra spaces', upper: 'UPPERCASE', lower: 'lowercase',
+      copyText: 'Copy text', clear: 'Clear',
+      helpTitle: 'Nexora Assistant', helpDesc: 'Ask about games, content or this site. The AI answers briefly and to the point.',
+      chip1: 'How do I come up with a channel name?', chip2: 'How do I start streaming from a phone?',
+      chip3: 'What if I run out of video ideas?',
+      helpLabel: 'Your question', phHelp: 'e.g. how do I start my own channel?', helpAsk: 'Ask',
+      favTitle: 'Favorites', favDesc: 'Save results to use later. They are stored in this browser.',
+      favEmpty: 'Nothing here yet. Press “Favorite” under any result.',
+      favClear: 'Clear favorites', favConfirm: 'Press again to delete everything', remove: 'Remove',
+      chanDesc: 'Gaming news and ideas come out in Russian and English. The bot writes posts for the channel and keeps the chat tidy.',
+      chanOpen: 'Open the channel in Telegram', botOpen: 'Open the bot @NexoraZoneBot',
+      chanBot: 'The @NexoraZoneBot bot prepares news and ideas for the channel and warns people about links, spam and flooding in the chat.',
+      footTag: 'Built for the future.',
+      footNote: 'Game data is collected automatically once a day: OpenDota, Valve, PUBG, Liquipedia.',
+      copied: 'Copied', selected: 'Text selected. Press Ctrl+C to copy',
+      nothingCopy: 'Nothing to copy yet', nothingSave: 'Nothing to save yet',
+      saved: 'Saved to favorites', already: 'Already in favorites', removed: 'Removed', cleared: 'Favorites cleared',
+      noStorage: 'Your browser blocks storage: favorites will be lost when you close the page',
+      needTopic: 'Enter a topic or task first', needQuestion: 'Write a question first',
+      aiThinking: 'Thinking…',
+      aiFail: 'The AI is not answering right now. Showing a built-in option.',
+      aiFailAsk: 'The AI is not answering right now. Try again later.',
+      aiLimit: 'Too many requests. Wait a minute.',
+      loading: 'Loading…',
+      gamesTitle: 'Games and rankings',
+      gamesDesc: 'Team and player rankings, the meta, tournament schedule and winners. Data is updated once a day.',
+      tGames: 'Games and rankings',
+      tGamesD: 'Team and player rankings, the meta, when tournaments start and who won. Dota 2, CS2, Valorant, PUBG, Fortnite.',
+      soonTitle: 'Upcoming tournaments', soonNow: 'live now', inDays: 'in {n} d', today: 'today', tomorrow: 'tomorrow',
+      dUpdated: 'Updated: ', dFrom: 'Data from ',
+      dStale: 'The data has not been updated for {n} days and may be out of date.',
+      dNone: 'The data is still being collected. Check back tomorrow.',
+      dFail: 'Could not load the data. Try refreshing the page a bit later.',
+      dExample: 'EXAMPLE: the numbers and names are fictional. Real data appears after the first update.',
+      bTourn: 'Tournaments', bTeams: 'Team ranking', bPlayers: 'Player ranking', bMeta: 'Meta: heroes',
+      bMatches: 'Latest pro matches', bSoon: 'Coming soon to Nexora',
+      soonD: 'We are working on:', s_teams: 'team ranking', s_players: 'player ranking', s_meta: 'meta',
+      gOn: 'Live now', gUp: 'Upcoming', gDone: 'Recently finished',
+      winnerL: 'Winner: ', runnerL: 'runner-up: ', winnerUnknown: 'Winner not listed yet', tierL: 'tier ',
+      credit: 'Tournament data: Liquipedia (CC BY-SA 3.0).',
+      noData: 'No data yet.', soonShort: 'Coming soon.', srcDown: 'The source is not responding right now. We will show the data as soon as it is back.',
+      mPro: 'Pro scene', mBest: 'Best win rate', mPop: 'Popular',
+      mProD: 'Who gets picked and banned most in professional matches. Win rate on the right.',
+      mBestD: 'Best win rate among popular heroes at high ranks (Divine and Immortal).',
+      mPopD: 'The most popular heroes at high ranks (Divine and Immortal).',
+      picksL: 'picks', bansL: 'bans', gamesL: 'games',
+      rEurope: 'Europe', rAmericas: 'Americas', rSeAsia: 'Southeast Asia', rChina: 'China',
+      rEU: 'Europe', rAS: 'Asia', rNA: 'North America',
+      teamsD: 'Active teams over the last 3 months. The number on the right is the rating.',
+      csD: 'Valve global ranking as of ',
+      playersDotaD: 'Top of the Dota 2 leaderboard for the chosen region.',
+      pubgD: 'Squad FPP mode, ranked season. ',
+      winsL: 'wins', lossesL: 'losses', lastL: 'last match ', ptsL: 'pts', dmgL: 'damage', vs: 'vs'
+    }
+  };
+  var t = function (k) { var v = I[lang][k]; return v === undefined ? k : v; };
+
+  /* ---------- базовые помощники ---------- */
+  var rnd = function (n) { return Math.floor(Math.random() * n); };
+  var pick = function (a) { return a[rnd(a.length)]; };
+  var other = function (n, cur) { return n < 2 ? 0 : (cur + 1 + rnd(n - 1)) % n; };
+  var setText = function (id, v) { $(id).textContent = v; };
+  var cap = function (w) { return w.charAt(0).toUpperCase() + w.slice(1); };
+  function el(tag, cls, text) {
+    var n = document.createElement(tag);
+    if (cls) n.className = cls;
+    if (text !== undefined && text !== null) n.textContent = text;
+    return n;
+  }
+  function clear(node) { while (node.firstChild) node.removeChild(node.firstChild); }
+  function safeUrl(u) { return /^https:\/\/[^\s"'<>]+$/.test(u) ? u : ''; }
+  function linkBtn(href, text, primary) {
+    var a = el('a', 'btn' + (primary ? ' primary' : ''), text);
+    a.href = href; a.target = '_blank'; a.rel = 'noopener noreferrer';
+    return a;
+  }
+
+  function toast(msg) {
+    var box = $('toasts');
+    var d = el('div', 'toast', msg);
+    box.appendChild(d);
+    while (box.children.length > 3) box.removeChild(box.firstChild);
+    setTimeout(function () { if (d.parentNode) d.parentNode.removeChild(d); }, 2600);
+  }
+
+  function selectEl(node) {
+    var ok = false;
+    try {
+      if (typeof node.select === 'function') { node.select(); }
+      else {
+        var r = document.createRange(); r.selectNodeContents(node);
+        var s = window.getSelection(); s.removeAllRanges(); s.addRange(r);
+      }
+      ok = document.execCommand('copy');
+    } catch (e) {}
+    return ok;
+  }
+  function copyFrom(node, value) {
+    if (!value || !value.trim()) { toast(t('nothingCopy')); return; }
+    var done = function () { toast(t('copied')); };
+    var fallback = function () { toast(selectEl(node) ? t('copied') : t('selected')); };
+    try { navigator.clipboard.writeText(value).then(done, fallback); } catch (e) { fallback(); }
+  }
+
+  /* ---------- перевод страницы ---------- */
+  var VIEW_TITLE = {
+    games: 'gamesTitle', nick: 'nickTitle', prompt: 'promptTitle', video: 'videoTitle', idea: 'ideaTitle',
+    lab: 'labTitle', text: 'textTitle', helper: 'helpTitle', favorites: 'favTitle', channel: 'tChannel'
+  };
+  var langHooks = [];   // функции, которые перерисовывают динамические блоки при смене языка
+
+  function applyLang() {
+    document.documentElement.lang = lang;
+    qsa('[data-i18n]').forEach(function (n) { n.textContent = t(n.getAttribute('data-i18n')); });
+    qsa('[data-i18n-ph]').forEach(function (n) { n.setAttribute('placeholder', t(n.getAttribute('data-i18n-ph'))); });
+    var lb = $('langBtn');
+    lb.textContent = t('langBtn'); lb.setAttribute('aria-label', t('langAria'));
+    if (AI_ON) setText('promptDesc', t('promptDescAI'));
+    langHooks.forEach(function (fn) { fn(); });
+    setTitle();
+  }
+  function setTitle() {
+    var v = currentView;
+    document.title = VIEW_TITLE[v] ? t(VIEW_TITLE[v]) + ' — ' + BASE_TITLE : BASE_TITLE;
+  }
+  var currentView = 'home';
+
+  /* ---------- вывод с перерисовкой при смене языка ---------- */
+  var redos = {};
+  function show(id, fn) { redos[id] = fn; fn(); }
+  langHooks.push(function () { Object.keys(redos).forEach(function (k) { redos[k](); }); });
+  function noteTo(id, key, kind) {
+    show(id, function () {
+      var out = $(id); clear(out);
+      out.appendChild(el('div', 'note' + (kind ? ' ' + kind : ''), t(key)));
+    });
+  }
+  function spinTo(id, key) {
+    show(id, function () { var out = $(id); clear(out); out.appendChild(el('div', 'spin', t(key))); });
+  }
+
+  /* ---------- игры: данные из data/data.json ---------- */
+  var GAME_LIST = ['dota', 'cs', 'valorant', 'pubg', 'fortnite'];
+  var GAME_NAME = { dota: 'Dota 2', cs: 'CS2', valorant: 'Valorant', pubg: 'PUBG', fortnite: 'Fortnite' };
+  /* что показываем у каждой игры и что ещё только планируется */
+  var PLAN = {
+    dota: ['tournaments', 'teams', 'players', 'meta', 'matches'],
+    cs: ['tournaments', 'teams'],
+    valorant: ['tournaments'],
+    pubg: ['tournaments', 'players'],
+    fortnite: ['tournaments']
+  };
+  var SOON = {
+    dota: [], cs: ['players', 'meta'], valorant: ['teams', 'players', 'meta'],
+    pubg: ['teams', 'meta'], fortnite: ['teams', 'players', 'meta']
+  };
+  var REGION_KEY = {
+    europe: 'rEurope', americas: 'rAmericas', se_asia: 'rSeAsia', china: 'rChina',
+    EU: 'rEU', AS: 'rAS', NA: 'rNA'
+  };
+  var ISO = /^\d{4}-\d{2}-\d{2}$/;
+  var DAY = 86400000;
+  var DATA = null, dataState = 'idle', curGame = 'dota';   // dataState: idle | loading | ok | none | fail
+  var GS = { dota: 'europe', pubg: 'EU', meta: 'pro' };     // выбранные регионы и вкладка меты
+
+  function tn(k, n) { return t(k).replace('{n}', n); }
+  function isoDay(ms) { return new Date(ms).toISOString().slice(0, 10); }
+  function dayNum(iso) { return Math.round(Date.parse(iso + 'T00:00:00Z') / DAY); }
+  function dFmt(iso, withYear) {
+    if (!ISO.test(iso || '')) return String(iso || '');
+    try {
+      return new Date(iso + 'T00:00:00Z').toLocaleDateString(lang === 'ru' ? 'ru-RU' : 'en-GB',
+        { day: 'numeric', month: 'short', year: withYear ? 'numeric' : undefined, timeZone: 'UTC' });
+    } catch (e) { return iso; }
+  }
+  function dRange(a, b) {
+    var y = String(new Date().getUTCFullYear()), wy = a.slice(0, 4) !== y || b.slice(0, 4) !== y;
+    return a === b ? dFmt(a, wy) : dFmt(a, wy) + ' – ' + dFmt(b, wy);
+  }
+  function gameData(g) { return (DATA && DATA.games && DATA.games[g]) || {}; }
+  function num(v) { return typeof v === 'number' && isFinite(v) ? String(v) : (v === undefined || v === null ? '' : String(v)); }
+  function sources(g, key) { return DATA && DATA.sources && DATA.sources[g + '.' + key]; }
+
+  /* турниры */
+  function tourList(g) {
+    var raw = gameData(g).tournaments;
+    if (!Array.isArray(raw)) return [];
+    return raw.filter(function (x) {
+      return x && typeof x.name === 'string' && x.name && ISO.test(x.start || '') && ISO.test(x.end || '');
+    });
+  }
+  function tStat(it, today) { return it.start > today ? 'up' : (it.end < today ? 'done' : 'on'); }
+  function whenText(it, st, today) {
+    if (st === 'on') return t('soonNow');
+    var n = dayNum(it.start) - dayNum(today);
+    return n <= 0 ? t('today') : (n === 1 ? t('tomorrow') : tn('inDays', n));
+  }
+
+  /* маленькие строители блоков */
+  function lrow(rk, name, val, sub) {
+    var r = el('div', 'lr' + (rk === null ? ' nr' : ''));
+    if (rk !== null) r.appendChild(el('span', 'rk', rk));
+    r.appendChild(el('span', 'nm', name));
+    r.appendChild(el('span', 'vl', val));
+    if (sub) r.appendChild(el('span', 'sb', sub));
+    return r;
+  }
+  function block(title, desc, key) {
+    var b = el('section', 'gblock');
+    b.appendChild(el('h3', null, title));
+    if (desc) b.appendChild(el('p', 'hint', desc));
+    var u = DATA && DATA.updated && DATA.updated[key], gen = DATA && DATA.generated;
+    if (typeof u === 'string' && typeof gen === 'string' && ISO.test(u.slice(0, 10)) && ISO.test(gen.slice(0, 10)) &&
+        dayNum(gen.slice(0, 10)) - dayNum(u.slice(0, 10)) > 2) {
+      b.appendChild(el('p', 'hint stale', t('dFrom') + dFmt(u.slice(0, 10), true)));
+    }
+    return b;
+  }
+  function blockNote(b, g, key) {
+    var s = sources(g, key);
+    b.appendChild(el('div', 'note soft', t(s && s.skipped ? 'soonShort' : (s && s.ok === false ? 'srcDown' : 'noData'))));
+  }
+  function seg(items, cur, onPick) {
+    var s = el('div', 'seg');
+    items.forEach(function (it) {
+      var bt = el('button', 'chip', it.label);
+      bt.type = 'button';
+      bt.setAttribute('aria-pressed', it.id === cur ? 'true' : 'false');
+      bt.addEventListener('click', function () { onPick(it.id); });
+      s.appendChild(bt);
+    });
+    return s;
+  }
+
+  /* блок: турниры */
+  function tRow(it, st, today) {
+    var r = el('div', 'trow'), top = el('div', 'top');
+    top.appendChild(el('span', 'nm', it.name));
+    if (st !== 'done') top.appendChild(el('span', 'tb ' + (st === 'on' ? 'on' : 'up'), whenText(it, st, today)));
+    r.appendChild(top);
+    var meta = [dRange(it.start, it.end)];
+    if (it.prize) meta.push(it.prize);
+    if (it.tier) meta.push(t('tierL') + it.tier);
+    r.appendChild(el('div', 'meta', meta.join(' · ')));
+    if (st === 'done') {
+      var res = el('div', 'res');
+      if (it.winner) {
+        res.appendChild(el('span', 'win', t('winnerL') + it.winner));
+        if (it.runner_up) res.appendChild(document.createTextNode(' · ' + t('runnerL') + it.runner_up));
+      } else {
+        res.textContent = t('winnerUnknown');
+      }
+      r.appendChild(res);
+    }
+    return r;
+  }
+  function tournBlock(g) {
+    var b = block(t('bTourn'), null, g + '.tournaments'), list = tourList(g);
+    if (!list.length) { blockNote(b, g, 'tournaments'); return b; }
+    var today = isoDay(Date.now()), groups = { up: [], on: [], done: [] };
+    list.forEach(function (it) { groups[tStat(it, today)].push(it); });
+    var byStart = function (a, c) { return a.start < c.start ? -1 : (a.start > c.start ? 1 : 0); };
+    groups.up.sort(byStart);
+    groups.on.sort(byStart);
+    groups.done.sort(function (a, c) { return a.end < c.end ? 1 : (a.end > c.end ? -1 : 0); });
+    [['on', 'gOn', 6], ['up', 'gUp', 6], ['done', 'gDone', 8]].forEach(function (p) {
+      var arr = groups[p[0]].slice(0, p[2]);
+      if (!arr.length) return;
+      b.appendChild(el('h4', 'sub-h', t(p[1])));
+      var box = el('div', 'lt');
+      arr.forEach(function (it) { box.appendChild(tRow(it, p[0], today)); });
+      b.appendChild(box);
+    });
+    b.appendChild(el('p', 'credit', t('credit')));
+    return b;
+  }
+
+  /* блок: рейтинг команд */
+  function teamsBlock(g) {
+    var b = block(t('bTeams'), null, g + '.teams'), d = gameData(g).teams, box;
+    if (g === 'cs') {
+      var arr = d && Array.isArray(d.teams) ? d.teams : [];
+      if (!arr.length) { blockNote(b, g, 'teams'); return b; }
+      if (d.date) b.appendChild(el('p', 'hint', t('csD') + dFmt(d.date, true)));
+      box = el('div', 'lt');
+      arr.forEach(function (r) {
+        box.appendChild(lrow('#' + num(r.rank), String(r.name), num(r.points), Array.isArray(r.roster) ? r.roster.join(', ') : ''));
+      });
+    } else {
+      if (!Array.isArray(d) || !d.length) { blockNote(b, g, 'teams'); return b; }
+      b.appendChild(el('p', 'hint', t('teamsD')));
+      box = el('div', 'lt');
+      d.forEach(function (r) {
+        var sub = t('winsL') + ' ' + num(r.wins) + ' · ' + t('lossesL') + ' ' + num(r.losses) +
+          (r.last ? ' · ' + t('lastL') + dFmt(r.last) : '');
+        box.appendChild(lrow('#' + num(r.rank), String(r.name), num(r.rating), sub));
+      });
+    }
+    b.appendChild(box);
+    return b;
+  }
+
+  /* блок: рейтинг игроков (Dota 2 и PUBG) */
+  function playersBlock(g) {
+    var b = block(t('bPlayers'), null, g + '.players'), d = gameData(g).players;
+    var regs = g === 'dota' ? d : (d && d.regions);
+    var order = g === 'dota' ? ['europe', 'americas', 'se_asia', 'china'] : ['EU', 'AS', 'NA'];
+    var ids = regs && typeof regs === 'object' ? Object.keys(regs).filter(function (k) {
+      return Array.isArray(regs[k]) && regs[k].length;
+    }) : [];
+    if (!ids.length) { blockNote(b, g, 'players'); return b; }
+    ids.sort(function (a, c) { return order.indexOf(a) - order.indexOf(c); });
+    if (ids.indexOf(GS[g]) < 0) GS[g] = ids[0];
+    b.appendChild(el('p', 'hint', g === 'dota' ? t('playersDotaD') : t('pubgD') + (d.season || '')));
+    if (ids.length > 1) {
+      b.appendChild(seg(ids.map(function (id) { return { id: id, label: t(REGION_KEY[id] || 'rEurope') }; }), GS[g], function (id) {
+        GS[g] = id; renderGames();
+      }));
+    }
+    var box = el('div', 'lt');
+    regs[GS[g]].forEach(function (r) {
+      if (g === 'dota') {
+        box.appendChild(lrow('#' + num(r.rank), String(r.name), r.team ? String(r.team) : '', ''));
+      } else {
+        var sub = t('winsL') + ' ' + num(r.wins) + ' · K/D ' + num(r.kd) + ' · ' + t('dmgL') + ' ' + num(r.damage);
+        box.appendChild(lrow('#' + num(r.rank), String(r.name), num(r.points) + ' ' + t('ptsL'), sub));
+      }
+    });
+    b.appendChild(box);
+    return b;
+  }
+
+  /* блок: мета героев Dota 2 */
+  function metaBlock() {
+    var b = block(t('bMeta'), null, 'dota.meta'), d = gameData('dota').meta;
+    if (!d || !Array.isArray(d.pro)) { blockNote(b, 'dota', 'meta'); return b; }
+    var tabs = [
+      { id: 'pro', label: t('mPro'), desc: 'mProD', list: d.pro },
+      { id: 'best', label: t('mBest'), desc: 'mBestD', list: d.high_best },
+      { id: 'pop', label: t('mPop'), desc: 'mPopD', list: d.high_popular }
+    ].filter(function (x) { return Array.isArray(x.list) && x.list.length; });
+    if (!tabs.length) { blockNote(b, 'dota', 'meta'); return b; }
+    var cur = tabs.filter(function (x) { return x.id === GS.meta; })[0] || tabs[0];
+    GS.meta = cur.id;
+    b.appendChild(seg(tabs, cur.id, function (id) { GS.meta = id; renderGames(); }));
+    b.appendChild(el('p', 'hint', t(cur.desc)));
+    var box = el('div', 'lt');
+    cur.list.forEach(function (x, i) {
+      var sub = cur.id === 'pro' ? num(x.picks) + ' ' + t('picksL') + ' · ' + num(x.bans) + ' ' + t('bansL') : num(x.picks) + ' ' + t('gamesL');
+      box.appendChild(lrow('#' + (i + 1), String(x.hero), num(x.wr) + '%', sub));
+    });
+    b.appendChild(box);
+    return b;
+  }
+
+  /* блок: последние матчи про-сцены */
+  function matchesBlock() {
+    var b = block(t('bMatches'), null, 'dota.matches'), d = gameData('dota').matches;
+    if (!Array.isArray(d) || !d.length) { blockNote(b, 'dota', 'matches'); return b; }
+    var box = el('div', 'lt');
+    d.forEach(function (m) {
+      var sub = t('winnerL') + (m.winner || '?') + (m.league ? ' · ' + m.league : '') + (m.date ? ' · ' + dFmt(m.date) : '');
+      box.appendChild(lrow(null, String(m.radiant) + ' ' + t('vs') + ' ' + String(m.dire), String(m.score || ''), sub));
+    });
+    b.appendChild(box);
+    return b;
+  }
+
+  function soonBlock(g) {
+    var b = block(t('bSoon'), t('soonD'), g + '.soon');
+    var pills = el('div', 'pills');
+    SOON[g].forEach(function (k) { pills.appendChild(el('span', 'pill', t('s_' + k))); });
+    b.appendChild(pills);
+    return b;
+  }
+
+  var BLOCKS = {
+    tournaments: tournBlock, teams: teamsBlock, players: playersBlock,
+    meta: function () { return metaBlock(); }, matches: function () { return matchesBlock(); }
+  };
+
+  function renderGames() {
+    qsa('.tab[data-game]').forEach(function (a) {
+      if (a.getAttribute('data-game') === curGame) a.setAttribute('aria-current', 'page'); else a.removeAttribute('aria-current');
+    });
+    var info = $('gamesInfo'), out = $('gamesOut');
+    clear(info); clear(out);
+    if (dataState === 'idle' || dataState === 'loading') { out.appendChild(el('div', 'spin', t('loading'))); return; }
+    if (dataState === 'none') { out.appendChild(el('div', 'note soft', t('dNone'))); return; }
+    if (dataState === 'fail' || !DATA) { out.appendChild(el('div', 'note err', t('dFail'))); return; }
+
+    if (DATA.example) info.appendChild(el('div', 'note soft', t('dExample')));
+    var gen = typeof DATA.generated === 'string' ? DATA.generated.slice(0, 10) : '';
+    if (ISO.test(gen)) {
+      info.appendChild(el('p', 'hint', t('dUpdated') + dFmt(gen, true)));
+      var age = dayNum(isoDay(Date.now())) - dayNum(gen);
+      if (age > 3 && !DATA.example) info.appendChild(el('div', 'note err', tn('dStale', age)));
+    }
+
+    var grid = el('div', 'ggrid'), nodes = [];
+    PLAN[curGame].forEach(function (k) { nodes.push({ k: k, n: BLOCKS[k](curGame) }); });
+    var half = nodes.filter(function (x) { return x.k !== 'tournaments'; });
+    nodes.forEach(function (x) { if (x.k === 'tournaments') x.n.classList.add('span2'); });
+    if (half.length % 2 === 1) half[half.length - 1].n.classList.add('span2');
+    nodes.forEach(function (x) { grid.appendChild(x.n); });
+    if (SOON[curGame].length) { var sb = soonBlock(curGame); sb.classList.add('span2'); grid.appendChild(sb); }
+    out.appendChild(grid);
+  }
+
+  /* главная: ближайшие турниры по всем играм */
+  function renderHomeSoon() {
+    var sec = $('soon'), box = $('soonList');
+    clear(box);
+    var today = isoDay(Date.now()), arr = [];
+    if (DATA && DATA.games) {
+      GAME_LIST.forEach(function (g) {
+        tourList(g).forEach(function (it) {
+          var s = tStat(it, today);
+          if (s !== 'done') arr.push({ g: g, it: it, s: s });
+        });
+      });
+    }
+    arr.sort(function (a, c) { return a.it.start < c.it.start ? -1 : (a.it.start > c.it.start ? 1 : 0); });
+    arr = arr.slice(0, 4);
+    sec.hidden = !arr.length;
+    arr.forEach(function (x) {
+      var a = el('a', 'srow');
+      a.href = '#games-' + x.g;
+      a.appendChild(el('span', 'pill', GAME_NAME[x.g]));
+      var mid = el('span', 'sm');
+      mid.appendChild(el('strong', null, x.it.name));
+      mid.appendChild(el('small', null, dRange(x.it.start, x.it.end) + (x.it.prize ? ' · ' + x.it.prize : '')));
+      a.appendChild(mid);
+      a.appendChild(el('span', 'tb ' + (x.s === 'on' ? 'on' : 'up'), whenText(x.it, x.s, today)));
+      box.appendChild(a);
+    });
+  }
+
+  function loadData() {
+    if (dataState === 'loading' || dataState === 'ok') return;
+    dataState = 'loading';
+    var done = function () { renderHomeSoon(); if (currentView === 'games') renderGames(); };
+    try {
+      fetch(CONFIG.DATA_URL, { cache: 'no-cache' }).then(function (r) {
+        if (!r.ok) { var e = new Error('http'); e.status = r.status; throw e; }
+        return r.json();
+      }).then(function (j) {
+        if (!j || typeof j !== 'object' || !j.games || typeof j.games !== 'object') throw new Error('bad');
+        DATA = j; dataState = 'ok';
+      }).catch(function (e) {
+        dataState = e && e.status === 404 ? 'none' : 'fail';
+      }).then(done);
+    } catch (e) { dataState = 'fail'; done(); }
+  }
+  langHooks.push(function () { renderHomeSoon(); if (currentView === 'games') renderGames(); });
+
+  /* ---------- маршрутизация ---------- */
+  var VIEWS = ['nick', 'prompt', 'video', 'idea', 'lab', 'text', 'helper', 'favorites', 'channel'];
+
+  function parseHash(raw) {
+    var h = String(raw || '').replace(/^#/, '').toLowerCase();
+    if (!h || h === 'home') return { view: 'home' };
+    if (h === 'tools') return { view: 'home', scroll: true };
+    var m = h.match(/^(?:games|profile)(?:-([a-z0-9]+))?$/);
+    if (m) return { view: 'games', game: GAME_LIST.indexOf(m[1]) >= 0 ? m[1] : 'dota' };
+    if (VIEWS.indexOf(h) >= 0) return h === 'helper' && !AI_ON ? { view: 'home' } : { view: h };
+    return { view: 'home' };
+  }
+  function render() {
+    var r = parseHash(location.hash);
+    qsa('[data-view]').forEach(function (s) { s.hidden = s.getAttribute('data-view') !== r.view; });
+    if (r.view === 'games') {
+      curGame = r.game;
+      if (dataState === 'fail' || dataState === 'none') dataState = 'idle';
+      loadData();
+      renderGames();
+    }
+    if (r.view === 'favorites') renderFavs();
+    var changed = r.view !== currentView;
+    currentView = r.view;
+    setTitle();
+    if (r.scroll) { var tl = $('tools'); if (tl && tl.scrollIntoView) tl.scrollIntoView(); }
+    else if (changed || lastView === null) window.scrollTo(0, 0);
+    lastView = r.view;
+  }
+  var lastView = null;
+
+  /* ---------- связь с ИИ (Cloudflare Worker) ---------- */
+  function callAI(mode, params) {
+    var body = { mode: mode, lang: lang };
+    Object.keys(params).forEach(function (k) { if (params[k]) body[k] = params[k]; });
+    var ctrl = typeof AbortController === 'function' ? new AbortController() : null;
+    var timer = setTimeout(function () { if (ctrl) ctrl.abort(); }, 40000);
+    return fetch(CONFIG.API_URL, {
+      method: 'POST',
+      headers: { 'Content-Type': 'text/plain;charset=UTF-8' },   // без preflight-запроса
+      body: JSON.stringify(body),
+      signal: ctrl ? ctrl.signal : undefined
+    }).then(function (r) {
+      return r.json().catch(function () { return {}; }).then(function (j) {
+        if (!r.ok || !j.text) { var e = new Error(j.error || 'fail'); e.status = r.status; throw e; }
+        return j.text;
+      });
+    }).then(function (v) { clearTimeout(timer); return v; }, function (e) { clearTimeout(timer); throw e; });
+  }
+  function aiError(e, hasFallback) {
+    if (e && e.status === 429) return t('aiLimit');
+    return t(hasFallback ? 'aiFail' : 'aiFailAsk');
+  }
+  function busy(btn, fn) {
+    if (btn.disabled) return;
+    btn.disabled = true;
+    btn.textContent = t('aiThinking');
+    Promise.resolve().then(fn).catch(function () {}).then(function () {
+      btn.disabled = false;
+      btn.textContent = t(btn.getAttribute('data-i18n'));
+    });
+  }
+  function parseNicks(txt) {
+    return String(txt).split(/\r?\n/).map(function (l) {
+      return l.replace(/^\s*(?:[-*•]|\d+[.)])\s*/, '').replace(/["'`]/g, '').trim();
+    }).filter(function (l) { return /^[A-Za-z0-9_.\-]{3,20}$/.test(l); }).slice(0, 6);
+  }
+
+  /* ---------- банки для генераторов ---------- */
+  var NG = {
+    dark:  { s: ['vor','kael','nyx','zhar','mor','thal','ash','vex','kry','drak','umb','ner','grim','vael','sorn'],
+             e: ['oth','yn','ar','is','ex','us','ion','el','um'] },
+    cyber: { s: ['zy','kiro','nex','qor','vyx','syn','tek','rax','lum','flux','neo','xen','ora','volt','myr'],
+             e: ['x','n','os','ix','on','ex','ik','a'] },
+    pro:   { s: ['zeph','kryo','ax','van','ori','tyr','kor','ryn','vel','alt','dax','ren','lyr','cael','irk'],
+             e: ['x','o','is','ar','on','a','yx'] }
+  };
+  var FUN_A = ['Soggy','Wobbly','Suspicious','Legally','Slightly','Angry','Humble','Sneaky','Overcooked','Tactical'];
+  var FUN_B = ['Toaster','Walrus','Cabbage','Raccoon','Biscuit','Goblin','Pigeon','Noodle','Pancake','Llama'];
+
+  var PROMPTS = {
+    ru: {
+      ideas: 'Придумай 10 оригинальных идей по теме',
+      explain: 'Объясни простыми словами тему',
+      content: 'Создай интересный план контента по теме',
+      code: 'Помоги разобраться с программированием. Объясняй пошагово и показывай примеры по теме',
+      game: 'Предложи честную игровую стратегию и советы для новичка по теме'
+    },
+    en: {
+      ideas: 'Generate 10 original ideas about',
+      explain: 'Explain this topic in simple terms:',
+      content: 'Create an engaging content plan about',
+      code: 'Help me learn programming. Explain step by step and show examples about',
+      game: 'Suggest a fair gaming strategy and beginner tips for'
+    }
+  };
+  var VIDEO = {
+    ru: {
+      YouTube: ['{t}: проверил необычный способ игры, вот результат', '{t}: 5 ошибок новичков', 'Челлендж: {t} с необычным правилом', '{t}: что будет, если сыграть иначе?'],
+      TikTok: ['{t}: неожиданный факт', '{t}: одна ошибка, которую делают многие', 'Проверь себя: знаешь ли ты всё про {t}?', '{t}: самый необычный момент'],
+      Shorts: ['{t}: быстрый совет', '{t}: 3 факта за 30 секунд', '{t}: ты точно не знал этого', '{t}: маленький секрет'],
+      stream: ['{t}: челлендж от зрителей', 'Учусь играть с нуля: {t}', '{t}: пробуем необычный режим', '{t}: вечер испытаний']
+    },
+    en: {
+      YouTube: ['{t}: I tested an unusual way to play, here is the result', '{t}: 5 beginner mistakes', 'Challenge: {t} with an unusual rule', '{t}: what happens if you play differently?'],
+      TikTok: ['{t}: an unexpected fact', '{t}: one mistake many people make', 'Test yourself: do you know everything about {t}?', '{t}: the strangest moment'],
+      Shorts: ['{t}: a quick tip', '{t}: 3 facts in 30 seconds', '{t}: you definitely did not know this', '{t}: a small secret'],
+      stream: ['{t}: viewers’ challenge', 'Learning from scratch: {t}', '{t}: trying an unusual mode', '{t}: a night of challenges']
+    }
+  };
+  var IDEAS = {
+    ru: {
+      site: ['Создай каталог полезных инструментов для геймеров.', 'Сделай страницу с подборкой бесплатных ресурсов для учёбы.', 'Создай личный трекер целей с отметками прогресса.', 'Разработай сайт с генераторами названий для проектов.'],
+      game: ['Придумай дружеский челлендж с необычным игровым правилом.', 'Попробуй пройти любимую игру, используя новую стратегию.', 'Составь список из 10 советов для новичков в любимой игре.', 'Создай викторину о персонажах или игровых мирах.'],
+      content: ['Сними короткий ролик о том, чему научился за неделю.', 'Сравни два игровых инструмента и объясни различия.', 'Сделай видео «3 полезных совета для новичка».', 'Покажи процесс создания маленького проекта с нуля.'],
+      learn: ['Сделай маленький сайт и добавляй по одной функции в день.', 'Изучи CSS-анимацию и создай анимированную кнопку.', 'Напиши программу, которая случайно выбирает идею.', 'Разбери один JavaScript-метод и используй его в проекте.']
+    },
+    en: {
+      site: ['Build a directory of useful tools for gamers.', 'Create a page with free learning resources.', 'Build a personal goal tracker with progress marks.', 'Develop a website that generates project names.'],
+      game: ['Invent a friendly challenge with an unusual game rule.', 'Try a new strategy in your favorite game.', 'Write 10 beginner tips for a game you enjoy.', 'Create a quiz about characters or game worlds.'],
+      content: ['Make a short video about what you learned this week.', 'Compare two gaming tools and explain the differences.', 'Create a video with three beginner tips.', 'Show how to build a small project from scratch.'],
+      learn: ['Build a small website and add one feature each day.', 'Learn CSS animation and create an animated button.', 'Write a program that randomly selects an idea.', 'Learn one JavaScript method and use it in your project.']
+    }
+  };
+  var CH = {
+    ru: {
+      any: ['Попробуй новый игровой режим, который ещё не изучал.', 'Сыграй один раунд с другом и придумайте собственные правила.', 'Изучи одну игровую механику и объясни её другому игроку.'],
+      shooter: ['Сосредоточься на командной работе и помогай союзникам.', 'Перед матчем потренируй точность в безопасном тренировочном режиме.', 'Попробуй новую роль или тактику, не мешая своей команде.'],
+      sandbox: ['Построй что-нибудь полезное, используя ограниченный набор материалов.', 'Исследуй новый участок мира и отметь интересные места.', 'Создай небольшую базу с необычным дизайном.'],
+      racing: ['Пройди трассу, стараясь сохранять плавное управление.', 'Попробуй другой автомобиль или настройку управления.', 'Изучи один поворот и найди более стабильную траекторию.']
+    },
+    en: {
+      any: ['Try a game mode you have not explored yet.', 'Play a round with a friend and invent your own rules.', 'Learn one game mechanic and explain it to another player.'],
+      shooter: ['Focus on teamwork and help your teammates.', 'Practice accuracy in a safe training mode before a match.', 'Try a different role or tactic without disrupting your team.'],
+      sandbox: ['Build something useful with a limited set of materials.', 'Explore a new area and mark interesting locations.', 'Create a small base with an unusual design.'],
+      racing: ['Complete a track while aiming for smooth control.', 'Try a different car or control setup.', 'Practice one corner and find a more consistent racing line.']
+    }
+  };
+  var TOOLTAG = { nick: 'NICK', prompt: 'PROMPT', video: 'VIDEO', idea: 'IDEA', lab: 'LAB', ai: 'ANSWER', help: 'HELP' };
+
+  /* ---------- генераторы ---------- */
+  // Результат из локальной базы пересчитывается при смене языка, результат от ИИ остаётся как есть.
+  function put(id, text, fn) {
+    setText(id, text);
+    if (fn) redos['res:' + id] = function () { setText(id, fn()); }; else delete redos['res:' + id];
+  }
+
+  function makeNick(style) {
+    var n, g, a, b, r;
+    if (style === 'funny') {
+      r = rnd(4);
+      n = r === 0 ? 'Not' + pick(FUN_B)
+        : r === 1 ? pick(FUN_B) + 'Enjoyer'
+        : r === 2 ? pick(FUN_B) + 'Dealer'
+        : pick(FUN_A) + pick(FUN_B);
+    } else {
+      g = NG[style] || NG.dark;
+      a = pick(g.s);
+      do { b = pick(g.s); } while (b === a);
+      r = rnd(3);
+      n = r === 0 ? cap(a) + pick(g.e) : r === 1 ? cap(a) + b : cap(a) + cap(b);
+    }
+    if (rnd(4) === 0) n += 10 + rnd(90);
+    return n;
+  }
+
+  var nickQueue = [];
+  function genNick(btn) {
+    var style = $('nickStyle').value, word = $('nickWord').value.trim();
+    if (!AI_ON || !btn) { put('nickname', makeNick(style)); return; }
+    if (nickQueue.length) { put('nickname', nickQueue.shift()); return; }
+    busy(btn, function () {
+      return callAI('nick', { style: style, text: word }).then(function (txt) {
+        nickQueue = parseNicks(txt);
+        if (!nickQueue.length) throw new Error('empty');
+        put('nickname', nickQueue.shift());
+      }).catch(function (e) { toast(aiError(e, true)); put('nickname', makeNick(style)); });
+    });
+  }
+
+  var ideaSt = { c: 'site', i: -1 }, labSt = { c: 'any', i: -1 }, videoSt = { p: 'YouTube', i: -1 };
+  function nextIdx(st, key, bank) {
+    var len = bank[lang][key].length;
+    return st.c === key && st.i >= 0 ? other(len, st.i) : rnd(len);
+  }
+  function genIdea(btn) {
+    var c = $('ideaCategory').value, topic = $('ideaTopic').value.trim();
+    var local = function () {
+      ideaSt = { c: c, i: nextIdx(ideaSt, c, IDEAS) };
+      put('ideaResult', IDEAS[lang][ideaSt.c][ideaSt.i], function () { return IDEAS[lang][ideaSt.c][ideaSt.i]; });
+    };
+    if (!AI_ON || !btn) { local(); return; }
+    busy(btn, function () {
+      return callAI('idea', { category: c, text: topic }).then(function (txt) { put('ideaResult', txt); })
+        .catch(function (e) { toast(aiError(e, true)); local(); });
+    });
+  }
+  function genLab(btn) {
+    var c = $('challengeGame').value;
+    var local = function () {
+      labSt = { c: c, i: nextIdx(labSt, c, CH) };
+      put('challengeResult', CH[lang][labSt.c][labSt.i], function () { return CH[lang][labSt.c][labSt.i]; });
+    };
+    if (!AI_ON || !btn) { local(); return; }
+    busy(btn, function () {
+      return callAI('lab', { game: c }).then(function (txt) { put('challengeResult', txt); })
+        .catch(function (e) { toast(aiError(e, true)); local(); });
+    });
+  }
+  function genVideo(btn) {
+    var p = $('platform').value, topic = $('videoTopic').value.trim();
+    var local = function () {
+      var len = VIDEO[lang][p].length;
+      videoSt = { p: p, i: videoSt.p === p && videoSt.i >= 0 ? other(len, videoSt.i) : rnd(len) };
+      var text = function () {
+        var tt = topic || t('defTopic');
+        return t('platformLabel') + ': ' + t('plat_' + videoSt.p) + '\n' + t('ideaLabel') + ': ' + VIDEO[lang][videoSt.p][videoSt.i].split('{t}').join(tt);
+      };
+      put('videoResult', text(), text);
+    };
+    if (!AI_ON || !btn) { local(); return; }
+    busy(btn, function () {
+      return callAI('video', { platform: p, text: topic }).then(function (txt) { put('videoResult', txt); })
+        .catch(function (e) { toast(aiError(e, true)); local(); });
+    });
+  }
+
+  /* ---------- главная: случайный набор ---------- */
+  var con = { nick: '', idea: { c: 'site', i: 0 }, lab: { c: 'any', i: 0 } };
+  function conRender() {
+    setText('cNick', con.nick);
+    setText('cIdea', IDEAS[lang][con.idea.c][con.idea.i]);
+    setText('cLab', CH[lang][con.lab.c][con.lab.i]);
+  }
+  function roll() {
+    var styles = ['dark', 'cyber', 'funny', 'pro'], cats = Object.keys(IDEAS.ru), games = Object.keys(CH.ru);
+    var ic = pick(cats), lc = pick(games);
+    con = { nick: makeNick(pick(styles)), idea: { c: ic, i: rnd(IDEAS.ru[ic].length) }, lab: { c: lc, i: rnd(CH.ru[lc].length) } };
+    conRender();
+  }
+
+  /* ---------- конструктор промптов и помощник ---------- */
+  function buildPrompt() {
+    var task = $('aiTask').value, topic = $('aiTopic').value.trim();
+    if (!topic) { toast(t('needTopic')); $('aiTopic').focus(); return false; }
+    setText('aiResult', PROMPTS[lang][task] + ' ' + t('q1') + topic + t('q2') + '. ' + t('promptTail'));
+    return true;
+  }
+  function showAnswer(boxId, textId, text) { setText(textId, text); $(boxId).hidden = false; }
+  function sendAI(btn) {
+    if (!$('aiResult').textContent.trim() && !buildPrompt()) return;
+    var prompt = $('aiResult').textContent;
+    busy(btn, function () {
+      return callAI('ask', { text: prompt }).then(function (txt) { showAnswer('aiAnswerBox', 'aiAnswer', txt); })
+        .catch(function (e) { toast(aiError(e, false)); });
+    });
+  }
+  function askHelp() {
+    var q = $('helpInput').value.trim(), btn = $('askBtn');
+    if (!q) { toast(t('needQuestion')); $('helpInput').focus(); return; }
+    busy(btn, function () {
+      return callAI('help', { text: q }).then(function (txt) { showAnswer('helpAnswerBox', 'helpAnswer', txt); })
+        .catch(function (e) { toast(aiError(e, false)); });
+    });
+  }
+
+  /* ---------- анализ текста ---------- */
+  function updateStats() {
+    var v = $('textInput').value, tr = v.trim();
+    setText('wordCount', tr ? String(tr.split(/\s+/).length) : '0');
+    setText('charCount', String(Array.from(v).length));
+    setText('lineCount', v ? String(v.split(/\r\n|\r|\n/).length) : '0');
+  }
+  function cleanSpaces(v) {
+    return v.replace(/[ \t ]+/g, ' ').replace(/ *(\r\n|\r|\n) */g, '\n').replace(/\n{3,}/g, '\n\n').trim();
+  }
+  function textOp(fn) { var ti = $('textInput'); ti.value = fn(ti.value); updateStats(); }
+
+  /* ---------- избранное ---------- */
+  var favs = [], warnedStorage = false, favConfirm = false, favTimer = 0;
+  function loadFavs() {
+    try {
+      var a = JSON.parse(sget(FAV_KEY) || '[]');
+      favs = (Array.isArray(a) ? a : []).filter(function (f) { return f && typeof f.text === 'string' && typeof f.tool === 'string'; }).slice(0, 60);
+    } catch (e) { favs = []; }
+  }
+  function saveFavs() {
+    if (!sset(FAV_KEY, JSON.stringify(favs)) && !warnedStorage) { warnedStorage = true; toast(t('noStorage')); }
+  }
+  function updateFavUI() {
+    var n = favs.length;
+    setText('favCount', n ? String(n) : '');
+    setText('favTile', t('open') + (n ? ' · ' + n : ''));
+  }
+  function renderFavs() {
+    var box = $('favoriteList'); clear(box);
+    updateFavUI();
+    $('clearFavs').hidden = !favs.length;
+    if (!favs.length) { box.appendChild(el('div', 'fav-empty', t('favEmpty'))); return; }
+    favs.forEach(function (f) {
+      var item = el('div', 'fav');
+      item.appendChild(el('div', 'fav-text', f.text));
+      var meta = el('div', 'fav-meta');
+      meta.appendChild(el('span', 'tag', TOOLTAG[f.tool] || String(f.tool).toUpperCase().slice(0, 10)));
+      var cp = el('button', 'btn sm', t('copy')); cp.type = 'button';
+      cp.addEventListener('click', function () { copyFrom(cp, f.text); });
+      var rm = el('button', 'btn sm', t('remove')); rm.type = 'button';
+      rm.addEventListener('click', function () {
+        favs = favs.filter(function (x) { return x !== f; });
+        saveFavs(); renderFavs(); toast(t('removed'));
+      });
+      meta.appendChild(cp); meta.appendChild(rm);
+      item.appendChild(meta);
+      box.appendChild(item);
+    });
+  }
+  function addFav(targetId, tool) {
+    var text = $(targetId).textContent.trim().slice(0, 2000);
+    if (!text) { toast(t('nothingSave')); return; }
+    if (favs.some(function (f) { return f.tool === tool && f.text === text; })) { toast(t('already')); return; }
+    favs.unshift({ tool: tool, text: text, ts: Date.now() });
+    favs = favs.slice(0, 60);
+    saveFavs(); updateFavUI(); toast(t('saved'));
+  }
+  function clearFavs(btn) {
+    if (!favConfirm) {
+      favConfirm = true; btn.textContent = t('favConfirm');
+      favTimer = setTimeout(function () { favConfirm = false; btn.textContent = t('favClear'); }, 3500);
+      return;
+    }
+    clearTimeout(favTimer); favConfirm = false; btn.textContent = t('favClear');
+    favs = []; saveFavs(); renderFavs(); toast(t('cleared'));
+  }
+
+  /* ---------- события ---------- */
+  document.addEventListener('click', function (e) {
+    var b = e.target.closest ? e.target.closest('[data-act]') : null;
+    if (!b) return;
+    var act = b.getAttribute('data-act');
+    switch (act) {
+      case 'lang': lang = lang === 'ru' ? 'en' : 'ru'; sset(LANG_KEY, lang); nickQueue = []; applyLang(); break;
+      case 'roll': roll(); break;
+      case 'gen-nick': genNick(b); break;
+      case 'gen-idea': genIdea(b); break;
+      case 'gen-lab': genLab(b); break;
+      case 'gen-video': genVideo(b); break;
+      case 'build-prompt': buildPrompt(); break;
+      case 'send-ai': sendAI(b); break;
+      case 'ask-help': askHelp(); break;
+      case 'chip': $('helpInput').value = b.textContent; askHelp(); break;
+      case 'copy':
+        var node = $(b.getAttribute('data-target'));
+        copyFrom(node, 'value' in node ? node.value : node.textContent);
+        break;
+      case 'save': addFav(b.getAttribute('data-target'), b.getAttribute('data-tool')); break;
+      case 't-clean': textOp(cleanSpaces); break;
+      case 't-upper': textOp(function (v) { return v.toUpperCase(); }); break;
+      case 't-lower': textOp(function (v) { return v.toLowerCase(); }); break;
+      case 't-clear': textOp(function () { return ''; }); $('textInput').focus(); break;
+      case 'clear-favs': clearFavs(b); break;
+    }
+  });
+
+  /* ---------- запуск ---------- */
+  langHooks.push(function () {
+    conRender();
+    updateFavUI();
+    if (currentView === 'favorites') renderFavs();
+    $('clearFavs').textContent = t('favClear');
+  });
+
+  function init() {
+    qsa('[data-ai-only]').forEach(function (n) { n.hidden = !AI_ON; });
+    $('year').textContent = new Date().getFullYear();
+    var bot = safeUrl(CONFIG.BOT_URL);
+    if (bot) $('botLink').href = bot; else $('botLink').hidden = true;
+    var ch = safeUrl(CONFIG.CHANNEL_URL);
+    if (ch) { $('chanLink').href = ch; $('chanLink').hidden = false; }
+    loadFavs();
+    loadData();
+    $('textInput').addEventListener('input', updateStats);
+    $('helpInput').addEventListener('keydown', function (ev) { if (ev.key === 'Enter') { ev.preventDefault(); askHelp(); } });
+    roll();
+    applyLang();
+    updateStats();
+    window.addEventListener('hashchange', render);
+    render();
+  }
+
+  if (window.__NEXORA_TEST__) {
+    window.__NEXORA_TEST__.api = {
+      parseHash: parseHash, makeNick: makeNick, parseNicks: parseNicks, cleanSpaces: cleanSpaces, I: I,
+      dRange: dRange, dFmt: dFmt
+    };
+  }
+  init();
+})();
+
+</script>
+</body>
+</html>
