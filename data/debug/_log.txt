@@ -4,8 +4,8 @@ dota.matches | ок | записей: 10
 dota.players | ок | записей: 40
 cs.teams | ок | записей: 16
 pubg.players | пропуск | нет секрета PUBG_API_KEY
-dota.tournaments | ошибка | ParseError: Liquipedia недоступна; S-Tier_Tournaments: HTTP 429 (liquipedia.net/dota2/api.php); A-Tier_Tournaments: HTTP 429 (liquipedia.net/dota2/api.php)
-cs.tournaments | ошибка | ParseError: Liquipedia недоступна; S-Tier_Tournaments: HTTP 429 (liquipedia.net/counterstrike/api.php); A-Tier_Tournaments: HTTP 429 (liquipedia.net/counterstrike/api.php)
-valorant.tournaments | ошибка | ParseError: Liquipedia недоступна; S-Tier_Tournaments: HTTP 429 (liquipedia.net/valorant/api.php); A-Tier_Tournaments: HTTP 429 (liquipedia.net/valorant/api.php)
-pubg.tournaments | ошибка | ParseError: Liquipedia недоступна; S-Tier_Tournaments: HTTP 429 (liquipedia.net/pubg/api.php); A-Tier_Tournaments: HTTP 429 (liquipedia.net/pubg/api.php)
-fortnite.tournaments | ошибка | ParseError: Liquipedia недоступна; S-Tier_Tournaments: HTTP 429 (liquipedia.net/fortnite/api.php); A-Tier_Tournaments: HTTP 429 (liquipedia.net/fortnite/api.php)
+dota.tournaments | ошибка | ParseError: Liquipedia недоступна; S-Tier_Tournaments: HTTP 429 (liquipedia.net/dota2/api.php); A-Tier_Tournaments: Liquipedia ограничила запросы (429) в этом запуске, остальные пропущены
+cs.tournaments | ошибка | ParseError: Liquipedia недоступна; S-Tier_Tournaments: Liquipedia ограничила запросы (429) в этом запуске, остальные пропущены; A-Tier_Tournaments: Liquipedia ограничила запросы (429) в этом запуске, остальные пропущены
+valorant.tournaments | ошибка | ParseError: Liquipedia недоступна; S-Tier_Tournaments: Liquipedia ограничила запросы (429) в этом запуске, остальные пропущены
+pubg.tournaments | ошибка | ParseError: Liquipedia недоступна; S-Tier_Tournaments: Liquipedia ограничила запросы (429) в этом запуске, остальные пропущены
+fortnite.tournaments | ошибка | ParseError: Liquipedia недоступна; S-Tier_Tournaments: Liquipedia ограничила запросы (429) в этом запуске, остальные пропущены

@@ -1,12 +1,12 @@
 {
  "schema": 1,
- "generated": "2026-11-01T08:18:18Z",
+ "generated": "2026-11-01T13:24:49Z",
  "updated": {
-  "dota.teams": "2026-11-01T08:18:18Z",
-  "dota.meta": "2026-11-01T08:18:18Z",
-  "dota.matches": "2026-11-01T08:18:18Z",
-  "dota.players": "2026-11-01T08:18:18Z",
-  "cs.teams": "2026-11-01T08:18:18Z"
+  "dota.teams": "2026-11-01T13:24:49Z",
+  "dota.meta": "2026-11-01T13:24:49Z",
+  "dota.matches": "2026-11-01T13:24:49Z",
+  "dota.players": "2026-11-01T13:24:49Z",
+  "cs.teams": "2026-11-01T13:24:49Z"
  },
  "sources": {
   "dota.teams": {
@@ -36,23 +36,23 @@
   },
   "dota.tournaments": {
    "ok": false,
-   "error": "ParseError: Liquipedia недоступна; S-Tier_Tournaments: HTTP 429 (liquipedia.net/dota2/api.php); A-Tier_Tournaments: HTTP 429 (liquipedia.net/dota2/api.php)"
+   "error": "ParseError: Liquipedia недоступна; S-Tier_Tournaments: HTTP 429 (liquipedia.net/dota2/api.php); A-Tier_Tournaments: Liquipedia ограничила запросы (429) в этом запуске, остальные пропущены"
   },
   "cs.tournaments": {
    "ok": false,
-   "error": "ParseError: Liquipedia недоступна; S-Tier_Tournaments: HTTP 429 (liquipedia.net/counterstrike/api.php); A-Tier_Tournaments: HTTP 429 (liquipedia.net/counterstrike/api.php)"
+   "error": "ParseError: Liquipedia недоступна; S-Tier_Tournaments: Liquipedia ограничила запросы (429) в этом запуске, остальные пропущены; A-Tier_Tournaments: Liquipedia ограничила запросы (429) в этом запуске, остальные пропущены"
   },
   "valorant.tournaments": {
    "ok": false,
-   "error": "ParseError: Liquipedia недоступна; S-Tier_Tournaments: HTTP 429 (liquipedia.net/valorant/api.php); A-Tier_Tournaments: HTTP 429 (liquipedia.net/valorant/api.php)"
+   "error": "ParseError: Liquipedia недоступна; S-Tier_Tournaments: Liquipedia ограничила запросы (429) в этом запуске, остальные пропущены"
   },
   "pubg.tournaments": {
    "ok": false,
-   "error": "ParseError: Liquipedia недоступна; S-Tier_Tournaments: HTTP 429 (liquipedia.net/pubg/api.php); A-Tier_Tournaments: HTTP 429 (liquipedia.net/pubg/api.php)"
+   "error": "ParseError: Liquipedia недоступна; S-Tier_Tournaments: Liquipedia ограничила запросы (429) в этом запуске, остальные пропущены"
   },
   "fortnite.tournaments": {
    "ok": false,
-   "error": "ParseError: Liquipedia недоступна; S-Tier_Tournaments: HTTP 429 (liquipedia.net/fortnite/api.php); A-Tier_Tournaments: HTTP 429 (liquipedia.net/fortnite/api.php)"
+   "error": "ParseError: Liquipedia недоступна; S-Tier_Tournaments: Liquipedia ограничила запросы (429) в этом запуске, остальные пропущены"
   }
  },
  "games": {
@@ -222,9 +222,9 @@
      },
      {
       "hero": "Windranger",
-      "picks": 22,
+      "picks": 23,
       "bans": 10,
-      "wr": 31.8
+      "wr": 30.4
      },
      {
       "hero": "Witch Doctor",
@@ -245,119 +245,119 @@
       "wr": 50.0
      },
      {
+      "hero": "Nature's Prophet",
+      "picks": 15,
+      "bans": 14,
+      "wr": 66.7
+     },
+     {
       "hero": "Earthshaker",
       "picks": 14,
       "bans": 17,
       "wr": 35.7
-     },
-     {
-      "hero": "Nature's Prophet",
-      "picks": 14,
-      "bans": 14,
-      "wr": 64.3
      }
     ],
     "high_best": [
      {
       "hero": "Bounty Hunter",
-      "picks": 35599,
-      "wr": 55.2
+      "picks": 37112,
+      "wr": 55.1
      },
      {
       "hero": "Outworld Devourer",
-      "picks": 57026,
-      "wr": 54.3
+      "picks": 59560,
+      "wr": 54.4
      },
      {
       "hero": "Nyx Assassin",
-      "picks": 47824,
+      "picks": 49944,
       "wr": 53.0
      },
      {
       "hero": "Wraith King",
-      "picks": 32180,
-      "wr": 52.8
+      "picks": 33554,
+      "wr": 52.9
      },
      {
       "hero": "Night Stalker",
-      "picks": 36414,
-      "wr": 52.7
+      "picks": 37972,
+      "wr": 52.8
      },
      {
-      "hero": "Spectre",
-      "picks": 26406,
+      "hero": "Phantom Lancer",
+      "picks": 42940,
       "wr": 52.7
      },
      {
       "hero": "Grimstroke",
-      "picks": 35066,
+      "picks": 36533,
       "wr": 52.6
      },
      {
-      "hero": "Phantom Lancer",
-      "picks": 41271,
-      "wr": 52.5
+      "hero": "Spectre",
+      "picks": 27553,
+      "wr": 52.6
      },
      {
       "hero": "Spirit Breaker",
-      "picks": 63744,
+      "picks": 66370,
       "wr": 52.4
      },
      {
       "hero": "Juggernaut",
-      "picks": 61150,
+      "picks": 63826,
       "wr": 52.4
      }
     ],
     "high_popular": [
      {
       "hero": "Pudge",
-      "picks": 101445,
+      "picks": 105663,
       "wr": 50.0
      },
      {
       "hero": "Rubick",
-      "picks": 97799,
+      "picks": 101731,
       "wr": 49.7
      },
      {
       "hero": "Lion",
-      "picks": 80659,
-      "wr": 48.4
+      "picks": 83783,
+      "wr": 48.3
      },
      {
       "hero": "Invoker",
-      "picks": 78256,
+      "picks": 81094,
       "wr": 51.8
      },
      {
       "hero": "Dragon Knight",
-      "picks": 72522,
-      "wr": 52.2
+      "picks": 75690,
+      "wr": 52.1
      },
      {
       "hero": "Windranger",
-      "picks": 70480,
-      "wr": 48.9
+      "picks": 73351,
+      "wr": 49.0
      },
      {
       "hero": "Slark",
-      "picks": 65222,
-      "wr": 50.2
+      "picks": 67840,
+      "wr": 50.1
      },
      {
       "hero": "Spirit Breaker",
-      "picks": 63744,
+      "picks": 66370,
       "wr": 52.4
      },
      {
       "hero": "Earthshaker",
-      "picks": 62315,
+      "picks": 64838,
       "wr": 51.3
      },
      {
       "hero": "Juggernaut",
-      "picks": 61150,
+      "picks": 63826,
       "wr": 52.4
      }
     ]
@@ -448,13 +448,13 @@
     "europe": [
      {
       "rank": 1,
-      "name": "9Class",
-      "team": "PV"
+      "name": "Arkadiy Khromaev",
+      "team": ""
      },
      {
       "rank": 2,
-      "name": "Arkadiy Khromaev",
-      "team": ""
+      "name": "9Class",
+      "team": "PV"
      },
      {
       "rank": 3,
@@ -468,18 +468,18 @@
      },
      {
       "rank": 5,
-      "name": "Niku",
-      "team": "NAVI"
-     },
-     {
-      "rank": 6,
       "name": "bzm",
       "team": "1win"
      },
      {
-      "rank": 7,
+      "rank": 6,
       "name": "医者watson",
       "team": "TY"
+     },
+     {
+      "rank": 7,
+      "name": "Niku",
+      "team": "NAVI"
      },
      {
       "rank": 8,
@@ -552,12 +552,12 @@
     "se_asia": [
      {
       "rank": 1,
-      "name": "JG",
+      "name": "Kuys",
       "team": ""
      },
      {
       "rank": 2,
-      "name": "Kuys",
+      "name": "Be1Yi",
       "team": ""
      },
      {
@@ -587,18 +587,18 @@
      },
      {
       "rank": 8,
-      "name": "Be1Yi",
-      "team": ""
-     },
-     {
-      "rank": 9,
       "name": "BEEBIE",
       "team": ""
      },
      {
-      "rank": 10,
+      "rank": 9,
       "name": "大仓bra惊云",
       "team": ""
+     },
+     {
+      "rank": 10,
+      "name": "GS",
+      "team": "90s"
      }
     ],
     "china": [
@@ -629,28 +629,28 @@
      },
      {
       "rank": 6,
-      "name": "Rice.",
-      "team": ""
-     },
-     {
-      "rank": 7,
-      "name": "MKL",
-      "team": "ljy简直太帅了"
-     },
-     {
-      "rank": 8,
       "name": "天国大哥",
       "team": ""
      },
      {
+      "rank": 7,
+      "name": "Rice.",
+      "team": ""
+     },
+     {
+      "rank": 8,
+      "name": "MKL",
+      "team": "ljy简直太帅了"
+     },
+     {
       "rank": 9,
-      "name": "我妻善逸",
-      "team": "IB"
+      "name": "一眼万年只是我以为",
+      "team": ""
      },
      {
       "rank": 10,
-      "name": "一眼万年只是我以为",
-      "team": ""
+      "name": "我妻善逸",
+      "team": "IB"
      }
     ]
    }
