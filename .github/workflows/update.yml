@@ -1,0 +1,60 @@
+name: Обновление данных Nexora
+
+on:
+  schedule:
+    - cron: "17 2 * * *"
+  workflow_dispatch:
+    inputs:
+      only:
+        description: "Только эти блоки (например dota или cs.teams). Пусто = все"
+        required: false
+        default: ""
+      force:
+        description: "Игнорировать кэш: 1 = да"
+        required: false
+        default: "0"
+      debug:
+        description: "Сохранить сырые ответы в data/debug: 1 = да"
+        required: false
+        default: "0"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: nexora-data
+  cancel-in-progress: false
+
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Собрать данные
+        env:
+          PUBG_API_KEY: ${{ secrets.PUBG_API_KEY }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ONLY: ${{ github.event.inputs.only }}
+          FORCE: ${{ github.event.inputs.force }}
+          DEBUG: ${{ github.event.inputs.debug }}
+        run: python collect.py
+
+      - name: Сохранить результат
+        if: always()
+        run: |
+          git config user.name "nexora-bot"
+          git config user.email "nexora-bot@users.noreply.github.com"
+          git add data
+          if git diff --cached --quiet; then
+            echo "Изменений нет"
+          else
+            git commit -m "Обновление данных"
+            git pull --rebase origin "${GITHUB_REF_NAME}" || true
+            git push
+          fi
