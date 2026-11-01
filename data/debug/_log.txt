@@ -1,0 +1,11 @@
+dota.teams | ок | записей: 15
+dota.meta | ок | записей: 30
+dota.matches | ок | записей: 10
+dota.players | ок | записей: 40
+cs.teams | ок | записей: 16
+pubg.players | пропуск | нет секрета PUBG_API_KEY
+dota.tournaments | ошибка | ParseError: Liquipedia недоступна; S-Tier_Tournaments: HTTP 429 (liquipedia.net/dota2/api.php); A-Tier_Tournaments: HTTP 429 (liquipedia.net/dota2/api.php)
+cs.tournaments | ошибка | ParseError: Liquipedia недоступна; S-Tier_Tournaments: HTTP 429 (liquipedia.net/counterstrike/api.php); A-Tier_Tournaments: HTTP 429 (liquipedia.net/counterstrike/api.php)
+valorant.tournaments | ошибка | ParseError: Liquipedia недоступна; S-Tier_Tournaments: HTTP 429 (liquipedia.net/valorant/api.php); A-Tier_Tournaments: HTTP 429 (liquipedia.net/valorant/api.php)
+pubg.tournaments | ошибка | ParseError: Liquipedia недоступна; S-Tier_Tournaments: HTTP 429 (liquipedia.net/pubg/api.php); A-Tier_Tournaments: HTTP 429 (liquipedia.net/pubg/api.php)
+fortnite.tournaments | ошибка | ParseError: Liquipedia недоступна; S-Tier_Tournaments: HTTP 429 (liquipedia.net/fortnite/api.php); A-Tier_Tournaments: HTTP 429 (liquipedia.net/fortnite/api.php)
