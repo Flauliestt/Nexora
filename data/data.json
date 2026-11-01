@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated": "2026-11-01T13:24:49Z",
+ "generated": "2026-11-01T13:25:46Z",
  "updated": {
   "dota.teams": "2026-11-01T13:24:49Z",
   "dota.meta": "2026-11-01T13:24:49Z",
@@ -36,7 +36,7 @@
   },
   "dota.tournaments": {
    "ok": false,
-   "error": "ParseError: Liquipedia недоступна; S-Tier_Tournaments: HTTP 429 (liquipedia.net/dota2/api.php); A-Tier_Tournaments: Liquipedia ограничила запросы (429) в этом запуске, остальные пропущены"
+   "error": "ParseError: Liquipedia недоступна; S-Tier_Tournaments: Liquipedia: The page you specified doesn't exist.; A-Tier_Tournaments: Liquipedia: The page you specified doesn't exist."
   },
   "cs.tournaments": {
    "ok": false,
