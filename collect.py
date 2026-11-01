@@ -566,21 +566,28 @@ LP_WIKI = {"dota": "dota2", "cs": "counterstrike", "valorant": "valorant", "pubg
 LP_PAGES = {
     "dota": [("S-Tier_Tournaments", "S"), ("A-Tier_Tournaments", "A")],
     "cs": [("S-Tier_Tournaments", "S"), ("A-Tier_Tournaments", "A")],
-    "valorant": [("S-Tier_Tournaments", "S"), ("A-Tier_Tournaments", "A")],
-    "pubg": [("S-Tier_Tournaments", "S"), ("A-Tier_Tournaments", "A")],
-    "fortnite": [("S-Tier_Tournaments", "S"), ("A-Tier_Tournaments", "A")],
+    "valorant": [("S-Tier_Tournaments", "S")],
+    "pubg": [("S-Tier_Tournaments", "S")],
+    "fortnite": [("S-Tier_Tournaments", "S")],
 }
 _lp_last = [0.0]
+_lp_blocked = [False]   # после 429 больше не стучимся к Liquipedia в этом запуске
 
 
 def lp_page(wiki, page):
+    if _lp_blocked[0]:
+        raise FetchError("Liquipedia ограничила запросы (429) в этом запуске, остальные пропущены")
     gap = LP_PAUSE - (time.time() - _lp_last[0])
     if gap > 0:
         time.sleep(gap)
     url = ("https://liquipedia.net/%s/api.php?action=parse&page=%s&prop=text&format=json"
            "&disablelimitreport=1&disableeditsection=1" % (wiki, page))
     try:
-        txt = fetch(url, {"Accept": "application/json"}, tries=2)
+        txt = fetch(url, {"Accept": "application/json"}, tries=1)
+    except FetchError as e:
+        if "429" in str(e):
+            _lp_blocked[0] = True
+        raise
     finally:
         _lp_last[0] = time.time()
     try:
@@ -704,6 +711,7 @@ def is_fresh(data, name, now):
 
 def main():
     now = utcnow()
+    _lp_blocked[0] = False
     stamp = now.strftime("%Y-%m-%dT%H:%M:%SZ")
     data = load_prev()
     only = [x.strip() for x in os.environ.get("ONLY", "").split(",") if x.strip()]
