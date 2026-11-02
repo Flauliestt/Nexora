@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "generated": "2026-11-01T13:31:07Z",
+ "generated": "2026-11-02T02:57:51Z",
  "updated": {
   "dota.teams": "2026-11-01T13:31:07Z",
   "dota.meta": "2026-11-01T13:31:07Z",
@@ -16,23 +16,23 @@
  "sources": {
   "dota.teams": {
    "ok": true,
-   "n": 15
+   "cached": true
   },
   "dota.meta": {
    "ok": true,
-   "n": 30
+   "cached": true
   },
   "dota.matches": {
    "ok": true,
-   "n": 10
+   "cached": true
   },
   "dota.players": {
    "ok": true,
-   "n": 40
+   "cached": true
   },
   "cs.teams": {
    "ok": true,
-   "n": 16
+   "cached": true
   },
   "pubg.players": {
    "ok": false,
@@ -41,23 +41,23 @@
   },
   "dota.tournaments": {
    "ok": true,
-   "n": 23
+   "cached": true
   },
   "cs.tournaments": {
    "ok": true,
-   "n": 22
+   "cached": true
   },
   "valorant.tournaments": {
    "ok": true,
-   "n": 13
+   "cached": true
   },
   "pubg.tournaments": {
    "ok": true,
-   "n": 14
+   "cached": true
   },
   "fortnite.tournaments": {
    "ok": true,
-   "n": 12
+   "cached": true
   }
  },
  "games": {
