@@ -1,38 +1,38 @@
 {
  "schema": 1,
- "generated": "2026-11-02T02:57:51Z",
+ "generated": "2026-11-03T02:58:13Z",
  "updated": {
-  "dota.teams": "2026-11-01T13:31:07Z",
-  "dota.meta": "2026-11-01T13:31:07Z",
-  "dota.matches": "2026-11-01T13:31:07Z",
-  "dota.players": "2026-11-01T13:31:07Z",
-  "cs.teams": "2026-11-01T13:31:07Z",
-  "dota.tournaments": "2026-11-01T13:31:07Z",
-  "cs.tournaments": "2026-11-01T13:31:07Z",
-  "valorant.tournaments": "2026-11-01T13:31:07Z",
-  "pubg.tournaments": "2026-11-01T13:31:07Z",
-  "fortnite.tournaments": "2026-11-01T13:31:07Z"
+  "dota.teams": "2026-11-03T02:58:13Z",
+  "dota.meta": "2026-11-03T02:58:13Z",
+  "dota.matches": "2026-11-03T02:58:13Z",
+  "dota.players": "2026-11-03T02:58:13Z",
+  "cs.teams": "2026-11-03T02:58:13Z",
+  "dota.tournaments": "2026-11-03T02:58:13Z",
+  "cs.tournaments": "2026-11-03T02:58:13Z",
+  "valorant.tournaments": "2026-11-03T02:58:13Z",
+  "pubg.tournaments": "2026-11-03T02:58:13Z",
+  "fortnite.tournaments": "2026-11-03T02:58:13Z"
  },
  "sources": {
   "dota.teams": {
    "ok": true,
-   "cached": true
+   "n": 15
   },
   "dota.meta": {
    "ok": true,
-   "cached": true
+   "n": 30
   },
   "dota.matches": {
    "ok": true,
-   "cached": true
+   "n": 10
   },
   "dota.players": {
    "ok": true,
-   "cached": true
+   "n": 40
   },
   "cs.teams": {
    "ok": true,
-   "cached": true
+   "n": 16
   },
   "pubg.players": {
    "ok": false,
@@ -41,23 +41,23 @@
   },
   "dota.tournaments": {
    "ok": true,
-   "cached": true
+   "n": 22
   },
   "cs.tournaments": {
    "ok": true,
-   "cached": true
+   "n": 23
   },
   "valorant.tournaments": {
    "ok": true,
-   "cached": true
+   "n": 13
   },
   "pubg.tournaments": {
    "ok": true,
-   "cached": true
+   "n": 13
   },
   "fortnite.tournaments": {
    "ok": true,
-   "cached": true
+   "n": 19
   }
  },
  "games": {
@@ -65,30 +65,30 @@
    "teams": [
     {
      "rank": 1,
-     "name": "Team Yandex",
-     "tag": "TY",
-     "rating": 1602,
-     "wins": 233,
-     "losses": 142,
-     "last": "2026-10-31"
+     "name": "Team Spirit",
+     "tag": "TSpirit",
+     "rating": 1592,
+     "wins": 974,
+     "losses": 651,
+     "last": "2026-11-01"
     },
     {
      "rank": 2,
+     "name": "Team Yandex",
+     "tag": "TY",
+     "rating": 1551,
+     "wins": 233,
+     "losses": 145,
+     "last": "2026-11-01"
+    },
+    {
+     "rank": 3,
      "name": "TEAM VISION",
      "tag": "VSN",
      "rating": 1546,
      "wins": 345,
      "losses": 180,
      "last": "2026-08-23"
-    },
-    {
-     "rank": 3,
-     "name": "Team Spirit",
-     "tag": "TSpirit",
-     "rating": 1540,
-     "wins": 971,
-     "losses": 651,
-     "last": "2026-10-31"
     },
     {
      "rank": 4,
@@ -139,19 +139,19 @@
      "rank": 9,
      "name": "Natus Vincere",
      "tag": "NAVI",
-     "rating": 1336,
-     "wins": 1521,
+     "rating": 1348,
+     "wins": 1523,
      "losses": 1230,
-     "last": "2026-09-30"
+     "last": "2026-11-02"
     },
     {
      "rank": 10,
      "name": "GamerLegion",
      "tag": "GL",
-     "rating": 1324,
-     "wins": 125,
+     "rating": 1339,
+     "wins": 127,
      "losses": 127,
-     "last": "2026-10-31"
+     "last": "2026-11-02"
     },
     {
      "rank": 11,
@@ -182,12 +182,12 @@
     },
     {
      "rank": 14,
-     "name": "OG",
-     "tag": "OG",
-     "rating": 1289,
-     "wins": 1258,
-     "losses": 987,
-     "last": "2026-10-30"
+     "name": "Yellow Submarine",
+     "tag": "YeS",
+     "rating": 1288,
+     "wins": 382,
+     "losses": 290,
+     "last": "2026-11-02"
     },
     {
      "rank": 15,
@@ -203,268 +203,268 @@
     "pro": [
      {
       "hero": "Dark Willow",
-      "picks": 40,
-      "bans": 7,
-      "wr": 47.5
+      "picks": 38,
+      "bans": 6,
+      "wr": 55.3
      },
      {
       "hero": "Hoodwink",
-      "picks": 28,
-      "bans": 2,
-      "wr": 39.3
-     },
-     {
-      "hero": "Dragon Knight",
-      "picks": 26,
-      "bans": 14,
-      "wr": 34.6
-     },
-     {
-      "hero": "Techies",
-      "picks": 26,
-      "bans": 21,
-      "wr": 50.0
+      "picks": 27,
+      "bans": 5,
+      "wr": 48.1
      },
      {
       "hero": "Windranger",
-      "picks": 23,
-      "bans": 10,
-      "wr": 30.4
+      "picks": 24,
+      "bans": 8,
+      "wr": 29.2
      },
      {
       "hero": "Witch Doctor",
-      "picks": 22,
-      "bans": 13,
-      "wr": 63.6
-     },
-     {
-      "hero": "Dazzle",
-      "picks": 18,
-      "bans": 18,
-      "wr": 44.4
-     },
-     {
-      "hero": "Slark",
-      "picks": 16,
-      "bans": 37,
-      "wr": 50.0
-     },
-     {
-      "hero": "Nature's Prophet",
-      "picks": 15,
+      "picks": 21,
       "bans": 14,
       "wr": 66.7
      },
      {
+      "hero": "Techies",
+      "picks": 21,
+      "bans": 24,
+      "wr": 47.6
+     },
+     {
+      "hero": "Dragon Knight",
+      "picks": 19,
+      "bans": 19,
+      "wr": 42.1
+     },
+     {
       "hero": "Earthshaker",
-      "picks": 14,
+      "picks": 16,
       "bans": 17,
-      "wr": 35.7
+      "wr": 50.0
+     },
+     {
+      "hero": "Dazzle",
+      "picks": 15,
+      "bans": 19,
+      "wr": 53.3
+     },
+     {
+      "hero": "Nature's Prophet",
+      "picks": 15,
+      "bans": 17,
+      "wr": 53.3
+     },
+     {
+      "hero": "Timbersaw",
+      "picks": 14,
+      "bans": 21,
+      "wr": 57.1
      }
     ],
     "high_best": [
      {
       "hero": "Bounty Hunter",
-      "picks": 37158,
-      "wr": 55.1
+      "picks": 34935,
+      "wr": 54.9
      },
      {
       "hero": "Outworld Devourer",
-      "picks": 59627,
-      "wr": 54.4
+      "picks": 57759,
+      "wr": 54.2
      },
      {
       "hero": "Nyx Assassin",
-      "picks": 50006,
+      "picks": 47311,
+      "wr": 53.2
+     },
+     {
+      "hero": "Night Stalker",
+      "picks": 36417,
       "wr": 53.0
      },
      {
       "hero": "Wraith King",
-      "picks": 33584,
+      "picks": 31871,
       "wr": 52.9
      },
      {
-      "hero": "Night Stalker",
-      "picks": 38015,
+      "hero": "Phantom Lancer",
+      "picks": 41071,
       "wr": 52.8
      },
      {
-      "hero": "Phantom Lancer",
-      "picks": 42981,
-      "wr": 52.6
-     },
-     {
       "hero": "Grimstroke",
-      "picks": 36578,
-      "wr": 52.6
+      "picks": 35502,
+      "wr": 52.7
      },
      {
       "hero": "Spectre",
-      "picks": 27587,
-      "wr": 52.6
-     },
-     {
-      "hero": "Spirit Breaker",
-      "picks": 66445,
-      "wr": 52.4
+      "picks": 26175,
+      "wr": 52.7
      },
      {
       "hero": "Juggernaut",
-      "picks": 63893,
-      "wr": 52.4
+      "picks": 61111,
+      "wr": 52.5
+     },
+     {
+      "hero": "Spirit Breaker",
+      "picks": 63287,
+      "wr": 52.3
      }
     ],
     "high_popular": [
      {
       "hero": "Pudge",
-      "picks": 105777,
-      "wr": 50.0
+      "picks": 100951,
+      "wr": 49.9
      },
      {
       "hero": "Rubick",
-      "picks": 101836,
+      "picks": 97458,
       "wr": 49.7
      },
      {
       "hero": "Lion",
-      "picks": 83878,
-      "wr": 48.3
+      "picks": 80208,
+      "wr": 48.5
      },
      {
       "hero": "Invoker",
-      "picks": 81170,
-      "wr": 51.8
-     },
-     {
-      "hero": "Dragon Knight",
-      "picks": 75793,
+      "picks": 77530,
       "wr": 52.1
      },
      {
+      "hero": "Dragon Knight",
+      "picks": 72197,
+      "wr": 52.2
+     },
+     {
       "hero": "Windranger",
-      "picks": 73422,
+      "picks": 70018,
       "wr": 48.9
      },
      {
       "hero": "Slark",
-      "picks": 67922,
-      "wr": 50.1
+      "picks": 64217,
+      "wr": 50.4
      },
      {
       "hero": "Spirit Breaker",
-      "picks": 66445,
-      "wr": 52.4
+      "picks": 63287,
+      "wr": 52.3
      },
      {
       "hero": "Earthshaker",
-      "picks": 64906,
-      "wr": 51.3
+      "picks": 63114,
+      "wr": 51.2
      },
      {
       "hero": "Juggernaut",
-      "picks": 63893,
-      "wr": 52.4
+      "picks": 61111,
+      "wr": 52.5
      }
     ]
    },
    "matches": [
     {
-     "league": "PARI UNIVERSE by FISSURE",
-     "radiant": "GamerLegion",
-     "dire": "Team Spirit",
-     "score": "32:28",
-     "winner": "Team Spirit",
-     "date": "2026-10-31"
+     "league": "EPL Masters 2026 ",
+     "radiant": "CyberHero",
+     "dire": "GamerLegion",
+     "score": "12:32",
+     "winner": "GamerLegion",
+     "date": "2026-11-02"
     },
     {
-     "league": "PARI UNIVERSE by FISSURE",
-     "radiant": "GamerLegion",
-     "dire": "Team Spirit",
-     "score": "17:36",
-     "winner": "Team Spirit",
-     "date": "2026-10-31"
+     "league": "EPL Masters 2026 ",
+     "radiant": "CyberHero",
+     "dire": "GamerLegion",
+     "score": "19:38",
+     "winner": "GamerLegion",
+     "date": "2026-11-02"
     },
     {
-     "league": "PARI UNIVERSE by FISSURE",
-     "radiant": "GamerLegion",
-     "dire": "Team Yandex",
-     "score": "35:37",
-     "winner": "Team Yandex",
-     "date": "2026-10-31"
+     "league": "EPL Masters 2026 ",
+     "radiant": "Nemiga Gaming",
+     "dire": "Natus Vincere",
+     "score": "11:33",
+     "winner": "Natus Vincere",
+     "date": "2026-11-02"
     },
     {
-     "league": "PARI UNIVERSE by FISSURE",
-     "radiant": "GamerLegion",
-     "dire": "Team Yandex",
-     "score": "23:40",
-     "winner": "Team Yandex",
-     "date": "2026-10-31"
+     "league": "EPL Masters 2026 ",
+     "radiant": "Nemiga Gaming",
+     "dire": "Natus Vincere",
+     "score": "4:22",
+     "winner": "Natus Vincere",
+     "date": "2026-11-02"
     },
     {
-     "league": "PARI UNIVERSE by FISSURE",
-     "radiant": "Team Spirit",
-     "dire": "Team Liquid",
-     "score": "46:16",
-     "winner": "Team Spirit",
-     "date": "2026-10-30"
-    },
-    {
-     "league": "PARI UNIVERSE by FISSURE",
-     "radiant": "Team Spirit",
-     "dire": "Team Liquid",
-     "score": "40:27",
-     "winner": "Team Liquid",
-     "date": "2026-10-30"
-    },
-    {
-     "league": "Party To Play league",
-     "radiant": "ветмо",
-     "dire": "Party 2 play JUNIOR",
-     "score": "24:41",
-     "winner": "Party 2 play JUNIOR",
-     "date": "2026-10-30"
-    },
-    {
-     "league": "PARI UNIVERSE by FISSURE",
-     "radiant": "Team Spirit",
-     "dire": "Team Liquid",
-     "score": "41:18",
-     "winner": "Team Spirit",
-     "date": "2026-10-30"
-    },
-    {
-     "league": "PARI UNIVERSE by FISSURE",
-     "radiant": "Team Liquid",
-     "dire": "OG",
-     "score": "37:13",
-     "winner": "Team Liquid",
-     "date": "2026-10-30"
-    },
-    {
-     "league": "PARI UNIVERSE by FISSURE",
+     "league": "EPL Masters 2026 ",
      "radiant": "OG",
-     "dire": "Team Liquid",
-     "score": "19:50",
-     "winner": "Team Liquid",
-     "date": "2026-10-30"
+     "dire": "Yellow Submarine",
+     "score": "20:37",
+     "winner": "Yellow Submarine",
+     "date": "2026-11-02"
+    },
+    {
+     "league": "EPL Masters 2026 ",
+     "radiant": "Yellow Submarine",
+     "dire": "OG",
+     "score": "25:12",
+     "winner": "Yellow Submarine",
+     "date": "2026-11-02"
+    },
+    {
+     "league": "EPL Masters 2026 ",
+     "radiant": "HULIGANI",
+     "dire": "LEGION",
+     "score": "31:18",
+     "winner": "HULIGANI",
+     "date": "2026-11-02"
+    },
+    {
+     "league": "EPL Masters 2026 ",
+     "radiant": "LEGION",
+     "dire": "HULIGANI",
+     "score": "13:27",
+     "winner": "HULIGANI",
+     "date": "2026-11-02"
+    },
+    {
+     "league": "PARI UNIVERSE by FISSURE",
+     "radiant": "Team Spirit",
+     "dire": "Team Yandex",
+     "score": "44:37",
+     "winner": "Team Spirit",
+     "date": "2026-11-01"
+    },
+    {
+     "league": "PARI UNIVERSE by FISSURE",
+     "radiant": "Team Yandex",
+     "dire": "Team Spirit",
+     "score": "43:61",
+     "winner": "Team Spirit",
+     "date": "2026-11-01"
     }
    ],
    "players": {
     "europe": [
      {
       "rank": 1,
+      "name": "Yatoro",
+      "team": "TSpirit"
+     },
+     {
+      "rank": 2,
       "name": "Arkadiy Khromaev",
       "team": ""
      },
      {
-      "rank": 2,
+      "rank": 3,
       "name": "9Class",
       "team": "PV"
-     },
-     {
-      "rank": 3,
-      "name": "Yatoro",
-      "team": "TSpirit"
      },
      {
       "rank": 4,
@@ -473,39 +473,39 @@
      },
      {
       "rank": 5,
-      "name": "bzm",
-      "team": "1win"
-     },
-     {
-      "rank": 6,
       "name": "医者watson",
       "team": "TY"
      },
      {
-      "rank": 7,
-      "name": "Niku",
-      "team": "NAVI"
+      "rank": 6,
+      "name": "Wisper",
+      "team": ""
      },
      {
-      "rank": 8,
+      "rank": 7,
       "name": "panto",
       "team": ""
      },
      {
+      "rank": 8,
+      "name": "Niku",
+      "team": "NAVI"
+     },
+     {
       "rank": 9,
-      "name": "Fernans",
-      "team": "ICxI"
+      "name": "bzm",
+      "team": "1win"
      },
      {
       "rank": 10,
-      "name": "Satanic",
-      "team": "PV"
+      "name": "gotthejuice",
+      "team": "NAVI"
      }
     ],
     "americas": [
      {
       "rank": 1,
-      "name": "Chloe-",
+      "name": "Karolina2012",
       "team": ""
      },
      {
@@ -515,60 +515,60 @@
      },
      {
       "rank": 3,
-      "name": "Milnil",
-      "team": "SM"
-     },
-     {
-      "rank": 4,
-      "name": "yournightmare",
-      "team": ""
-     },
-     {
-      "rank": 5,
       "name": "SoLotic",
       "team": "Awake"
      },
      {
+      "rank": 4,
+      "name": "Milnil",
+      "team": "SM"
+     },
+     {
+      "rank": 5,
+      "name": "Jessie",
+      "team": ""
+     },
+     {
       "rank": 6,
-      "name": "Soledad",
+      "name": "yournightmare",
       "team": ""
      },
      {
       "rank": 7,
-      "name": "Sebs-",
-      "team": "oPd"
+      "name": "Soledad",
+      "team": ""
      },
      {
       "rank": 8,
-      "name": "Droguito",
+      "name": "Pishtya",
       "team": ""
      },
      {
       "rank": 9,
-      "name": "0Dynamo<",
-      "team": ""
+      "name": "Sebs-",
+      "team": "oPd"
      },
      {
       "rank": 10,
-      "name": "Deuce",
-      "team": "EBM"
+      "name": "Droguito",
+      "team": ""
      }
     ],
     "se_asia": [
      {
       "rank": 1,
-      "name": "Kuys",
-      "team": ""
+      "name": "GS",
+      "team": "90s"
      },
      {
       "rank": 2,
-      "name": "Be1Yi",
+      "name": "大仓bra惊云",
       "team": ""
      },
      {
       "rank": 3,
-      "name": "wota2",
-      "team": "Dire"
+      "name": "Be1Yi",
+      "team": ""
      },
      {
       "rank": 4,
@@ -577,12 +577,12 @@
      },
      {
       "rank": 5,
-      "name": "Carlos",
+      "name": "Azura",
       "team": ""
      },
      {
       "rank": 6,
-      "name": "Azura",
+      "name": "Seep",
       "team": ""
      },
      {
@@ -597,13 +597,13 @@
      },
      {
       "rank": 9,
-      "name": "大仓bra惊云",
+      "name": "ponyo",
       "team": ""
      },
      {
       "rank": 10,
-      "name": "GS",
-      "team": "90s"
+      "name": "AnimalSimulator2.0",
+      "team": ""
      }
     ],
     "china": [
@@ -765,10 +765,10 @@
      "start": "2026-10-22",
      "end": "2026-11-01",
      "prize": "$250,000",
-     "winner": null,
-     "runner_up": null,
+     "winner": "Team Spirit",
+     "runner_up": "Team Yandex",
      "tier": "1",
-     "status": "ongoing"
+     "status": "finished"
     },
     {
      "name": "BLAST SLAM VIII",
@@ -879,63 +879,17 @@
      "runner_up": "Natus Vincere",
      "tier": "1",
      "status": "finished"
-    },
-    {
-     "name": "DreamLeague Season 27",
-     "start": "2025-12-10",
-     "end": "2025-12-21",
-     "prize": "$1,000,000",
-     "winner": "Team Yandex",
-     "runner_up": "Team Spirit",
-     "tier": "1",
-     "status": "finished"
     }
    ]
   },
   "cs": {
    "teams": {
-    "date": "2026-10-05",
+    "date": "2026-11-02",
     "teams": [
      {
       "rank": 1,
-      "name": "Spirit",
-      "points": 2046,
-      "roster": [
-       "donk",
-       "magixx",
-       "sh1ro",
-       "tN1R",
-       "zont1x"
-      ]
-     },
-     {
-      "rank": 2,
-      "name": "Legacy",
-      "points": 1931,
-      "roster": [
-       "arT",
-       "dumau",
-       "latto",
-       "n1ssim",
-       "try"
-      ]
-     },
-     {
-      "rank": 3,
-      "name": "Vitality",
-      "points": 1911,
-      "roster": [
-       "apEX",
-       "flameZ",
-       "mezii",
-       "ropz",
-       "ZywOo"
-      ]
-     },
-     {
-      "rank": 4,
       "name": "MOUZ",
-      "points": 1863,
+      "points": 1960,
       "roster": [
        "PR",
        "Spinx",
@@ -945,33 +899,21 @@
       ]
      },
      {
-      "rank": 5,
-      "name": "G2",
-      "points": 1847,
+      "rank": 2,
+      "name": "Vitality",
+      "points": 1922,
       "roster": [
-       "HeavyGod",
-       "huNter-",
-       "MATYS",
-       "NertZ",
-       "r1nkle"
+       "flameZ",
+       "jL",
+       "mezii",
+       "ropz",
+       "ZywOo"
       ]
      },
      {
-      "rank": 6,
-      "name": "Falcons",
-      "points": 1843,
-      "roster": [
-       "karrigan",
-       "kyousuke",
-       "m0NESY",
-       "NiKo",
-       "TeSeS"
-      ]
-     },
-     {
-      "rank": 7,
+      "rank": 3,
       "name": "FURIA",
-      "points": 1829,
+      "points": 1912,
       "roster": [
        "FalleN",
        "KSCERATO",
@@ -981,9 +923,57 @@
       ]
      },
      {
+      "rank": 4,
+      "name": "Aurora",
+      "points": 1860,
+      "roster": [
+       "Jimpphat",
+       "kyxsan",
+       "Wicadia",
+       "woxic",
+       "XANTARES"
+      ]
+     },
+     {
+      "rank": 5,
+      "name": "Spirit",
+      "points": 1842,
+      "roster": [
+       "donk",
+       "magixx",
+       "sh1ro",
+       "tN1R",
+       "zont1x"
+      ]
+     },
+     {
+      "rank": 6,
+      "name": "BETBOOM",
+      "points": 1786,
+      "roster": [
+       "Boombl4",
+       "d1Ledez",
+       "Magnojez",
+       "S1ren",
+       "zorte"
+      ]
+     },
+     {
+      "rank": 7,
+      "name": "Falcons",
+      "points": 1764,
+      "roster": [
+       "karrigan",
+       "kyousuke",
+       "m0NESY",
+       "NiKo",
+       "TeSeS"
+      ]
+     },
+     {
       "rank": 8,
       "name": "FUT",
-      "points": 1799,
+      "points": 1721,
       "roster": [
        "cmtry",
        "dem0n",
@@ -994,68 +984,20 @@
      },
      {
       "rank": 9,
-      "name": "Aurora",
-      "points": 1716,
+      "name": "Legacy",
+      "points": 1662,
       "roster": [
-       "Jimpphat",
-       "kyxsan",
-       "Wicadia",
-       "woxic",
-       "XANTARES"
+       "arT",
+       "dumau",
+       "latto",
+       "n1ssim",
+       "try"
       ]
      },
      {
       "rank": 10,
-      "name": "Astralis",
-      "points": 1674,
-      "roster": [
-       "HooXi",
-       "jabbi",
-       "phzy",
-       "ryu",
-       "Staehr"
-      ]
-     },
-     {
-      "rank": 11,
-      "name": "BETBOOM",
-      "points": 1596,
-      "roster": [
-       "Boombl4",
-       "d1Ledez",
-       "Magnojez",
-       "S1ren",
-       "zorte"
-      ]
-     },
-     {
-      "rank": 12,
-      "name": "MIBR",
-      "points": 1585,
-      "roster": [
-       "insani",
-       "LNZ",
-       "nqz",
-       "tomaszin",
-       "venomzera"
-      ]
-     },
-     {
-      "rank": 13,
-      "name": "B8",
-      "points": 1555,
-      "roster": [
-       "alex666",
-       "esenthial",
-       "kensizor",
-       "npl",
-       "s1zzi"
-      ]
-     },
-     {
-      "rank": 14,
       "name": "Nemiga",
-      "points": 1551,
+      "points": 1650,
       "roster": [
        "KaiR0N-",
        "khaN",
@@ -1065,30 +1007,68 @@
       ]
      },
      {
-      "rank": 15,
-      "name": "HEROIC",
-      "points": 1550,
+      "rank": 11,
+      "name": "G2",
+      "points": 1616,
       "roster": [
-       "Brollan",
-       "Chr1zN",
-       "MartinezSa",
-       "nilo",
-       "susp"
+       "HeavyGod",
+       "huNter-",
+       "MATYS",
+       "NertZ",
+       "r1nkle"
+      ]
+     },
+     {
+      "rank": 12,
+      "name": "1win",
+      "points": 1598,
+      "roster": [
+       "ArtFr0st",
+       "Ax1Le",
+       "BELCHONOKK",
+       "fame",
+       "nafany"
+      ]
+     },
+     {
+      "rank": 13,
+      "name": "Natus Vincere",
+      "points": 1589,
+      "roster": [
+       "Aleksib",
+       "b1t",
+       "iM",
+       "makazze",
+       "w0nderful"
+      ]
+     },
+     {
+      "rank": 14,
+      "name": "Astralis",
+      "points": 1572,
+      "roster": [
+       "jabbi",
+       "phzy",
+       "ryu",
+       "siuhy",
+       "Staehr"
+      ]
+     },
+     {
+      "rank": 15,
+      "name": "Ninjas in Pyjamas",
+      "points": 1564,
+      "roster": [
+       "adamb",
+       "Krimbo",
+       "sjuush",
+       "stavn",
+       "xKacpersky"
       ]
      }
     ]
    },
    "tournaments": [
-    {
-     "name": "Intel Extreme Masters Beijing 2026",
-     "start": "2026-11-02",
-     "end": "2026-11-08",
-     "prize": "$1,250,000",
-     "winner": null,
-     "runner_up": null,
-     "tier": "S",
-     "status": "upcoming"
-    },
     {
      "name": "BLAST Rivals Fall 2026",
      "start": "2026-11-11",
@@ -1178,6 +1158,26 @@
      "runner_up": null,
      "tier": "S",
      "status": "upcoming"
+    },
+    {
+     "name": "BLAST Open Spring 2027",
+     "start": "2027-03-19",
+     "end": "2027-03-28",
+     "prize": "$1,100,000",
+     "winner": null,
+     "runner_up": null,
+     "tier": "S",
+     "status": "upcoming"
+    },
+    {
+     "name": "Intel Extreme Masters Beijing 2026",
+     "start": "2026-11-02",
+     "end": "2026-11-08",
+     "prize": "$1,250,000",
+     "winner": null,
+     "runner_up": null,
+     "tier": "S",
+     "status": "ongoing"
     },
     {
      "name": "PGL Masters Bucharest 2026",
@@ -1304,14 +1304,24 @@
   "valorant": {
    "tournaments": [
     {
+     "name": "VCT 2027: Pacific Kickoff",
+     "start": "2027-01-11",
+     "end": "2027-01-31",
+     "prize": "",
+     "winner": null,
+     "runner_up": null,
+     "tier": "S",
+     "status": "upcoming"
+    },
+    {
      "name": "VALORANT Game Changers Championship 2026",
      "start": "2026-10-22",
      "end": "2026-11-01",
      "prize": "$500,000",
-     "winner": null,
-     "runner_up": null,
+     "winner": "KRÜ Blaze",
+     "runner_up": "Gentle Mates GC",
      "tier": "S",
-     "status": "ongoing"
+     "status": "finished"
     },
     {
      "name": "VALORANT Champions 2026",
@@ -1422,16 +1432,6 @@
      "runner_up": "XLG Esports",
      "tier": "S",
      "status": "finished"
-    },
-    {
-     "name": "VALORANT Masters Santiago 2026",
-     "start": "2026-02-28",
-     "end": "2026-03-15",
-     "prize": "$1,000,000",
-     "winner": "Nongshim RedForce",
-     "runner_up": "Paper Rex",
-     "tier": "S",
-     "status": "finished"
     }
    ]
   },
@@ -1452,10 +1452,10 @@
      "start": "2026-10-29",
      "end": "2026-11-01",
      "prize": "$300,000",
-     "winner": null,
-     "runner_up": null,
+     "winner": "Twisted Minds",
+     "runner_up": "eArena",
      "tier": "S",
-     "status": "ongoing"
+     "status": "finished"
     },
     {
      "name": "PUBG Global Series 2026 Circuit 3 Series Final",
@@ -1566,21 +1566,81 @@
      "runner_up": "China",
      "tier": "S",
      "status": "finished"
-    },
-    {
-     "name": "PUBG Global Series 8 2025",
-     "start": "2025-05-12",
-     "end": "2025-05-18",
-     "prize": "$300,000",
-     "winner": "BB Team",
-     "runner_up": "Freecs",
-     "tier": "S",
-     "status": "finished"
     }
    ]
   },
   "fortnite": {
    "tournaments": [
+    {
+     "name": "FNCS 2026 Reload: EU - Grand Finals",
+     "start": "2026-11-21",
+     "end": "2026-11-21",
+     "prize": "$223,500",
+     "winner": null,
+     "runner_up": null,
+     "tier": "S",
+     "status": "upcoming"
+    },
+    {
+     "name": "FNCS 2026 Reload: NAC - Grand Finals",
+     "start": "2026-11-21",
+     "end": "2026-11-21",
+     "prize": "$158,250",
+     "winner": null,
+     "runner_up": null,
+     "tier": "S",
+     "status": "upcoming"
+    },
+    {
+     "name": "FNCS 2026 Reload: NAW - Grand Finals",
+     "start": "2026-11-21",
+     "end": "2026-11-21",
+     "prize": "$60,750",
+     "winner": null,
+     "runner_up": null,
+     "tier": "S",
+     "status": "upcoming"
+    },
+    {
+     "name": "FNCS 2026 Reload: Brazil - Grand Finals",
+     "start": "2026-11-21",
+     "end": "2026-11-21",
+     "prize": "$60,750",
+     "winner": null,
+     "runner_up": null,
+     "tier": "S",
+     "status": "upcoming"
+    },
+    {
+     "name": "FNCS 2026 Reload: Oceania - Grand Finals",
+     "start": "2026-11-21",
+     "end": "2026-11-21",
+     "prize": "$28,400",
+     "winner": null,
+     "runner_up": null,
+     "tier": "S",
+     "status": "upcoming"
+    },
+    {
+     "name": "FNCS 2026 Reload: Asiat - Grand Finals",
+     "start": "2026-11-21",
+     "end": "2026-11-21",
+     "prize": "$28,400",
+     "winner": null,
+     "runner_up": null,
+     "tier": "S",
+     "status": "upcoming"
+    },
+    {
+     "name": "FNCS 2026 Reload: Middle East - Grand Finals",
+     "start": "2026-11-21",
+     "end": "2026-11-21",
+     "prize": "$28,400",
+     "winner": null,
+     "runner_up": null,
+     "tier": "S",
+     "status": "upcoming"
+    },
     {
      "name": "FNCS 2026 - Solos BR: Oceania - Grand Finals",
      "start": "2026-10-26",
