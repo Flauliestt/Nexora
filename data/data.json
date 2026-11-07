@@ -1,17 +1,17 @@
 {
  "schema": 1,
- "generated": "2026-11-06T02:57:09Z",
+ "generated": "2026-11-07T02:56:35Z",
  "updated": {
-  "dota.teams": "2026-11-06T02:57:09Z",
-  "dota.meta": "2026-11-06T02:57:09Z",
-  "dota.matches": "2026-11-06T02:57:09Z",
-  "dota.players": "2026-11-06T02:57:09Z",
-  "cs.teams": "2026-11-06T02:57:09Z",
-  "dota.tournaments": "2026-11-06T02:57:09Z",
-  "cs.tournaments": "2026-11-06T02:57:09Z",
-  "valorant.tournaments": "2026-11-06T02:57:09Z",
-  "pubg.tournaments": "2026-11-06T02:57:09Z",
-  "fortnite.tournaments": "2026-11-06T02:57:09Z"
+  "dota.teams": "2026-11-07T02:56:35Z",
+  "dota.meta": "2026-11-07T02:56:35Z",
+  "dota.matches": "2026-11-07T02:56:35Z",
+  "dota.players": "2026-11-07T02:56:35Z",
+  "cs.teams": "2026-11-07T02:56:35Z",
+  "dota.tournaments": "2026-11-07T02:56:35Z",
+  "cs.tournaments": "2026-11-07T02:56:35Z",
+  "valorant.tournaments": "2026-11-07T02:56:35Z",
+  "pubg.tournaments": "2026-11-07T02:56:35Z",
+  "fortnite.tournaments": "2026-11-07T02:56:35Z"
  },
  "sources": {
   "dota.teams": {
@@ -203,171 +203,179 @@
     "pro": [
      {
       "hero": "Dark Willow",
-      "picks": 30,
-      "bans": 10,
-      "wr": 50.0
+      "picks": 25,
+      "bans": 9,
+      "wr": 56.0
      },
      {
       "hero": "Windranger",
-      "picks": 27,
-      "bans": 5,
-      "wr": 37.0
+      "picks": 24,
+      "bans": 4,
+      "wr": 41.7
      },
      {
       "hero": "Witch Doctor",
-      "picks": 25,
+      "picks": 23,
       "bans": 12,
-      "wr": 60.0
+      "wr": 52.2
      },
      {
       "hero": "Techies",
-      "picks": 19,
-      "bans": 23,
-      "wr": 47.4
+      "picks": 18,
+      "bans": 21,
+      "wr": 50.0
      },
      {
       "hero": "Hoodwink",
-      "picks": 19,
-      "bans": 12,
-      "wr": 63.2
+      "picks": 18,
+      "bans": 14,
+      "wr": 61.1
      },
      {
       "hero": "Dragon Knight",
-      "picks": 18,
+      "picks": 15,
       "bans": 24,
-      "wr": 38.9
+      "wr": 53.3
      },
      {
       "hero": "Nature's Prophet",
-      "picks": 16,
-      "bans": 11,
-      "wr": 25.0
+      "picks": 15,
+      "bans": 9,
+      "wr": 26.7
      },
      {
       "hero": "Earthshaker",
-      "picks": 15,
-      "bans": 12,
-      "wr": 46.7
-     },
-     {
-      "hero": "Sven",
       "picks": 14,
-      "bans": 4,
-      "wr": 35.7
+      "bans": 11,
+      "wr": 50.0
      },
      {
       "hero": "Dazzle",
       "picks": 14,
-      "bans": 23,
+      "bans": 20,
       "wr": 57.1
+     },
+     {
+      "hero": "Lich",
+      "picks": 13,
+      "bans": 0,
+      "wr": 38.5
      }
     ],
     "high_best": [
      {
       "hero": "Bounty Hunter",
-      "picks": 34043,
-      "wr": 54.9
-     },
-     {
-      "hero": "Outworld Devourer",
-      "picks": 58400,
-      "wr": 53.8
+      "picks": 33108,
+      "wr": 54.8
      },
      {
       "hero": "Nyx Assassin",
-      "picks": 46692,
+      "picks": 45319,
       "wr": 53.7
      },
      {
+      "hero": "Outworld Devourer",
+      "picks": 57343,
+      "wr": 53.6
+     },
+     {
       "hero": "Night Stalker",
-      "picks": 36314,
+      "picks": 35202,
       "wr": 53.2
      },
      {
-      "hero": "Phantom Lancer",
-      "picks": 40371,
-      "wr": 52.8
-     },
-     {
-      "hero": "Spectre",
-      "picks": 25374,
-      "wr": 52.8
-     },
-     {
       "hero": "Juggernaut",
-      "picks": 60804,
-      "wr": 52.7
+      "picks": 59453,
+      "wr": 52.8
      },
      {
       "hero": "Wraith King",
-      "picks": 31663,
-      "wr": 52.7
+      "picks": 31026,
+      "wr": 52.8
      },
      {
-      "hero": "Grimstroke",
-      "picks": 36074,
+      "hero": "Phantom Lancer",
+      "picks": 39537,
       "wr": 52.6
      },
      {
       "hero": "Dragon Knight",
-      "picks": 70969,
-      "wr": 52.5
+      "picks": 68789,
+      "wr": 52.4
+     },
+     {
+      "hero": "Spirit Breaker",
+      "picks": 60978,
+      "wr": 52.4
+     },
+     {
+      "hero": "Grimstroke",
+      "picks": 35426,
+      "wr": 52.4
      }
     ],
     "high_popular": [
      {
       "hero": "Pudge",
-      "picks": 99683,
+      "picks": 97331,
       "wr": 50.0
      },
      {
       "hero": "Rubick",
-      "picks": 96721,
+      "picks": 94141,
       "wr": 49.6
      },
      {
       "hero": "Lion",
-      "picks": 79563,
-      "wr": 48.6
+      "picks": 77585,
+      "wr": 48.7
      },
      {
       "hero": "Invoker",
-      "picks": 76673,
+      "picks": 74847,
       "wr": 52.0
      },
      {
       "hero": "Dragon Knight",
-      "picks": 70969,
-      "wr": 52.5
+      "picks": 68789,
+      "wr": 52.4
      },
      {
       "hero": "Windranger",
-      "picks": 68415,
+      "picks": 66413,
       "wr": 49.0
      },
      {
       "hero": "Earthshaker",
-      "picks": 64129,
-      "wr": 51.1
-     },
-     {
-      "hero": "Slark",
-      "picks": 62573,
-      "wr": 50.2
-     },
-     {
-      "hero": "Spirit Breaker",
-      "picks": 62289,
-      "wr": 52.5
+      "picks": 63009,
+      "wr": 50.7
      },
      {
       "hero": "Anti-Mage",
-      "picks": 62118,
-      "wr": 50.9
+      "picks": 61102,
+      "wr": 51.0
+     },
+     {
+      "hero": "Spirit Breaker",
+      "picks": 60978,
+      "wr": 52.4
+     },
+     {
+      "hero": "Slark",
+      "picks": 60652,
+      "wr": 50.3
      }
     ]
    },
    "matches": [
+    {
+     "league": "Party To Play league",
+     "radiant": "ветмо",
+     "dire": "Party 2 play",
+     "score": "37:61",
+     "winner": "Party 2 play",
+     "date": "2026-11-06"
+    },
     {
      "league": "EPL Masters 2026 ",
      "radiant": "GamerLegion",
@@ -439,14 +447,6 @@
      "score": "29:13",
      "winner": "GamerLegion",
      "date": "2026-11-04"
-    },
-    {
-     "league": "EPL Masters 2026 ",
-     "radiant": "HULIGANI",
-     "dire": "CyberHero",
-     "score": "34:13",
-     "winner": "HULIGANI",
-     "date": "2026-11-04"
     }
    ],
    "players": {
@@ -463,23 +463,23 @@
      },
      {
       "rank": 3,
-      "name": "Arkadiy Khromaev",
-      "team": ""
-     },
-     {
-      "rank": 4,
       "name": "医者watson",
       "team": "TY"
      },
      {
-      "rank": 5,
+      "rank": 4,
       "name": "Wisper",
       "team": ""
      },
      {
-      "rank": 6,
+      "rank": 5,
       "name": "Niku",
       "team": "NAVI"
+     },
+     {
+      "rank": 6,
+      "name": "bzm",
+      "team": "1win"
      },
      {
       "rank": 7,
@@ -488,55 +488,55 @@
      },
      {
       "rank": 8,
-      "name": "bzm",
-      "team": "1win"
-     },
-     {
-      "rank": 9,
       "name": "gotthejuice",
       "team": "NAVI"
      },
      {
+      "rank": 9,
+      "name": "Rein",
+      "team": "HU"
+     },
+     {
       "rank": 10,
-      "name": "notme",
-      "team": "TSpirit"
+      "name": "Saberlight",
+      "team": ""
      }
     ],
     "americas": [
      {
       "rank": 1,
-      "name": "Gabbana",
-      "team": ""
-     },
-     {
-      "rank": 2,
-      "name": "AlienManaBanana",
-      "team": ""
-     },
-     {
-      "rank": 3,
       "name": "Milnil",
       "team": "SM"
      },
      {
-      "rank": 4,
-      "name": "SoLotic",
-      "team": "Awake"
-     },
-     {
-      "rank": 5,
+      "rank": 2,
       "name": "Jessie",
       "team": ""
      },
      {
-      "rank": 6,
+      "rank": 3,
       "name": "LS",
       "team": ""
      },
      {
-      "rank": 7,
+      "rank": 4,
       "name": "Sebs-",
       "team": "oPd"
+     },
+     {
+      "rank": 5,
+      "name": "Captainc0c0",
+      "team": ""
+     },
+     {
+      "rank": 6,
+      "name": "SoLotic",
+      "team": "Awake"
+     },
+     {
+      "rank": 7,
+      "name": "Pishtya",
+      "team": ""
      },
      {
       "rank": 8,
@@ -545,12 +545,12 @@
      },
      {
       "rank": 9,
-      "name": "Pishtya",
+      "name": "yournightmare",
       "team": ""
      },
      {
       "rank": 10,
-      "name": "Captainc0c0",
+      "name": "0Dynamo<",
       "team": ""
      }
     ],
@@ -582,27 +582,27 @@
      },
      {
       "rank": 6,
-      "name": "BEEBIE",
-      "team": ""
-     },
-     {
-      "rank": 7,
       "name": "lewis",
       "team": "IAP"
      },
      {
+      "rank": 7,
+      "name": "BEEBIE",
+      "team": ""
+     },
+     {
       "rank": 8,
+      "name": "陶一飞",
+      "team": "only"
+     },
+     {
+      "rank": 9,
       "name": "ponyo",
       "team": ""
      },
      {
-      "rank": 9,
-      "name": "かえで",
-      "team": ""
-     },
-     {
       "rank": 10,
-      "name": "AnimalSimulator2.0",
+      "name": "かえで",
       "team": ""
      }
     ],
@@ -629,28 +629,28 @@
      },
      {
       "rank": 5,
-      "name": "画卷",
-      "team": ""
-     },
-     {
-      "rank": 6,
       "name": "天国大哥",
       "team": ""
      },
      {
+      "rank": 6,
+      "name": "画卷",
+      "team": ""
+     },
+     {
       "rank": 7,
-      "name": "Rice.",
+      "name": "Watermelon, Squirrel and Milk",
       "team": ""
      },
      {
       "rank": 8,
-      "name": "MKL",
-      "team": "ljy简直太帅了"
+      "name": "Rice.",
+      "team": ""
      },
      {
       "rank": 9,
-      "name": "Watermelon, Squirrel and Milk",
-      "team": ""
+      "name": "MKL",
+      "team": "ljy简直太帅了"
      },
      {
       "rank": 10,
