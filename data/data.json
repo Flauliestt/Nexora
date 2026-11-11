@@ -1,17 +1,17 @@
 {
  "schema": 1,
- "generated": "2026-11-10T02:57:43Z",
+ "generated": "2026-11-11T02:58:31Z",
  "updated": {
-  "dota.teams": "2026-11-10T02:57:43Z",
-  "dota.meta": "2026-11-10T02:57:43Z",
-  "dota.matches": "2026-11-10T02:57:43Z",
-  "dota.players": "2026-11-10T02:57:43Z",
-  "cs.teams": "2026-11-10T02:57:43Z",
-  "dota.tournaments": "2026-11-10T02:57:43Z",
-  "cs.tournaments": "2026-11-10T02:57:43Z",
-  "valorant.tournaments": "2026-11-10T02:57:43Z",
-  "pubg.tournaments": "2026-11-10T02:57:43Z",
-  "fortnite.tournaments": "2026-11-10T02:57:43Z"
+  "dota.teams": "2026-11-11T02:58:31Z",
+  "dota.meta": "2026-11-11T02:58:31Z",
+  "dota.matches": "2026-11-11T02:58:31Z",
+  "dota.players": "2026-11-11T02:58:31Z",
+  "cs.teams": "2026-11-11T02:58:31Z",
+  "dota.tournaments": "2026-11-11T02:58:31Z",
+  "cs.tournaments": "2026-11-11T02:58:31Z",
+  "valorant.tournaments": "2026-11-11T02:58:31Z",
+  "pubg.tournaments": "2026-11-11T02:58:31Z",
+  "fortnite.tournaments": "2026-11-11T02:58:31Z"
  },
  "sources": {
   "dota.teams": {
@@ -45,7 +45,7 @@
   },
   "cs.tournaments": {
    "ok": true,
-   "n": 22
+   "n": 23
   },
   "valorant.tournaments": {
    "ok": true,
@@ -202,251 +202,251 @@
    "meta": {
     "pro": [
      {
-      "hero": "Witch Doctor",
-      "picks": 69,
-      "bans": 27,
-      "wr": 58.0
-     },
-     {
-      "hero": "Dark Willow",
-      "picks": 64,
-      "bans": 27,
-      "wr": 51.6
-     },
-     {
       "hero": "Hoodwink",
-      "picks": 63,
-      "bans": 28,
-      "wr": 49.2
+      "picks": 77,
+      "bans": 27,
+      "wr": 49.4
      },
      {
-      "hero": "Windranger",
-      "picks": 59,
-      "bans": 25,
-      "wr": 52.5
-     },
-     {
-      "hero": "Dragon Knight",
-      "picks": 53,
-      "bans": 58,
+      "hero": "Witch Doctor",
+      "picks": 75,
+      "bans": 34,
       "wr": 54.7
      },
      {
-      "hero": "Dazzle",
-      "picks": 47,
-      "bans": 49,
-      "wr": 48.9
+      "hero": "Dark Willow",
+      "picks": 69,
+      "bans": 32,
+      "wr": 50.7
      },
      {
-      "hero": "Earthshaker",
-      "picks": 43,
-      "bans": 32,
-      "wr": 62.8
+      "hero": "Dragon Knight",
+      "picks": 68,
+      "bans": 58,
+      "wr": 51.5
+     },
+     {
+      "hero": "Windranger",
+      "picks": 67,
+      "bans": 27,
+      "wr": 49.3
+     },
+     {
+      "hero": "Dazzle",
+      "picks": 54,
+      "bans": 55,
+      "wr": 46.3
      },
      {
       "hero": "Techies",
-      "picks": 43,
-      "bans": 84,
-      "wr": 48.8
+      "picks": 53,
+      "bans": 95,
+      "wr": 50.9
+     },
+     {
+      "hero": "Earthshaker",
+      "picks": 52,
+      "bans": 41,
+      "wr": 65.4
+     },
+     {
+      "hero": "Doom",
+      "picks": 45,
+      "bans": 61,
+      "wr": 46.7
      },
      {
       "hero": "Pangolier",
-      "picks": 37,
-      "bans": 37,
-      "wr": 56.8
-     },
-     {
-      "hero": "Timbersaw",
-      "picks": 32,
-      "bans": 42,
-      "wr": 50.0
+      "picks": 39,
+      "bans": 38,
+      "wr": 48.7
      }
     ],
     "high_best": [
      {
       "hero": "Bounty Hunter",
-      "picks": 33250,
-      "wr": 55.2
+      "picks": 32635,
+      "wr": 54.9
      },
      {
       "hero": "Outworld Devourer",
-      "picks": 56342,
+      "picks": 55366,
       "wr": 53.6
      },
      {
       "hero": "Nyx Assassin",
-      "picks": 45109,
+      "picks": 44279,
       "wr": 53.5
      },
      {
       "hero": "Night Stalker",
-      "picks": 35261,
-      "wr": 53.5
+      "picks": 34780,
+      "wr": 53.2
      },
      {
       "hero": "Juggernaut",
-      "picks": 59632,
-      "wr": 53.0
-     },
-     {
-      "hero": "Phantom Lancer",
-      "picks": 39173,
-      "wr": 52.5
-     },
-     {
-      "hero": "Wraith King",
-      "picks": 31560,
-      "wr": 52.5
+      "picks": 59205,
+      "wr": 52.9
      },
      {
       "hero": "Spectre",
-      "picks": 23879,
-      "wr": 52.5
+      "picks": 23326,
+      "wr": 52.7
+     },
+     {
+      "hero": "Phantom Lancer",
+      "picks": 38276,
+      "wr": 52.6
+     },
+     {
+      "hero": "Wraith King",
+      "picks": 31416,
+      "wr": 52.6
      },
      {
       "hero": "Dragon Knight",
-      "picks": 67446,
+      "picks": 65876,
       "wr": 52.4
      },
      {
       "hero": "Spirit Breaker",
-      "picks": 60937,
-      "wr": 52.3
+      "picks": 59997,
+      "wr": 52.4
      }
     ],
     "high_popular": [
      {
       "hero": "Pudge",
-      "picks": 96502,
-      "wr": 50.2
+      "picks": 94640,
+      "wr": 50.1
      },
      {
       "hero": "Rubick",
-      "picks": 94400,
-      "wr": 49.8
+      "picks": 93058,
+      "wr": 49.9
      },
      {
       "hero": "Lion",
-      "picks": 77696,
+      "picks": 76477,
       "wr": 48.6
      },
      {
       "hero": "Invoker",
-      "picks": 74826,
-      "wr": 51.8
+      "picks": 73592,
+      "wr": 51.9
      },
      {
       "hero": "Dragon Knight",
-      "picks": 67446,
+      "picks": 65876,
       "wr": 52.4
      },
      {
       "hero": "Windranger",
-      "picks": 65316,
-      "wr": 48.9
+      "picks": 64334,
+      "wr": 49.0
      },
      {
       "hero": "Earthshaker",
-      "picks": 62753,
+      "picks": 61668,
       "wr": 50.8
      },
      {
-      "hero": "Anti-Mage",
-      "picks": 61124,
-      "wr": 50.9
-     },
-     {
       "hero": "Spirit Breaker",
-      "picks": 60937,
-      "wr": 52.3
+      "picks": 59997,
+      "wr": 52.4
      },
      {
-      "hero": "Slark",
-      "picks": 59788,
-      "wr": 50.2
+      "hero": "Anti-Mage",
+      "picks": 59839,
+      "wr": 51.0
+     },
+     {
+      "hero": "Juggernaut",
+      "picks": 59205,
+      "wr": 52.9
      }
     ]
    },
    "matches": [
     {
      "league": "1win Essence III",
-     "radiant": "Yellow Submarine",
-     "dire": "Xipto",
-     "score": "25:19",
-     "winner": "Yellow Submarine",
-     "date": "2026-11-09"
+     "radiant": "CyberHero",
+     "dire": "_PowerRangers",
+     "score": "29:11",
+     "winner": "CyberHero",
+     "date": "2026-11-10"
+    },
+    {
+     "league": "1win Essence III",
+     "radiant": "_PowerRangers",
+     "dire": "CyberHero",
+     "score": "42:37",
+     "winner": "CyberHero",
+     "date": "2026-11-10"
+    },
+    {
+     "league": "1win Essence III",
+     "radiant": "_PowerRangers",
+     "dire": "Froglings",
+     "score": "24:12",
+     "winner": "_PowerRangers",
+     "date": "2026-11-10"
+    },
+    {
+     "league": "1win Essence III",
+     "radiant": "_PowerRangers",
+     "dire": "Froglings",
+     "score": "33:9",
+     "winner": "_PowerRangers",
+     "date": "2026-11-10"
     },
     {
      "league": "DreamLeague Division 2 Series 5",
      "radiant": "Inner Circle x Insanity",
-     "dire": "Yakult Brothers",
-     "score": "29:10",
-     "winner": "Inner Circle x Insanity",
-     "date": "2026-11-09"
-    },
-    {
-     "league": "DreamLeague Division 2 Series 5",
-     "radiant": "PuckChamp",
-     "dire": "Zero Tenacity",
-     "score": "40:21",
-     "winner": "PuckChamp",
-     "date": "2026-11-09"
-    },
-    {
-     "league": "DreamLeague Division 2 Series 5",
-     "radiant": "CyberHero",
      "dire": "HULIGANI",
-     "score": "31:20",
-     "winner": "CyberHero",
-     "date": "2026-11-09"
+     "score": "27:13",
+     "winner": "Inner Circle x Insanity",
+     "date": "2026-11-10"
     },
     {
      "league": "1win Essence III",
-     "radiant": "Yellow Submarine",
+     "radiant": "Froglings",
+     "dire": "_PowerRangers",
+     "score": "40:23",
+     "winner": "Froglings",
+     "date": "2026-11-10"
+    },
+    {
+     "league": "DreamLeague Division 2 Series 5",
+     "radiant": "Inner Circle x Insanity",
+     "dire": "HULIGANI",
+     "score": "34:20",
+     "winner": "Inner Circle x Insanity",
+     "date": "2026-11-10"
+    },
+    {
+     "league": "1win Essence III",
+     "radiant": "PlayTime",
      "dire": "Xipto",
-     "score": "41:42",
+     "score": "23:27",
      "winner": "Xipto",
-     "date": "2026-11-09"
+     "date": "2026-11-10"
     },
     {
      "league": "DreamLeague Division 2 Series 5",
      "radiant": "Inner Circle x Insanity",
-     "dire": "Yakult Brothers",
-     "score": "33:15",
+     "dire": "Zero Tenacity",
+     "score": "46:23",
      "winner": "Inner Circle x Insanity",
-     "date": "2026-11-09"
-    },
-    {
-     "league": "DreamLeague Division 2 Series 5",
-     "radiant": "Zero Tenacity",
-     "dire": "PuckChamp",
-     "score": "19:36",
-     "winner": "PuckChamp",
-     "date": "2026-11-09"
-    },
-    {
-     "league": "DreamLeague Division 2 Series 5",
-     "radiant": "CyberHero",
-     "dire": "HULIGANI",
-     "score": "35:12",
-     "winner": "CyberHero",
-     "date": "2026-11-09"
+     "date": "2026-11-10"
     },
     {
      "league": "1win Essence III",
-     "radiant": "Yellow Submarine",
+     "radiant": "PlayTime",
      "dire": "Xipto",
-     "score": "28:11",
-     "winner": "Yellow Submarine",
-     "date": "2026-11-09"
-    },
-    {
-     "league": "DreamLeague Division 2 Series 5",
-     "radiant": "Yakult Brothers",
-     "dire": "Inner Circle x Insanity",
-     "score": "24:24",
-     "winner": "Yakult Brothers",
-     "date": "2026-11-09"
+     "score": "35:23",
+     "winner": "PlayTime",
+     "date": "2026-11-10"
     }
    ],
    "players": {
@@ -458,65 +458,65 @@
      },
      {
       "rank": 2,
-      "name": "医者watson",
-      "team": "TY"
-     },
-     {
-      "rank": 3,
       "name": "Arkadiy Khromaev",
       "team": ""
      },
      {
-      "rank": 4,
+      "rank": 3,
       "name": "Wisper",
       "team": ""
      },
      {
+      "rank": 4,
+      "name": "医者watson",
+      "team": "TY"
+     },
+     {
       "rank": 5,
+      "name": "Nightfall",
+      "team": ""
+     },
+     {
+      "rank": 6,
       "name": "Yatoro",
       "team": "TSpirit"
      },
      {
-      "rank": 6,
+      "rank": 7,
       "name": "Niku",
       "team": "NAVI"
      },
      {
-      "rank": 7,
+      "rank": 8,
       "name": "bzm",
       "team": "1win"
      },
      {
-      "rank": 8,
+      "rank": 9,
       "name": "Rein",
       "team": "HU"
      },
      {
-      "rank": 9,
-      "name": "rincyq",
-      "team": ""
-     },
-     {
       "rank": 10,
-      "name": "Saberlight",
+      "name": "rincyq",
       "team": ""
      }
     ],
     "americas": [
      {
       "rank": 1,
-      "name": "Gabbana",
-      "team": ""
-     },
-     {
-      "rank": 2,
       "name": "Jessie",
       "team": ""
      },
      {
-      "rank": 3,
+      "rank": 2,
       "name": "Milnil",
       "team": "SM"
+     },
+     {
+      "rank": 3,
+      "name": "CanadianSerge",
+      "team": ""
      },
      {
       "rank": 4,
@@ -530,8 +530,8 @@
      },
      {
       "rank": 6,
-      "name": "CanadianSerge",
-      "team": ""
+      "name": "MD",
+      "team": "Rage"
      },
      {
       "rank": 7,
@@ -540,13 +540,13 @@
      },
      {
       "rank": 8,
-      "name": "MD",
-      "team": "Rage"
+      "name": "Sebs-",
+      "team": "oPd"
      },
      {
       "rank": 9,
-      "name": "Sebs-",
-      "team": "oPd"
+      "name": "yournightmare",
+      "team": ""
      },
      {
       "rank": 10,
@@ -557,52 +557,52 @@
     "se_asia": [
      {
       "rank": 1,
-      "name": "userr192837",
-      "team": ""
-     },
-     {
-      "rank": 2,
       "name": "大仓bra惊云",
       "team": ""
      },
      {
-      "rank": 3,
+      "rank": 2,
       "name": "Be1Yi",
       "team": ""
      },
      {
-      "rank": 4,
+      "rank": 3,
       "name": "Azura",
       "team": ""
      },
      {
-      "rank": 5,
+      "rank": 4,
       "name": "Seep",
       "team": ""
      },
      {
-      "rank": 6,
+      "rank": 5,
       "name": "陶一飞",
       "team": "only"
      },
      {
-      "rank": 7,
+      "rank": 6,
       "name": "Khánh An",
       "team": ""
      },
      {
-      "rank": 8,
+      "rank": 7,
       "name": "かえで",
       "team": ""
      },
      {
-      "rank": 9,
+      "rank": 8,
       "name": "AnimalSimulator2.0",
       "team": ""
      },
      {
-      "rank": 10,
+      "rank": 9,
       "name": "ponyo",
+      "team": ""
+     },
+     {
+      "rank": 10,
+      "name": "Myut",
       "team": ""
      }
     ],
@@ -624,38 +624,38 @@
      },
      {
       "rank": 4,
-      "name": "丁青",
-      "team": ""
-     },
-     {
-      "rank": 5,
       "name": "画卷",
       "team": ""
      },
      {
-      "rank": 6,
+      "rank": 5,
       "name": "Rice.",
       "team": ""
      },
      {
-      "rank": 7,
+      "rank": 6,
       "name": "MKL",
       "team": "ljy简直太帅了"
      },
      {
-      "rank": 8,
+      "rank": 7,
       "name": "一眼万年只是我以为",
       "team": ""
      },
      {
-      "rank": 9,
+      "rank": 8,
       "name": "玩伐木机狼人船长的s马",
       "team": ""
      },
      {
-      "rank": 10,
+      "rank": 9,
       "name": "我妻善逸",
       "team": "IB"
+     },
+     {
+      "rank": 10,
+      "name": "Watermelon, Squirrel and Milk",
+      "team": ""
      }
     ]
    },
@@ -1070,16 +1070,6 @@
    },
    "tournaments": [
     {
-     "name": "BLAST Rivals Fall 2026",
-     "start": "2026-11-11",
-     "end": "2026-11-15",
-     "prize": "$1,000,000",
-     "winner": null,
-     "runner_up": null,
-     "tier": "S",
-     "status": "upcoming"
-    },
-    {
      "name": "YaLLa Compass UAE 2026",
      "start": "2026-11-16",
      "end": "2026-11-22",
@@ -1168,6 +1158,26 @@
      "runner_up": null,
      "tier": "S",
      "status": "upcoming"
+    },
+    {
+     "name": "Intel Extreme Masters USA 2027",
+     "start": "2027-04-05",
+     "end": "2027-04-11",
+     "prize": "$1,000,000",
+     "winner": null,
+     "runner_up": null,
+     "tier": "S",
+     "status": "upcoming"
+    },
+    {
+     "name": "BLAST Rivals Fall 2026",
+     "start": "2026-11-11",
+     "end": "2026-11-15",
+     "prize": "$1,000,000",
+     "winner": null,
+     "runner_up": null,
+     "tier": "S",
+     "status": "ongoing"
     },
     {
      "name": "Intel Extreme Masters Beijing 2026",
