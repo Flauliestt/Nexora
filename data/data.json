@@ -1,17 +1,17 @@
 {
  "schema": 1,
- "generated": "2026-11-15T02:56:28Z",
+ "generated": "2026-11-16T03:05:29Z",
  "updated": {
-  "dota.teams": "2026-11-15T02:56:28Z",
-  "dota.meta": "2026-11-15T02:56:28Z",
-  "dota.matches": "2026-11-15T02:56:28Z",
-  "dota.players": "2026-11-15T02:56:28Z",
-  "cs.teams": "2026-11-15T02:56:28Z",
-  "dota.tournaments": "2026-11-13T02:55:47Z",
-  "cs.tournaments": "2026-11-13T02:55:47Z",
-  "valorant.tournaments": "2026-11-13T02:55:47Z",
-  "pubg.tournaments": "2026-11-13T02:55:47Z",
-  "fortnite.tournaments": "2026-11-13T02:55:47Z"
+  "dota.teams": "2026-11-16T03:05:29Z",
+  "dota.meta": "2026-11-16T03:05:29Z",
+  "dota.matches": "2026-11-16T03:05:29Z",
+  "dota.players": "2026-11-16T03:05:29Z",
+  "cs.teams": "2026-11-16T03:05:29Z",
+  "dota.tournaments": "2026-11-16T03:05:29Z",
+  "cs.tournaments": "2026-11-16T03:05:29Z",
+  "valorant.tournaments": "2026-11-16T03:05:29Z",
+  "pubg.tournaments": "2026-11-16T03:05:29Z",
+  "fortnite.tournaments": "2026-11-16T03:05:29Z"
  },
  "sources": {
   "dota.teams": {
@@ -40,24 +40,24 @@
    "note": "нет секрета PUBG_API_KEY"
   },
   "dota.tournaments": {
-   "ok": false,
-   "error": "ParseError: Liquipedia недоступна; Tier_1_Tournaments: HTTP 429 (liquipedia.net/dota2/api.php); Portal:Tournaments: Liquipedia ограничила запросы (429) в этом запуске, остальные пропущены; Tier_2_Tournaments: Liquipedia ограничила запросы (429) в этом запуске, остальные пропущены"
+   "ok": true,
+   "n": 22
   },
   "cs.tournaments": {
-   "ok": false,
-   "error": "ParseError: Liquipedia недоступна; S-Tier_Tournaments: Liquipedia ограничила запросы (429) в этом запуске, остальные пропущены; A-Tier_Tournaments: Liquipedia ограничила запросы (429) в этом запуске, остальные пропущены; Portal:Tournaments: Liquipedia ограничила запросы (429) в этом запуске, остальн"
+   "ok": true,
+   "n": 23
   },
   "valorant.tournaments": {
-   "ok": false,
-   "error": "ParseError: Liquipedia недоступна; S-Tier_Tournaments: Liquipedia ограничила запросы (429) в этом запуске, остальные пропущены; A-Tier_Tournaments: Liquipedia ограничила запросы (429) в этом запуске, остальные пропущены; Portal:Tournaments: Liquipedia ограничила запросы (429) в этом запуске, остальн"
+   "ok": true,
+   "n": 13
   },
   "pubg.tournaments": {
-   "ok": false,
-   "error": "ParseError: Liquipedia недоступна; S-Tier_Tournaments: Liquipedia ограничила запросы (429) в этом запуске, остальные пропущены; A-Tier_Tournaments: Liquipedia ограничила запросы (429) в этом запуске, остальные пропущены; Portal:Tournaments: Liquipedia ограничила запросы (429) в этом запуске, остальн"
+   "ok": true,
+   "n": 13
   },
   "fortnite.tournaments": {
-   "ok": false,
-   "error": "ParseError: Liquipedia недоступна; S-Tier_Tournaments: Liquipedia ограничила запросы (429) в этом запуске, остальные пропущены; A-Tier_Tournaments: Liquipedia ограничила запросы (429) в этом запуске, остальные пропущены; Portal:Tournaments: Liquipedia ограничила запросы (429) в этом запуске, остальн"
+   "ok": true,
+   "n": 19
   }
  },
  "games": {
@@ -65,6 +65,15 @@
    "teams": [
     {
      "rank": 1,
+     "name": "Team Spirit",
+     "tag": "TSpirit",
+     "rating": 1556,
+     "wins": 978,
+     "losses": 653,
+     "last": "2026-11-15"
+    },
+    {
+     "rank": 2,
      "name": "Team Yandex",
      "tag": "TY",
      "rating": 1551,
@@ -73,7 +82,7 @@
      "last": "2026-11-01"
     },
     {
-     "rank": 2,
+     "rank": 3,
      "name": "TEAM VISION",
      "tag": "VSN",
      "rating": 1546,
@@ -82,31 +91,22 @@
      "last": "2026-08-23"
     },
     {
-     "rank": 3,
-     "name": "Team Spirit",
-     "tag": "TSpirit",
-     "rating": 1540,
-     "wins": 976,
-     "losses": 653,
-     "last": "2026-11-13"
-    },
-    {
      "rank": 4,
      "name": "PARIVISION",
      "tag": "PV",
-     "rating": 1509,
-     "wins": 75,
-     "losses": 39,
-     "last": "2026-11-13"
+     "rating": 1505,
+     "wins": 77,
+     "losses": 40,
+     "last": "2026-11-15"
     },
     {
      "rank": 5,
      "name": "Aurora Gaming",
      "tag": "Aurora",
-     "rating": 1429,
-     "wins": 397,
+     "rating": 1435,
+     "wins": 399,
      "losses": 292,
-     "last": "2026-11-14"
+     "last": "2026-11-15"
     },
     {
      "rank": 6,
@@ -128,15 +128,6 @@
     },
     {
      "rank": 8,
-     "name": "LGD Gaming",
-     "tag": "LGD",
-     "rating": 1356,
-     "wins": 1840,
-     "losses": 1130,
-     "last": "2026-11-14"
-    },
-    {
-     "rank": 9,
      "name": "Nigma Galaxy ",
      "tag": "NGX",
      "rating": 1355,
@@ -145,13 +136,22 @@
      "last": "2026-08-22"
     },
     {
+     "rank": 9,
+     "name": "LGD Gaming",
+     "tag": "LGD",
+     "rating": 1340,
+     "wins": 1840,
+     "losses": 1132,
+     "last": "2026-11-15"
+    },
+    {
      "rank": 10,
      "name": "GamerLegion",
      "tag": "GL",
-     "rating": 1327,
-     "wins": 137,
-     "losses": 136,
-     "last": "2026-11-13"
+     "rating": 1331,
+     "wins": 138,
+     "losses": 138,
+     "last": "2026-11-15"
     },
     {
      "rank": 11,
@@ -182,271 +182,271 @@
     },
     {
      "rank": 14,
+     "name": "LEGION",
+     "tag": "LEGION",
+     "rating": 1252,
+     "wins": 31,
+     "losses": 27,
+     "last": "2026-11-15"
+    },
+    {
+     "rank": 15,
      "name": "Xtreme Gaming",
      "tag": "XG",
      "rating": 1252,
      "wins": 627,
      "losses": 516,
      "last": "2026-10-02"
-    },
-    {
-     "rank": 15,
-     "name": "OG",
-     "tag": "OG",
-     "rating": 1227,
-     "wins": 1260,
-     "losses": 992,
-     "last": "2026-11-04"
     }
    ],
    "meta": {
     "pro": [
      {
-      "hero": "Witch Doctor",
-      "picks": 86,
-      "bans": 41,
-      "wr": 51.2
+      "hero": "Hoodwink",
+      "picks": 78,
+      "bans": 18,
+      "wr": 53.8
      },
      {
-      "hero": "Hoodwink",
-      "picks": 85,
-      "bans": 24,
-      "wr": 51.8
+      "hero": "Witch Doctor",
+      "picks": 67,
+      "bans": 45,
+      "wr": 44.8
      },
      {
       "hero": "Dragon Knight",
-      "picks": 74,
-      "bans": 60,
-      "wr": 48.6
-     },
-     {
-      "hero": "Windranger",
-      "picks": 73,
-      "bans": 25,
-      "wr": 46.6
+      "picks": 66,
+      "bans": 51,
+      "wr": 53.0
      },
      {
       "hero": "Dark Willow",
-      "picks": 69,
-      "bans": 31,
-      "wr": 52.2
-     },
-     {
-      "hero": "Techies",
-      "picks": 52,
-      "bans": 99,
-      "wr": 55.8
-     },
-     {
-      "hero": "Dazzle",
-      "picks": 51,
-      "bans": 41,
-      "wr": 39.2
-     },
-     {
-      "hero": "Earthshaker",
-      "picks": 49,
-      "bans": 63,
-      "wr": 61.2
-     },
-     {
-      "hero": "Doom",
-      "picks": 49,
-      "bans": 66,
+      "picks": 64,
+      "bans": 25,
       "wr": 53.1
      },
      {
-      "hero": "Winter Wyvern",
-      "picks": 36,
+      "hero": "Windranger",
+      "picks": 63,
       "bans": 21,
+      "wr": 44.4
+     },
+     {
+      "hero": "Doom",
+      "picks": 48,
+      "bans": 56,
       "wr": 50.0
+     },
+     {
+      "hero": "Dazzle",
+      "picks": 45,
+      "bans": 34,
+      "wr": 40.0
+     },
+     {
+      "hero": "Techies",
+      "picks": 44,
+      "bans": 86,
+      "wr": 61.4
+     },
+     {
+      "hero": "Earthshaker",
+      "picks": 38,
+      "bans": 58,
+      "wr": 47.4
+     },
+     {
+      "hero": "Earth Spirit",
+      "picks": 31,
+      "bans": 35,
+      "wr": 51.6
      }
     ],
     "high_best": [
      {
       "hero": "Bounty Hunter",
-      "picks": 30848,
+      "picks": 31236,
       "wr": 54.8
      },
      {
       "hero": "Outworld Devourer",
-      "picks": 52193,
-      "wr": 53.7
+      "picks": 53288,
+      "wr": 53.9
      },
      {
       "hero": "Nyx Assassin",
-      "picks": 42375,
+      "picks": 43370,
       "wr": 53.6
      },
      {
       "hero": "Night Stalker",
-      "picks": 33344,
-      "wr": 53.3
+      "picks": 33967,
+      "wr": 53.0
      },
      {
-      "hero": "Juggernaut",
-      "picks": 58172,
+      "hero": "Spirit Breaker",
+      "picks": 59401,
       "wr": 52.7
      },
      {
       "hero": "Wraith King",
-      "picks": 31582,
+      "picks": 32674,
       "wr": 52.7
      },
      {
-      "hero": "Spirit Breaker",
-      "picks": 57968,
+      "hero": "Juggernaut",
+      "picks": 59727,
       "wr": 52.6
      },
      {
       "hero": "Spectre",
-      "picks": 21950,
+      "picks": 22390,
       "wr": 52.4
      },
      {
       "hero": "Dragon Knight",
-      "picks": 63508,
+      "picks": 65494,
       "wr": 52.3
      },
      {
       "hero": "Phantom Lancer",
-      "picks": 35844,
-      "wr": 52.3
+      "picks": 36661,
+      "wr": 52.1
      }
     ],
     "high_popular": [
      {
       "hero": "Pudge",
-      "picks": 90591,
-      "wr": 50.1
+      "picks": 92468,
+      "wr": 50.2
      },
      {
       "hero": "Rubick",
-      "picks": 89019,
+      "picks": 91022,
       "wr": 49.9
      },
      {
       "hero": "Lion",
-      "picks": 73462,
+      "picks": 75054,
       "wr": 48.4
      },
      {
       "hero": "Invoker",
-      "picks": 71517,
+      "picks": 73173,
       "wr": 52.0
      },
      {
       "hero": "Dragon Knight",
-      "picks": 63508,
+      "picks": 65494,
       "wr": 52.3
      },
      {
       "hero": "Windranger",
-      "picks": 61778,
-      "wr": 49.3
+      "picks": 63352,
+      "wr": 49.1
      },
      {
       "hero": "Earthshaker",
-      "picks": 61192,
-      "wr": 50.8
+      "picks": 63072,
+      "wr": 50.7
      },
      {
       "hero": "Juggernaut",
-      "picks": 58172,
-      "wr": 52.7
-     },
-     {
-      "hero": "Spirit Breaker",
-      "picks": 57968,
+      "picks": 59727,
       "wr": 52.6
      },
      {
+      "hero": "Spirit Breaker",
+      "picks": 59401,
+      "wr": 52.7
+     },
+     {
       "hero": "Anti-Mage",
-      "picks": 57868,
-      "wr": 50.8
+      "picks": 59123,
+      "wr": 50.9
      }
     ]
    },
    "matches": [
     {
      "league": "1win Essence III",
-     "radiant": "1win",
-     "dire": "Froglings",
-     "score": "34:15",
-     "winner": "1win",
+     "radiant": "LGD Gaming",
+     "dire": "Team Spirit",
+     "score": "16:46",
+     "winner": "Team Spirit",
      "date": "2026-11-15"
     },
     {
      "league": "1win Essence III",
-     "radiant": "1win",
-     "dire": "Froglings",
-     "score": "33:48",
-     "winner": "Froglings",
-     "date": "2026-11-14"
+     "radiant": "LGD Gaming",
+     "dire": "Team Spirit",
+     "score": "6:27",
+     "winner": "Team Spirit",
+     "date": "2026-11-15"
+    },
+    {
+     "league": "1win Essence III",
+     "radiant": "DO KONCA",
+     "dire": "Aurora Gaming",
+     "score": "2:37",
+     "winner": "Aurora Gaming",
+     "date": "2026-11-15"
+    },
+    {
+     "league": "DreamLeague Division 2 Series 5",
+     "radiant": "CyberHero",
+     "dire": "HULIGANI",
+     "score": "31:14",
+     "winner": "CyberHero",
+     "date": "2026-11-15"
+    },
+    {
+     "league": "DreamLeague Division 2 Series 5",
+     "radiant": "CyberHero",
+     "dire": "HULIGANI",
+     "score": "21:11",
+     "winner": "CyberHero",
+     "date": "2026-11-15"
+    },
+    {
+     "league": "1win Essence III",
+     "radiant": "DO KONCA",
+     "dire": "Aurora Gaming",
+     "score": "47:49",
+     "winner": "Aurora Gaming",
+     "date": "2026-11-15"
     },
     {
      "league": "1win Essence III",
      "radiant": "Froglings",
-     "dire": "1win",
-     "score": "13:31",
-     "winner": "1win",
-     "date": "2026-11-14"
-    },
-    {
-     "league": "1win Essence III",
-     "radiant": "CyberHero",
-     "dire": "Aurora Gaming",
-     "score": "34:35",
-     "winner": "Aurora Gaming",
-     "date": "2026-11-14"
-    },
-    {
-     "league": "1win Essence III",
-     "radiant": "CyberHero",
-     "dire": "Aurora Gaming",
-     "score": "12:31",
-     "winner": "Aurora Gaming",
-     "date": "2026-11-14"
-    },
-    {
-     "league": "DreamLeague Division 2 Series 5",
-     "radiant": "PlayTime",
-     "dire": "_PowerRangers",
-     "score": "39:29",
-     "winner": "PlayTime",
-     "date": "2026-11-14"
-    },
-    {
-     "league": "1win Essence III",
-     "radiant": "Team Liquid",
      "dire": "LEGION",
-     "score": "18:39",
+     "score": "18:31",
      "winner": "LEGION",
-     "date": "2026-11-14"
+     "date": "2026-11-15"
     },
     {
      "league": "DreamLeague Division 2 Series 5",
-     "radiant": "_PowerRangers",
-     "dire": "PlayTime",
-     "score": "8:24",
-     "winner": "PlayTime",
-     "date": "2026-11-14"
+     "radiant": "InterActive Philippines",
+     "dire": "Nemiga Gaming",
+     "score": "29:47",
+     "winner": "Nemiga Gaming",
+     "date": "2026-11-15"
     },
     {
-     "league": "1win Essence III",
-     "radiant": "Team Liquid",
-     "dire": "LEGION",
-     "score": "33:13",
-     "winner": "Team Liquid",
-     "date": "2026-11-14"
+     "league": "DreamLeague Division 2 Series 5",
+     "radiant": "InterActive Philippines",
+     "dire": "Nemiga Gaming",
+     "score": "8:37",
+     "winner": "Nemiga Gaming",
+     "date": "2026-11-15"
     },
     {
      "league": "1win Essence III",
      "radiant": "LEGION",
-     "dire": "Team Liquid",
-     "score": "28:23",
+     "dire": "Froglings",
+     "score": "27:33",
      "winner": "LEGION",
-     "date": "2026-11-14"
+     "date": "2026-11-15"
     }
    ],
    "players": {
@@ -458,18 +458,18 @@
      },
      {
       "rank": 2,
-      "name": "Arkadiy Khromaev",
+      "name": "Wisper",
       "team": ""
      },
      {
       "rank": 3,
-      "name": "Yatoro",
-      "team": "TSpirit"
+      "name": "Arkadiy Khromaev",
+      "team": ""
      },
      {
       "rank": 4,
-      "name": "Wisper",
-      "team": ""
+      "name": "Niku",
+      "team": "NAVI"
      },
      {
       "rank": 5,
@@ -478,13 +478,13 @@
      },
      {
       "rank": 6,
-      "name": "Niku",
-      "team": "NAVI"
+      "name": "医者watson",
+      "team": "TY"
      },
      {
       "rank": 7,
-      "name": "医者watson",
-      "team": "TY"
+      "name": "Yatoro",
+      "team": "TSpirit"
      },
      {
       "rank": 8,
@@ -515,18 +515,23 @@
      },
      {
       "rank": 3,
-      "name": "Pishtya",
-      "team": ""
-     },
-     {
-      "rank": 4,
       "name": "Karl",
       "team": "XG"
      },
      {
-      "rank": 5,
-      "name": "yournightmare",
+      "rank": 4,
+      "name": "Pishtya",
       "team": ""
+     },
+     {
+      "rank": 5,
+      "name": "AlienManaBanana",
+      "team": ""
+     },
+     {
+      "rank": 6,
+      "name": "KPR",
+      "team": "GP"
      },
      {
       "rank": 6,
@@ -534,30 +539,25 @@
       "team": "NALH"
      },
      {
-      "rank": 7,
+      "rank": 8,
+      "name": "yournightmare",
+      "team": ""
+     },
+     {
+      "rank": 9,
       "name": "Captainc0c0",
       "team": ""
      },
      {
-      "rank": 8,
-      "name": "KPR",
-      "team": "GP"
-     },
-     {
-      "rank": 9,
+      "rank": 10,
       "name": "Natsumi ><",
       "team": "WAE"
-     },
-     {
-      "rank": 10,
-      "name": "Gast",
-      "team": ""
      }
     ],
     "se_asia": [
      {
       "rank": 1,
-      "name": "~",
+      "name": "ponyo",
       "team": ""
      },
      {
@@ -567,94 +567,94 @@
      },
      {
       "rank": 3,
-      "name": "bzs",
-      "team": ""
-     },
-     {
-      "rank": 4,
       "name": "Be1Yi",
       "team": ""
      },
      {
-      "rank": 5,
-      "name": "Khánh An",
-      "team": ""
-     },
-     {
-      "rank": 6,
+      "rank": 4,
       "name": "陶一飞",
       "team": "only"
      },
      {
-      "rank": 7,
+      "rank": 5,
       "name": "我们是亚军!!!",
       "team": ""
      },
      {
-      "rank": 8,
+      "rank": 6,
       "name": "Collapse",
       "team": ""
      },
      {
+      "rank": 7,
+      "name": "BEEBIE",
+      "team": ""
+     },
+     {
+      "rank": 8,
+      "name": "free game",
+      "team": ""
+     },
+     {
       "rank": 9,
-      "name": "ponyo",
+      "name": "~",
       "team": ""
      },
      {
       "rank": 10,
-      "name": "free game",
+      "name": "库尔德牛逼武装",
       "team": ""
      }
     ],
     "china": [
      {
       "rank": 1,
-      "name": "Jisoo",
-      "team": "UoP"
-     },
-     {
-      "rank": 2,
       "name": "天国大哥",
       "team": ""
      },
      {
+      "rank": 2,
+      "name": "一口仙",
+      "team": ""
+     },
+     {
       "rank": 3,
-      "name": "illusionS",
-      "team": ""
-     },
-     {
-      "rank": 4,
-      "name": "画卷",
-      "team": ""
-     },
-     {
-      "rank": 5,
       "name": "DD",
       "team": ""
      },
      {
-      "rank": 6,
+      "rank": 4,
       "name": "Rice.",
       "team": ""
      },
      {
-      "rank": 7,
+      "rank": 5,
       "name": "一眼万年只是我以为",
       "team": ""
      },
      {
-      "rank": 8,
+      "rank": 6,
       "name": "玩伐木机狼人船长的s马",
       "team": ""
      },
      {
+      "rank": 7,
+      "name": "saki",
+      "team": ""
+     },
+     {
+      "rank": 8,
+      "name": "dumb",
+      "team": ""
+     },
+     {
       "rank": 9,
-      "name": "认真的雪。",
+      "name": "lebesgue",
       "team": ""
      },
      {
       "rank": 10,
-      "name": "lebesgue",
+      "name": "Зая",
       "team": ""
      }
     ]
@@ -1070,16 +1070,6 @@
    },
    "tournaments": [
     {
-     "name": "YaLLa Compass UAE 2026",
-     "start": "2026-11-16",
-     "end": "2026-11-22",
-     "prize": "$600,000",
-     "winner": null,
-     "runner_up": "Cancelled",
-     "tier": "S",
-     "status": "upcoming"
-    },
-    {
      "name": "PGL Major Singapore 2026",
      "start": "2026-11-24",
      "end": "2026-12-13",
@@ -1170,14 +1160,34 @@
      "status": "upcoming"
     },
     {
+     "name": "FISSURE Playground #6",
+     "start": "2027-04-15",
+     "end": "2027-04-26",
+     "prize": "",
+     "winner": null,
+     "runner_up": null,
+     "tier": "S",
+     "status": "upcoming"
+    },
+    {
+     "name": "YaLLa Compass UAE 2026",
+     "start": "2026-11-16",
+     "end": "2026-11-22",
+     "prize": "$600,000",
+     "winner": null,
+     "runner_up": "Cancelled",
+     "tier": "S",
+     "status": "ongoing"
+    },
+    {
      "name": "BLAST Rivals Fall 2026",
      "start": "2026-11-11",
      "end": "2026-11-15",
      "prize": "$1,000,000",
-     "winner": null,
-     "runner_up": null,
+     "winner": "FURIA",
+     "runner_up": "Team Spirit",
      "tier": "S",
-     "status": "ongoing"
+     "status": "finished"
     },
     {
      "name": "Intel Extreme Masters Beijing 2026",
@@ -1286,16 +1296,6 @@
      "prize": "$2,000,000",
      "winner": "Team Spirit",
      "runner_up": "FUT Esports",
-     "tier": "S",
-     "status": "finished"
-    },
-    {
-     "name": "PGL Summer 2026",
-     "start": "2026-08-06",
-     "end": "2026-08-16",
-     "prize": "$1,250,000",
-     "winner": "16",
-     "runner_up": "Cancelled",
      "tier": "S",
      "status": "finished"
     }
