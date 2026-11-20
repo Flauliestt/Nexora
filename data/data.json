@@ -1,17 +1,17 @@
 {
  "schema": 1,
- "generated": "2026-11-19T02:59:20Z",
+ "generated": "2026-11-20T02:56:00Z",
  "updated": {
-  "dota.teams": "2026-11-19T02:59:20Z",
-  "dota.meta": "2026-11-19T02:59:20Z",
-  "dota.matches": "2026-11-19T02:59:20Z",
-  "dota.players": "2026-11-19T02:59:20Z",
-  "cs.teams": "2026-11-19T02:59:20Z",
-  "dota.tournaments": "2026-11-19T02:59:20Z",
-  "cs.tournaments": "2026-11-19T02:59:20Z",
-  "valorant.tournaments": "2026-11-19T02:59:20Z",
-  "pubg.tournaments": "2026-11-19T02:59:20Z",
-  "fortnite.tournaments": "2026-11-19T02:59:20Z"
+  "dota.teams": "2026-11-20T02:56:00Z",
+  "dota.meta": "2026-11-20T02:56:00Z",
+  "dota.matches": "2026-11-20T02:56:00Z",
+  "dota.players": "2026-11-20T02:56:00Z",
+  "cs.teams": "2026-11-20T02:56:00Z",
+  "dota.tournaments": "2026-11-20T02:56:00Z",
+  "cs.tournaments": "2026-11-20T02:56:00Z",
+  "valorant.tournaments": "2026-11-20T02:56:00Z",
+  "pubg.tournaments": "2026-11-20T02:56:00Z",
+  "fortnite.tournaments": "2026-11-20T02:56:00Z"
  },
  "sources": {
   "dota.teams": {
@@ -119,15 +119,6 @@
     },
     {
      "rank": 7,
-     "name": "Team Falcons",
-     "tag": "FLCN",
-     "rating": 1372,
-     "wins": 571,
-     "losses": 317,
-     "last": "2026-08-21"
-    },
-    {
-     "rank": 8,
      "name": "Nigma Galaxy ",
      "tag": "NGX",
      "rating": 1355,
@@ -136,7 +127,7 @@
      "last": "2026-08-22"
     },
     {
-     "rank": 9,
+     "rank": 8,
      "name": "LGD Gaming",
      "tag": "LGD",
      "rating": 1339,
@@ -145,7 +136,7 @@
      "last": "2026-11-17"
     },
     {
-     "rank": 10,
+     "rank": 9,
      "name": "GamerLegion",
      "tag": "GL",
      "rating": 1318,
@@ -154,7 +145,7 @@
      "last": "2026-11-16"
     },
     {
-     "rank": 11,
+     "rank": 10,
      "name": "Team Liquid",
      "tag": "Liquid",
      "rating": 1313,
@@ -163,7 +154,7 @@
      "last": "2026-11-14"
     },
     {
-     "rank": 12,
+     "rank": 11,
      "name": "Team Resilience",
      "tag": "Resilience",
      "rating": 1298,
@@ -172,16 +163,7 @@
      "last": "2026-10-15"
     },
     {
-     "rank": 13,
-     "name": "Iron Wing",
-     "tag": "IW",
-     "rating": 1275,
-     "wins": 19,
-     "losses": 26,
-     "last": "2026-08-21"
-    },
-    {
-     "rank": 14,
+     "rank": 12,
      "name": "Xtreme Gaming",
      "tag": "XG",
      "rating": 1252,
@@ -190,184 +172,250 @@
      "last": "2026-10-02"
     },
     {
-     "rank": 15,
+     "rank": 13,
      "name": "LEGION",
      "tag": "LEGION",
      "rating": 1251,
      "wins": 33,
      "losses": 31,
      "last": "2026-11-17"
+    },
+    {
+     "rank": 14,
+     "name": "OG",
+     "tag": "OG",
+     "rating": 1227,
+     "wins": 1260,
+     "losses": 992,
+     "last": "2026-11-04"
+    },
+    {
+     "rank": 15,
+     "name": "CyberHero",
+     "tag": "CyberHero",
+     "rating": 1226,
+     "wins": 51,
+     "losses": 36,
+     "last": "2026-11-19"
     }
    ],
    "meta": {
     "pro": [
      {
       "hero": "Dark Willow",
-      "picks": 53,
-      "bans": 13,
-      "wr": 49.1
-     },
-     {
-      "hero": "Hoodwink",
-      "picks": 48,
-      "bans": 13,
-      "wr": 39.6
+      "picks": 45,
+      "bans": 11,
+      "wr": 51.1
      },
      {
       "hero": "Dragon Knight",
-      "picks": 46,
-      "bans": 45,
-      "wr": 63.0
+      "picks": 43,
+      "bans": 40,
+      "wr": 65.1
      },
      {
-      "hero": "Witch Doctor",
-      "picks": 42,
-      "bans": 47,
-      "wr": 52.4
+      "hero": "Hoodwink",
+      "picks": 41,
+      "bans": 9,
+      "wr": 43.9
      },
      {
       "hero": "Windranger",
-      "picks": 40,
-      "bans": 16,
-      "wr": 45.0
+      "picks": 37,
+      "bans": 13,
+      "wr": 45.9
      },
      {
-      "hero": "Dazzle",
+      "hero": "Witch Doctor",
       "picks": 32,
-      "bans": 19,
-      "wr": 43.8
-     },
-     {
-      "hero": "Techies",
-      "picks": 32,
-      "bans": 54,
-      "wr": 50.0
-     },
-     {
-      "hero": "Pangolier",
-      "picks": 32,
-      "bans": 27,
+      "bans": 41,
       "wr": 46.9
      },
      {
-      "hero": "Doom",
+      "hero": "Pangolier",
       "picks": 29,
-      "bans": 45,
-      "wr": 41.4
+      "bans": 17,
+      "wr": 51.7
      },
      {
-      "hero": "Earth Spirit",
-      "picks": 25,
-      "bans": 33,
-      "wr": 60.0
+      "hero": "Dazzle",
+      "picks": 27,
+      "bans": 18,
+      "wr": 48.1
+     },
+     {
+      "hero": "Techies",
+      "picks": 26,
+      "bans": 45,
+      "wr": 50.0
+     },
+     {
+      "hero": "Doom",
+      "picks": 24,
+      "bans": 44,
+      "wr": 33.3
+     },
+     {
+      "hero": "Winter Wyvern",
+      "picks": 21,
+      "bans": 9,
+      "wr": 61.9
      }
     ],
     "high_best": [
      {
       "hero": "Bounty Hunter",
-      "picks": 30474,
-      "wr": 54.9
+      "picks": 29087,
+      "wr": 54.6
      },
      {
-      "hero": "Outworld Devourer",
-      "picks": 51336,
-      "wr": 53.8
-     },
-     {
-      "hero": "Nyx Assassin",
-      "picks": 42852,
+      "hero": "Dazzle",
+      "picks": 24144,
       "wr": 53.3
      },
      {
-      "hero": "Night Stalker",
-      "picks": 33330,
+      "hero": "Outworld Devourer",
+      "picks": 47765,
+      "wr": 53.2
+     },
+     {
+      "hero": "Nyx Assassin",
+      "picks": 43369,
+      "wr": 53.0
+     },
+     {
+      "hero": "Sven",
+      "picks": 40420,
       "wr": 52.9
      },
      {
-      "hero": "Spirit Breaker",
-      "picks": 58397,
-      "wr": 52.6
+      "hero": "Grimstroke",
+      "picks": 34077,
+      "wr": 52.7
      },
      {
       "hero": "Wraith King",
-      "picks": 32654,
+      "picks": 33505,
       "wr": 52.6
      },
      {
-      "hero": "Spectre",
-      "picks": 21713,
+      "hero": "Night Stalker",
+      "picks": 33292,
       "wr": 52.5
      },
      {
       "hero": "Invoker",
-      "picks": 72251,
-      "wr": 52.3
+      "picks": 71356,
+      "wr": 52.2
      },
      {
-      "hero": "Juggernaut",
-      "picks": 58883,
-      "wr": 52.3
-     },
-     {
-      "hero": "Grimstroke",
-      "picks": 33540,
-      "wr": 52.3
+      "hero": "Spirit Breaker",
+      "picks": 55969,
+      "wr": 52.1
      }
     ],
     "high_popular": [
      {
       "hero": "Pudge",
-      "picks": 91835,
-      "wr": 50.2
+      "picks": 92014,
+      "wr": 49.8
      },
      {
       "hero": "Rubick",
-      "picks": 89712,
+      "picks": 88462,
       "wr": 50.0
      },
      {
       "hero": "Lion",
-      "picks": 73467,
-      "wr": 48.5
+      "picks": 71899,
+      "wr": 48.7
      },
      {
       "hero": "Invoker",
-      "picks": 72251,
-      "wr": 52.3
-     },
-     {
-      "hero": "Dragon Knight",
-      "picks": 65518,
-      "wr": 51.9
+      "picks": 71356,
+      "wr": 52.2
      },
      {
       "hero": "Earthshaker",
-      "picks": 63303,
-      "wr": 50.7
-     },
-     {
-      "hero": "Windranger",
-      "picks": 63289,
-      "wr": 48.9
-     },
-     {
-      "hero": "Juggernaut",
-      "picks": 58883,
-      "wr": 52.3
-     },
-     {
-      "hero": "Anti-Mage",
-      "picks": 58523,
+      "picks": 63746,
       "wr": 51.1
      },
      {
-      "hero": "Slark",
-      "picks": 58460,
-      "wr": 50.1
+      "hero": "Windranger",
+      "picks": 61774,
+      "wr": 49.2
+     },
+     {
+      "hero": "Dragon Knight",
+      "picks": 61066,
+      "wr": 51.8
+     },
+     {
+      "hero": "Juggernaut",
+      "picks": 60359,
+      "wr": 51.1
+     },
+     {
+      "hero": "Spirit Breaker",
+      "picks": 55969,
+      "wr": 52.1
+     },
+     {
+      "hero": "Anti-Mage",
+      "picks": 55961,
+      "wr": 50.7
      }
     ]
    },
    "matches": [
+    {
+     "league": "DreamLeague Division 2 Series 5",
+     "radiant": "CyberHero",
+     "dire": "Froglings",
+     "score": "39:29",
+     "winner": "CyberHero",
+     "date": "2026-11-19"
+    },
+    {
+     "league": "DreamLeague Division 2 Series 5",
+     "radiant": "CyberHero",
+     "dire": "Froglings",
+     "score": "38:20",
+     "winner": "CyberHero",
+     "date": "2026-11-19"
+    },
+    {
+     "league": "DreamLeague Division 2 Series 5",
+     "radiant": "Froglings",
+     "dire": "CyberHero",
+     "score": "31:37",
+     "winner": "Froglings",
+     "date": "2026-11-19"
+    },
+    {
+     "league": "DreamLeague Division 2 Series 5",
+     "radiant": "Froglings",
+     "dire": "HULIGANI",
+     "score": "28:24",
+     "winner": "Froglings",
+     "date": "2026-11-19"
+    },
+    {
+     "league": "DreamLeague Division 2 Series 5",
+     "radiant": "Froglings",
+     "dire": "HULIGANI",
+     "score": "8:41",
+     "winner": "HULIGANI",
+     "date": "2026-11-19"
+    },
+    {
+     "league": "DreamLeague Division 2 Series 5",
+     "radiant": "HULIGANI",
+     "dire": "Froglings",
+     "score": "39:41",
+     "winner": "Froglings",
+     "date": "2026-11-19"
+    },
     {
      "league": "DreamLeague Division 2 Series 5",
      "radiant": "Inner Circle x Insanity",
@@ -399,54 +447,6 @@
      "score": "31:22",
      "winner": "PARIVISION",
      "date": "2026-11-18"
-    },
-    {
-     "league": "DreamLeague Division 2 Series 5",
-     "radiant": "CyberHero",
-     "dire": "Inner Circle x Insanity",
-     "score": "48:28",
-     "winner": "CyberHero",
-     "date": "2026-11-18"
-    },
-    {
-     "league": "1win Essence III",
-     "radiant": "Team Spirit",
-     "dire": "PARIVISION",
-     "score": "13:34",
-     "winner": "PARIVISION",
-     "date": "2026-11-18"
-    },
-    {
-     "league": "DreamLeague Division 2 Series 5",
-     "radiant": "Nemiga Gaming",
-     "dire": "HULIGANI",
-     "score": "19:41",
-     "winner": "HULIGANI",
-     "date": "2026-11-18"
-    },
-    {
-     "league": "1win Essence III",
-     "radiant": "PARIVISION",
-     "dire": "Aurora Gaming",
-     "score": "41:12",
-     "winner": "PARIVISION",
-     "date": "2026-11-18"
-    },
-    {
-     "league": "DreamLeague Division 2 Series 5",
-     "radiant": "HULIGANI",
-     "dire": "Nemiga Gaming",
-     "score": "20:5",
-     "winner": "HULIGANI",
-     "date": "2026-11-18"
-    },
-    {
-     "league": "1win Essence III",
-     "radiant": "PARIVISION",
-     "dire": "Aurora Gaming",
-     "score": "33:35",
-     "winner": "PARIVISION",
-     "date": "2026-11-18"
     }
    ],
    "players": {
@@ -468,18 +468,18 @@
      },
      {
       "rank": 4,
-      "name": "Nightfall",
-      "team": ""
-     },
-     {
-      "rank": 5,
       "name": "bzm",
       "team": "1win"
      },
      {
-      "rank": 6,
-      "name": "Saberlight",
+      "rank": 5,
+      "name": "Nightfall",
       "team": ""
+     },
+     {
+      "rank": 6,
+      "name": "Pure",
+      "team": "1win"
      },
      {
       "rank": 7,
@@ -493,13 +493,13 @@
      },
      {
       "rank": 9,
-      "name": "Rein",
-      "team": "HU"
+      "name": "Saberlight",
+      "team": ""
      },
      {
       "rank": 10,
-      "name": "Pure",
-      "team": "1win"
+      "name": "Rein",
+      "team": "HU"
      }
     ],
     "americas": [
@@ -515,23 +515,23 @@
      },
      {
       "rank": 3,
-      "name": "Milnil",
-      "team": "SM"
-     },
-     {
-      "rank": 4,
       "name": "Pishtya",
       "team": ""
      },
      {
-      "rank": 5,
+      "rank": 4,
       "name": "SoLotic",
       "team": "Awake"
      },
      {
+      "rank": 5,
+      "name": "Milnil",
+      "team": "SM"
+     },
+     {
       "rank": 6,
-      "name": "AlienManaBanana",
-      "team": ""
+      "name": "KPR",
+      "team": "GP"
      },
      {
       "rank": 7,
@@ -539,9 +539,9 @@
       "team": "NALH"
      },
      {
-      "rank": 7,
-      "name": "KPR",
-      "team": "GP"
+      "rank": 8,
+      "name": "AlienManaBanana",
+      "team": ""
      },
      {
       "rank": 9,
@@ -550,19 +550,19 @@
      },
      {
       "rank": 10,
-      "name": "rosie",
+      "name": "Droguito",
       "team": ""
      }
     ],
     "se_asia": [
      {
       "rank": 1,
-      "name": "大仓bra惊云",
+      "name": "bzs",
       "team": ""
      },
      {
       "rank": 2,
-      "name": "Be1Yi",
+      "name": "大仓bra惊云",
       "team": ""
      },
      {
@@ -572,33 +572,33 @@
      },
      {
       "rank": 5,
-      "name": "BEEBIE",
-      "team": ""
-     },
-     {
-      "rank": 6,
       "name": "Collapse",
       "team": ""
      },
      {
-      "rank": 7,
+      "rank": 6,
       "name": "free game",
       "team": ""
      },
      {
-      "rank": 8,
+      "rank": 7,
       "name": "库尔德牛逼武装",
       "team": ""
      },
      {
+      "rank": 8,
+      "name": "Monet",
+      "team": ""
+     },
+     {
       "rank": 9,
-      "name": "lzy",
-      "team": "MA"
+      "name": "hidie",
+      "team": ""
      },
      {
       "rank": 10,
-      "name": "Skill Lay",
-      "team": "YG"
+      "name": "BEEBIE",
+      "team": ""
      }
     ],
     "china": [
@@ -614,57 +614,47 @@
      },
      {
       "rank": 3,
-      "name": "tch.",
+      "name": "Yusui",
       "team": ""
      },
      {
       "rank": 4,
-      "name": "DD",
+      "name": "tch.",
       "team": ""
      },
      {
       "rank": 5,
-      "name": "玩伐木机狼人船长的s马",
+      "name": "DD",
       "team": ""
      },
      {
       "rank": 6,
-      "name": "saki",
+      "name": "玩伐木机狼人船长的s马",
       "team": ""
      },
      {
       "rank": 7,
-      "name": "dumb",
+      "name": "saki",
       "team": ""
      },
      {
       "rank": 8,
-      "name": "京城小神",
+      "name": "认真的雪。",
       "team": ""
      },
      {
       "rank": 9,
-      "name": "共享心跳",
+      "name": "CARROxx",
       "team": ""
      },
      {
       "rank": 10,
-      "name": "Зая",
+      "name": "Qy1t",
       "team": ""
      }
     ]
    },
    "tournaments": [
-    {
-     "name": "BLAST SLAM IX",
-     "start": "2026-11-20",
-     "end": "2026-11-29",
-     "prize": "$750,000",
-     "winner": null,
-     "runner_up": null,
-     "tier": "1",
-     "status": "upcoming"
-    },
     {
      "name": "DreamLeague Season 30",
      "start": "2026-12-02",
@@ -744,6 +734,16 @@
      "runner_up": null,
      "tier": "1",
      "status": "upcoming"
+    },
+    {
+     "name": "BLAST SLAM IX",
+     "start": "2026-11-20",
+     "end": "2026-11-29",
+     "prize": "$750,000",
+     "winner": null,
+     "runner_up": null,
+     "tier": "1",
+     "status": "ongoing"
     },
     {
      "name": "1win Essence III",
@@ -1557,40 +1557,10 @@
   "fortnite": {
    "tournaments": [
     {
-     "name": "FNCS 2026 Reload: EU - Grand Finals",
-     "start": "2026-11-21",
-     "end": "2026-11-21",
-     "prize": "$223,500",
-     "winner": null,
-     "runner_up": null,
-     "tier": "S",
-     "status": "upcoming"
-    },
-    {
      "name": "FNCS 2026 Reload: NAC - Grand Finals",
      "start": "2026-11-21",
      "end": "2026-11-21",
      "prize": "$158,250",
-     "winner": null,
-     "runner_up": null,
-     "tier": "S",
-     "status": "upcoming"
-    },
-    {
-     "name": "FNCS 2026 Reload: NAW - Grand Finals",
-     "start": "2026-11-21",
-     "end": "2026-11-21",
-     "prize": "$60,750",
-     "winner": null,
-     "runner_up": null,
-     "tier": "S",
-     "status": "upcoming"
-    },
-    {
-     "name": "FNCS 2026 Reload: Brazil - Grand Finals",
-     "start": "2026-11-21",
-     "end": "2026-11-21",
-     "prize": "$60,750",
      "winner": null,
      "runner_up": null,
      "tier": "S",
@@ -1607,7 +1577,7 @@
      "status": "upcoming"
     },
     {
-     "name": "FNCS 2026 Reload: Asiat - Grand Finals",
+     "name": "FNCS 2026 Reload: Middle East - Grand Finals",
      "start": "2026-11-21",
      "end": "2026-11-21",
      "prize": "$28,400",
@@ -1617,9 +1587,39 @@
      "status": "upcoming"
     },
     {
-     "name": "FNCS 2026 Reload: Middle East - Grand Finals",
-     "start": "2026-11-21",
-     "end": "2026-11-21",
+     "name": "FNCS 2026 Reload: EU - Grand Finals",
+     "start": "2026-11-22",
+     "end": "2026-11-22",
+     "prize": "$223,500",
+     "winner": null,
+     "runner_up": null,
+     "tier": "S",
+     "status": "upcoming"
+    },
+    {
+     "name": "FNCS 2026 Reload: NAW - Grand Finals",
+     "start": "2026-11-22",
+     "end": "2026-11-22",
+     "prize": "$60,750",
+     "winner": null,
+     "runner_up": null,
+     "tier": "S",
+     "status": "upcoming"
+    },
+    {
+     "name": "FNCS 2026 Reload: Brazil - Grand Finals",
+     "start": "2026-11-22",
+     "end": "2026-11-22",
+     "prize": "$60,750",
+     "winner": null,
+     "runner_up": null,
+     "tier": "S",
+     "status": "upcoming"
+    },
+    {
+     "name": "FNCS 2026 Reload: Asiat - Grand Finals",
+     "start": "2026-11-22",
+     "end": "2026-11-22",
      "prize": "$28,400",
      "winner": null,
      "runner_up": null,
