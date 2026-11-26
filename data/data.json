@@ -1,17 +1,17 @@
 {
  "schema": 1,
- "generated": "2026-11-25T03:06:12Z",
+ "generated": "2026-11-26T03:04:07Z",
  "updated": {
-  "dota.teams": "2026-11-25T03:06:12Z",
-  "dota.meta": "2026-11-25T03:06:12Z",
-  "dota.matches": "2026-11-25T03:06:12Z",
-  "dota.players": "2026-11-25T03:06:12Z",
-  "cs.teams": "2026-11-25T03:06:12Z",
-  "dota.tournaments": "2026-11-25T03:06:12Z",
-  "cs.tournaments": "2026-11-25T03:06:12Z",
-  "valorant.tournaments": "2026-11-25T03:06:12Z",
-  "pubg.tournaments": "2026-11-25T03:06:12Z",
-  "fortnite.tournaments": "2026-11-25T03:06:12Z"
+  "dota.teams": "2026-11-26T03:04:07Z",
+  "dota.meta": "2026-11-26T03:04:07Z",
+  "dota.matches": "2026-11-26T03:04:07Z",
+  "dota.players": "2026-11-26T03:04:07Z",
+  "cs.teams": "2026-11-26T03:04:07Z",
+  "dota.tournaments": "2026-11-26T03:04:07Z",
+  "cs.tournaments": "2026-11-26T03:04:07Z",
+  "valorant.tournaments": "2026-11-26T03:04:07Z",
+  "pubg.tournaments": "2026-11-26T03:04:07Z",
+  "fortnite.tournaments": "2026-11-26T03:04:07Z"
  },
  "sources": {
   "dota.teams": {
@@ -203,171 +203,179 @@
     "pro": [
      {
       "hero": "Windranger",
-      "picks": 32,
+      "picks": 29,
       "bans": 5,
-      "wr": 68.8
-     },
-     {
-      "hero": "Dark Willow",
-      "picks": 28,
-      "bans": 11,
-      "wr": 50.0
+      "wr": 69.0
      },
      {
       "hero": "Sand King",
+      "picks": 27,
+      "bans": 12,
+      "wr": 48.1
+     },
+     {
+      "hero": "Dark Willow",
       "picks": 26,
-      "bans": 11,
+      "bans": 10,
       "wr": 50.0
      },
      {
       "hero": "Witch Doctor",
-      "picks": 22,
-      "bans": 8,
-      "wr": 40.9
-     },
-     {
-      "hero": "Earthshaker",
       "picks": 21,
-      "bans": 15,
-      "wr": 61.9
+      "bans": 9,
+      "wr": 42.9
      },
      {
       "hero": "Abaddon",
       "picks": 21,
       "bans": 28,
-      "wr": 57.1
+      "wr": 61.9
      },
      {
       "hero": "Kez",
-      "picks": 20,
-      "bans": 15,
-      "wr": 60.0
-     },
-     {
-      "hero": "Dragon Knight",
-      "picks": 19,
-      "bans": 22,
-      "wr": 57.9
+      "picks": 21,
+      "bans": 14,
+      "wr": 57.1
      },
      {
       "hero": "Shadow Demon",
       "picks": 19,
-      "bans": 40,
-      "wr": 52.6
+      "bans": 36,
+      "wr": 57.9
      },
      {
-      "hero": "Hoodwink",
-      "picks": 19,
+      "hero": "Earthshaker",
+      "picks": 18,
+      "bans": 17,
+      "wr": 55.6
+     },
+     {
+      "hero": "Batrider",
+      "picks": 18,
+      "bans": 16,
+      "wr": 38.9
+     },
+     {
+      "hero": "Techies",
+      "picks": 18,
       "bans": 8,
-      "wr": 52.6
+      "wr": 38.9
      }
     ],
     "high_best": [
      {
       "hero": "Riki",
-      "picks": 63944,
-      "wr": 56.0
+      "picks": 69114,
+      "wr": 55.2
      },
      {
       "hero": "Dazzle",
-      "picks": 52304,
-      "wr": 54.8
+      "picks": 52810,
+      "wr": 54.5
      },
      {
       "hero": "Abaddon",
-      "picks": 61547,
-      "wr": 54.3
-     },
-     {
-      "hero": "Phantom Assassin",
-      "picks": 72196,
-      "wr": 54.1
+      "picks": 69940,
+      "wr": 54.0
      },
      {
       "hero": "Sven",
-      "picks": 54537,
-      "wr": 54.1
+      "picks": 55888,
+      "wr": 53.6
      },
      {
-      "hero": "Grimstroke",
-      "picks": 43445,
+      "hero": "Phantom Assassin",
+      "picks": 76158,
       "wr": 53.3
      },
      {
-      "hero": "Wraith King",
-      "picks": 37485,
-      "wr": 52.9
+      "hero": "Grimstroke",
+      "picks": 44436,
+      "wr": 53.2
      },
      {
       "hero": "Nyx Assassin",
-      "picks": 46288,
+      "picks": 45315,
+      "wr": 52.9
+     },
+     {
+      "hero": "Wraith King",
+      "picks": 36484,
+      "wr": 52.8
+     },
+     {
+      "hero": "Monkey King",
+      "picks": 44437,
       "wr": 52.7
      },
      {
       "hero": "Shadow Shaman",
-      "picks": 38016,
-      "wr": 52.7
-     },
-     {
-      "hero": "Earthshaker",
-      "picks": 75922,
+      "picks": 38544,
       "wr": 52.6
      }
     ],
     "high_popular": [
      {
       "hero": "Pudge",
-      "picks": 98274,
+      "picks": 98239,
       "wr": 47.6
      },
      {
       "hero": "Rubick",
-      "picks": 87829,
+      "picks": 88246,
       "wr": 49.7
      },
      {
       "hero": "Earthshaker",
-      "picks": 75922,
-      "wr": 52.6
+      "picks": 77364,
+      "wr": 52.2
      },
      {
       "hero": "Phantom Assassin",
-      "picks": 72196,
-      "wr": 54.1
+      "picks": 76158,
+      "wr": 53.3
      },
      {
       "hero": "Invoker",
-      "picks": 71201,
-      "wr": 50.5
-     },
-     {
-      "hero": "Lion",
-      "picks": 67303,
-      "wr": 49.0
-     },
-     {
-      "hero": "Riki",
-      "picks": 63944,
-      "wr": 56.0
+      "picks": 71338,
+      "wr": 50.1
      },
      {
       "hero": "Abaddon",
-      "picks": 61547,
-      "wr": 54.3
+      "picks": 69940,
+      "wr": 54.0
+     },
+     {
+      "hero": "Riki",
+      "picks": 69114,
+      "wr": 55.2
+     },
+     {
+      "hero": "Lion",
+      "picks": 67410,
+      "wr": 48.8
      },
      {
       "hero": "Windranger",
-      "picks": 56905,
-      "wr": 50.4
+      "picks": 58725,
+      "wr": 50.2
      },
      {
-      "hero": "Sven",
-      "picks": 54537,
-      "wr": 54.1
+      "hero": "Sand King",
+      "picks": 56553,
+      "wr": 51.7
      }
     ]
    },
    "matches": [
+    {
+     "league": "肛宝联赛-老婆杯",
+     "radiant": "可可ii",
+     "dire": "og",
+     "score": "28:26",
+     "winner": "可可ii",
+     "date": "2026-11-25"
+    },
     {
      "league": "BLAST SLAM IX",
      "radiant": "OG",
@@ -439,32 +447,24 @@
      "score": "39:23",
      "winner": "PARIVISION",
      "date": "2026-11-24"
-    },
-    {
-     "league": "BLAST SLAM IX",
-     "radiant": "1win",
-     "dire": "Team Yandex",
-     "score": "38:16",
-     "winner": "1win",
-     "date": "2026-11-24"
     }
    ],
    "players": {
     "europe": [
      {
       "rank": 1,
-      "name": "Wisper",
-      "team": ""
-     },
-     {
-      "rank": 2,
       "name": "9Class",
       "team": "PV"
      },
      {
+      "rank": 2,
+      "name": "Wisper",
+      "team": ""
+     },
+     {
       "rank": 3,
-      "name": "bzm",
-      "team": "1win"
+      "name": "Nightfall",
+      "team": ""
      },
      {
       "rank": 4,
@@ -473,33 +473,33 @@
      },
      {
       "rank": 5,
-      "name": "Nightfall",
-      "team": ""
-     },
-     {
-      "rank": 6,
       "name": "Pure",
       "team": "1win"
      },
      {
-      "rank": 7,
+      "rank": 6,
       "name": "Niku",
       "team": "NAVI"
      },
      {
-      "rank": 8,
+      "rank": 7,
       "name": "DM",
       "team": "TY"
      },
      {
+      "rank": 8,
+      "name": "bzm",
+      "team": "1win"
+     },
+     {
       "rank": 9,
-      "name": "Yatoro",
-      "team": "TSpirit"
+      "name": "Satanic",
+      "team": "PV"
      },
      {
       "rank": 10,
-      "name": "CHIRAJUNIOR",
-      "team": "TY"
+      "name": "daze",
+      "team": "NAVI"
      }
     ],
     "americas": [
@@ -510,23 +510,23 @@
      },
      {
       "rank": 2,
-      "name": "Milnil",
-      "team": "SM"
-     },
-     {
-      "rank": 3,
       "name": "ReM<3",
       "team": "RIA"
      },
      {
-      "rank": 4,
+      "rank": 3,
       "name": "sanity is gone",
       "team": "NALH"
      },
      {
-      "rank": 5,
+      "rank": 4,
       "name": "SoLotic",
       "team": "Awake"
+     },
+     {
+      "rank": 5,
+      "name": "Milnil",
+      "team": "SM"
      },
      {
       "rank": 6,
@@ -540,64 +540,64 @@
      },
      {
       "rank": 8,
-      "name": "Captainc0c0",
-      "team": ""
-     },
-     {
-      "rank": 9,
       "name": "AlienManaBanana",
       "team": ""
      },
      {
-      "rank": 10,
+      "rank": 9,
       "name": "KPR",
       "team": "GP"
+     },
+     {
+      "rank": 10,
+      "name": "Natsumi ><",
+      "team": "WAE"
      }
     ],
     "se_asia": [
      {
       "rank": 1,
-      "name": "bzs",
+      "name": "S1mple",
       "team": ""
      },
      {
       "rank": 3,
-      "name": "Sorrow",
-      "team": ""
-     },
-     {
-      "rank": 4,
       "name": "陶一飞",
       "team": "only"
      },
      {
-      "rank": 5,
+      "rank": 4,
       "name": "Monet",
       "team": ""
      },
      {
-      "rank": 6,
-      "name": "Collapse",
-      "team": ""
-     },
-     {
-      "rank": 7,
+      "rank": 5,
       "name": "Ana",
       "team": ""
      },
      {
+      "rank": 6,
+      "name": "Agonize",
+      "team": ""
+     },
+     {
+      "rank": 7,
+      "name": "Collapse",
+      "team": ""
+     },
+     {
       "rank": 8,
-      "name": "库尔德牛逼武装",
+      "name": "leaf",
       "team": ""
      },
      {
       "rank": 9,
-      "name": "BEEBIE",
+      "name": "库尔德牛逼武装",
       "team": ""
      },
      {
       "rank": 10,
-      "name": "hidie",
+      "name": "Spider-Man",
       "team": ""
      }
     ],
@@ -634,22 +634,22 @@
      },
      {
       "rank": 7,
-      "name": "CARROxx",
-      "team": ""
-     },
-     {
-      "rank": 8,
       "name": "玩伐木机狼人船长的s马",
       "team": ""
      },
      {
+      "rank": 8,
+      "name": "CARROxx",
+      "team": ""
+     },
+     {
       "rank": 9,
-      "name": "Qy1t",
+      "name": "混",
       "team": ""
      },
      {
       "rank": 10,
-      "name": "混",
+      "name": "Qy1t",
       "team": ""
      }
     ]
@@ -1601,8 +1601,8 @@
      "start": "2026-11-22",
      "end": "2026-11-22",
      "prize": "$60,750",
-     "winner": null,
-     "runner_up": null,
+     "winner": "ZLink",
+     "runner_up": "Thor",
      "tier": "S",
      "status": "finished"
     },
