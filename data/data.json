@@ -1,17 +1,17 @@
 {
  "schema": 1,
- "generated": "2026-11-27T03:08:32Z",
+ "generated": "2026-11-28T03:01:35Z",
  "updated": {
-  "dota.teams": "2026-11-27T03:08:32Z",
-  "dota.meta": "2026-11-27T03:08:32Z",
-  "dota.matches": "2026-11-27T03:08:32Z",
-  "dota.players": "2026-11-27T03:08:32Z",
-  "cs.teams": "2026-11-27T03:08:32Z",
-  "dota.tournaments": "2026-11-27T03:08:32Z",
-  "cs.tournaments": "2026-11-27T03:08:32Z",
-  "valorant.tournaments": "2026-11-27T03:08:32Z",
-  "pubg.tournaments": "2026-11-27T03:08:32Z",
-  "fortnite.tournaments": "2026-11-27T03:08:32Z"
+  "dota.teams": "2026-11-28T03:01:35Z",
+  "dota.meta": "2026-11-28T03:01:35Z",
+  "dota.matches": "2026-11-28T03:01:35Z",
+  "dota.players": "2026-11-28T03:01:35Z",
+  "cs.teams": "2026-11-28T03:01:35Z",
+  "dota.tournaments": "2026-11-28T03:01:35Z",
+  "cs.tournaments": "2026-11-28T03:01:35Z",
+  "valorant.tournaments": "2026-11-28T03:01:35Z",
+  "pubg.tournaments": "2026-11-28T03:01:35Z",
+  "fortnite.tournaments": "2026-11-28T03:01:35Z"
  },
  "sources": {
   "dota.teams": {
@@ -76,10 +76,10 @@
      "rank": 2,
      "name": "PARIVISION",
      "tag": "PV",
-     "rating": 1552,
-     "wins": 91,
-     "losses": 45,
-     "last": "2026-11-24"
+     "rating": 1511,
+     "wins": 94,
+     "losses": 48,
+     "last": "2026-11-27"
     },
     {
      "rank": 3,
@@ -94,22 +94,13 @@
      "rank": 4,
      "name": "Team Liquid",
      "tag": "Liquid",
-     "rating": 1379,
-     "wins": 1901,
-     "losses": 1298,
-     "last": "2026-11-26"
+     "rating": 1414,
+     "wins": 1903,
+     "losses": 1299,
+     "last": "2026-11-27"
     },
     {
      "rank": 5,
-     "name": "GamerLegion",
-     "tag": "GL",
-     "rating": 1366,
-     "wins": 145,
-     "losses": 144,
-     "last": "2026-11-26"
-    },
-    {
-     "rank": 6,
      "name": "Natus Vincere",
      "tag": "NAVI",
      "rating": 1353,
@@ -118,31 +109,40 @@
      "last": "2026-11-23"
     },
     {
-     "rank": 7,
+     "rank": 6,
      "name": "Aurora Gaming",
      "tag": "Aurora",
-     "rating": 1342,
-     "wins": 408,
-     "losses": 303,
-     "last": "2026-11-26"
+     "rating": 1348,
+     "wins": 409,
+     "losses": 305,
+     "last": "2026-11-27"
+    },
+    {
+     "rank": 7,
+     "name": "GamerLegion",
+     "tag": "GL",
+     "rating": 1329,
+     "wins": 145,
+     "losses": 146,
+     "last": "2026-11-27"
     },
     {
      "rank": 8,
+     "name": "1win",
+     "tag": "1win",
+     "rating": 1324,
+     "wins": 43,
+     "losses": 44,
+     "last": "2026-11-27"
+    },
+    {
+     "rank": 9,
      "name": "Team Resilience",
      "tag": "Resilience",
      "rating": 1298,
      "wins": 58,
      "losses": 51,
      "last": "2026-10-15"
-    },
-    {
-     "rank": 9,
-     "name": "1win",
-     "tag": "1win",
-     "rating": 1286,
-     "wins": 41,
-     "losses": 44,
-     "last": "2026-11-26"
     },
     {
      "rank": 10,
@@ -203,171 +203,235 @@
     "pro": [
      {
       "hero": "Sand King",
-      "picks": 30,
-      "bans": 13,
-      "wr": 46.7
+      "picks": 25,
+      "bans": 9,
+      "wr": 40.0
      },
      {
       "hero": "Windranger",
-      "picks": 26,
+      "picks": 23,
       "bans": 4,
-      "wr": 76.9
+      "wr": 78.3
      },
      {
       "hero": "Kez",
-      "picks": 22,
+      "picks": 20,
       "bans": 16,
       "wr": 50.0
      },
      {
-      "hero": "Dark Willow",
-      "picks": 21,
-      "bans": 9,
-      "wr": 47.6
-     },
-     {
-      "hero": "Batrider",
-      "picks": 18,
-      "bans": 14,
-      "wr": 33.3
-     },
-     {
-      "hero": "Abaddon",
-      "picks": 18,
-      "bans": 30,
-      "wr": 55.6
+      "hero": "Earthshaker",
+      "picks": 19,
+      "bans": 15,
+      "wr": 47.4
      },
      {
       "hero": "Shadow Demon",
-      "picks": 17,
-      "bans": 28,
-      "wr": 47.1
+      "picks": 15,
+      "bans": 26,
+      "wr": 53.3
      },
      {
-      "hero": "Earthshaker",
-      "picks": 16,
-      "bans": 16,
-      "wr": 68.8
-     },
-     {
-      "hero": "Techies",
-      "picks": 16,
-      "bans": 8,
-      "wr": 37.5
-     },
-     {
-      "hero": "Beastmaster",
+      "hero": "Witch Doctor",
       "picks": 14,
-      "bans": 35,
-      "wr": 42.9
+      "bans": 7,
+      "wr": 71.4
+     },
+     {
+      "hero": "Batrider",
+      "picks": 13,
+      "bans": 19,
+      "wr": 23.1
+     },
+     {
+      "hero": "Magnus",
+      "picks": 13,
+      "bans": 25,
+      "wr": 53.8
+     },
+     {
+      "hero": "Dark Willow",
+      "picks": 13,
+      "bans": 9,
+      "wr": 38.5
+     },
+     {
+      "hero": "Abaddon",
+      "picks": 12,
+      "bans": 28,
+      "wr": 41.7
      }
     ],
     "high_best": [
      {
       "hero": "Omniknight",
-      "picks": 28739,
-      "wr": 55.9
-     },
-     {
-      "hero": "Riki",
-      "picks": 70190,
-      "wr": 54.5
+      "picks": 31264,
+      "wr": 55.8
      },
      {
       "hero": "Dazzle",
-      "picks": 52147,
-      "wr": 54.3
+      "picks": 49849,
+      "wr": 54.1
+     },
+     {
+      "hero": "Riki",
+      "picks": 65812,
+      "wr": 54.0
      },
      {
       "hero": "Abaddon",
-      "picks": 75745,
-      "wr": 53.9
-     },
-     {
-      "hero": "Sven",
-      "picks": 55827,
-      "wr": 53.4
+      "picks": 75341,
+      "wr": 53.7
      },
      {
       "hero": "Grimstroke",
-      "picks": 45334,
-      "wr": 53.3
+      "picks": 45013,
+      "wr": 53.6
      },
      {
       "hero": "Nyx Assassin",
-      "picks": 43808,
-      "wr": 53.0
+      "picks": 41486,
+      "wr": 53.1
      },
      {
       "hero": "Wraith King",
-      "picks": 35684,
+      "picks": 34138,
+      "wr": 53.1
+     },
+     {
+      "hero": "Sven",
+      "picks": 53526,
       "wr": 53.0
      },
      {
       "hero": "Monkey King",
-      "picks": 49817,
-      "wr": 52.7
+      "picks": 54912,
+      "wr": 52.6
      },
      {
-      "hero": "Phantom Assassin",
-      "picks": 75709,
-      "wr": 52.6
+      "hero": "Shadow Shaman",
+      "picks": 37639,
+      "wr": 52.4
      }
     ],
     "high_popular": [
      {
       "hero": "Pudge",
-      "picks": 98093,
+      "picks": 95617,
       "wr": 47.7
      },
      {
       "hero": "Rubick",
-      "picks": 88453,
-      "wr": 49.7
+      "picks": 85890,
+      "wr": 49.6
      },
      {
       "hero": "Earthshaker",
-      "picks": 77872,
+      "picks": 76274,
       "wr": 52.1
      },
      {
       "hero": "Abaddon",
-      "picks": 75745,
-      "wr": 53.9
+      "picks": 75341,
+      "wr": 53.7
      },
      {
       "hero": "Phantom Assassin",
-      "picks": 75709,
-      "wr": 52.6
+      "picks": 72049,
+      "wr": 51.9
      },
      {
       "hero": "Invoker",
-      "picks": 70959,
-      "wr": 50.0
+      "picks": 68548,
+      "wr": 49.8
      },
      {
       "hero": "Riki",
-      "picks": 70190,
-      "wr": 54.5
-     },
-     {
-      "hero": "Lion",
-      "picks": 67191,
-      "wr": 48.6
+      "picks": 65812,
+      "wr": 54.0
      },
      {
       "hero": "Sand King",
-      "picks": 61965,
-      "wr": 51.5
+      "picks": 65195,
+      "wr": 51.4
+     },
+     {
+      "hero": "Lion",
+      "picks": 65052,
+      "wr": 48.7
      },
      {
       "hero": "Windranger",
-      "picks": 60102,
-      "wr": 50.3
+      "picks": 60227,
+      "wr": 50.4
      }
     ]
    },
    "matches": [
+    {
+     "league": "BLAST SLAM IX",
+     "radiant": "Aurora Gaming",
+     "dire": "PARIVISION",
+     "score": "11:35",
+     "winner": "PARIVISION",
+     "date": "2026-11-27"
+    },
+    {
+     "league": "BLAST SLAM IX",
+     "radiant": "Aurora Gaming",
+     "dire": "PARIVISION",
+     "score": "40:27",
+     "winner": "Aurora Gaming",
+     "date": "2026-11-27"
+    },
+    {
+     "league": "BLAST SLAM IX",
+     "radiant": "Aurora Gaming",
+     "dire": "PARIVISION",
+     "score": "24:38",
+     "winner": "PARIVISION",
+     "date": "2026-11-27"
+    },
+    {
+     "league": "BLAST SLAM IX",
+     "radiant": "1win",
+     "dire": "GamerLegion",
+     "score": "39:13",
+     "winner": "1win",
+     "date": "2026-11-27"
+    },
+    {
+     "league": "BLAST SLAM IX",
+     "radiant": "GamerLegion",
+     "dire": "1win",
+     "score": "10:29",
+     "winner": "1win",
+     "date": "2026-11-27"
+    },
+    {
+     "league": "BLAST SLAM IX",
+     "radiant": "Team Liquid",
+     "dire": "PARIVISION",
+     "score": "25:7",
+     "winner": "Team Liquid",
+     "date": "2026-11-27"
+    },
+    {
+     "league": "BLAST SLAM IX",
+     "radiant": "PARIVISION",
+     "dire": "Team Liquid",
+     "score": "46:32",
+     "winner": "PARIVISION",
+     "date": "2026-11-27"
+    },
+    {
+     "league": "BLAST SLAM IX",
+     "radiant": "Team Liquid",
+     "dire": "PARIVISION",
+     "score": "36:22",
+     "winner": "Team Liquid",
+     "date": "2026-11-27"
+    },
     {
      "league": "BLAST SLAM IX",
      "radiant": "GamerLegion",
@@ -383,92 +447,28 @@
      "score": "23:16",
      "winner": "Team Yandex",
      "date": "2026-11-26"
-    },
-    {
-     "league": "肛宝联赛-老婆杯",
-     "radiant": "死亡之拳",
-     "dire": "PSG.LGD",
-     "score": "53:41",
-     "winner": "PSG.LGD",
-     "date": "2026-11-26"
-    },
-    {
-     "league": "BLAST SLAM IX",
-     "radiant": "1win",
-     "dire": "Team Liquid",
-     "score": "19:31",
-     "winner": "Team Liquid",
-     "date": "2026-11-26"
-    },
-    {
-     "league": "肛宝联赛-老婆杯",
-     "radiant": "死亡之拳",
-     "dire": "og",
-     "score": "33:15",
-     "winner": "死亡之拳",
-     "date": "2026-11-26"
-    },
-    {
-     "league": "BLAST SLAM IX",
-     "radiant": "1win",
-     "dire": "Team Liquid",
-     "score": "24:21",
-     "winner": "Team Liquid",
-     "date": "2026-11-26"
-    },
-    {
-     "league": "BLAST SLAM IX",
-     "radiant": "Aurora Gaming",
-     "dire": "GamerLegion",
-     "score": "16:44",
-     "winner": "GamerLegion",
-     "date": "2026-11-26"
-    },
-    {
-     "league": "BLAST SLAM IX",
-     "radiant": "GamerLegion",
-     "dire": "Aurora Gaming",
-     "score": "21:14",
-     "winner": "GamerLegion",
-     "date": "2026-11-26"
-    },
-    {
-     "league": "肛宝联赛-老婆杯",
-     "radiant": "可可ii",
-     "dire": "og",
-     "score": "28:26",
-     "winner": "可可ii",
-     "date": "2026-11-25"
-    },
-    {
-     "league": "BLAST SLAM IX",
-     "radiant": "OG",
-     "dire": "Aurora Gaming",
-     "score": "13:33",
-     "winner": "Aurora Gaming",
-     "date": "2026-11-24"
     }
    ],
    "players": {
     "europe": [
      {
       "rank": 1,
-      "name": "9Class",
-      "team": "PV"
-     },
-     {
-      "rank": 2,
-      "name": "Wisper",
-      "team": ""
-     },
-     {
-      "rank": 3,
       "name": "Pure",
       "team": "1win"
      },
      {
-      "rank": 4,
+      "rank": 2,
+      "name": "9Class",
+      "team": "PV"
+     },
+     {
+      "rank": 3,
       "name": "Nightfall",
+      "team": ""
+     },
+     {
+      "rank": 4,
+      "name": "Wisper",
       "team": ""
      },
      {
@@ -498,7 +498,7 @@
      },
      {
       "rank": 10,
-      "name": "CHIRAJUNIOR",
+      "name": "医者watson",
       "team": "TY"
      }
     ],
@@ -550,7 +550,7 @@
      },
      {
       "rank": 10,
-      "name": "Captainc0c0",
+      "name": "Peluchestiben",
       "team": ""
      }
     ],
@@ -592,7 +592,7 @@
      },
      {
       "rank": 9,
-      "name": "Spider-Man",
+      "name": "rin",
       "team": ""
      },
      {
@@ -629,27 +629,27 @@
      },
      {
       "rank": 6,
-      "name": "tch.",
-      "team": ""
-     },
-     {
-      "rank": 7,
       "name": "Se7en",
       "team": ""
      },
      {
+      "rank": 7,
+      "name": "tch.",
+      "team": ""
+     },
+     {
       "rank": 8,
-      "name": "玩伐木机狼人船长的s马",
+      "name": "混",
       "team": ""
      },
      {
       "rank": 9,
-      "name": "CARROxx",
+      "name": "玩伐木机狼人船长的s马",
       "team": ""
      },
      {
       "rank": 10,
-      "name": "混",
+      "name": "京城小神",
       "team": ""
      }
     ]
